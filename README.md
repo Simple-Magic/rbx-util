@@ -32,6 +32,8 @@ type StackQueue = {
 
 ## [Repository](https://wally.run/package/rasmusmerzin/repository?version=0.1.0)
 
+DataStore wrapper utility.
+
 ```luau
 type Repository = {
     new: Function<Repository, Init>,
@@ -39,3 +41,23 @@ type Repository = {
     Entity.Start: Function<void, (Repository.Entity, Player)>
 }
 ```
+
+## [Message](https://wally.run/package/rasmusmerzin/message?version=0.2.0)
+
+Bundle of services for sending messages to clients.
+
+- AnnouncementService
+  - :Announce
+  - :AnnounceFor
+- CountdownService
+  - :Countdown
+- DialogueService
+  - :DialogueFor
+- HitmarkerService
+  - :HitmarkerFor
+- LoadingService
+  - :SetLoading
+  - :SetLoadingFor
+- LogService
+  - :LogAll
+  - :LogTo
