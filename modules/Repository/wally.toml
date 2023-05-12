@@ -1,0 +1,11 @@
+[package]
+name = "rasmusmerzin/repository"
+description = "Repository class"
+version = "0.1.0"
+license = "MIT"
+authors = ["Emil Rasmus Merzin"]
+registry = "https://github.com/UpliftGames/wally-index"
+realm = "shared"
+
+[dependencies]
+Timer = "sleitnick/timer@1.1"
