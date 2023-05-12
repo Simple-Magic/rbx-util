@@ -1,0 +1,21 @@
+name: Aftman CI
+
+on:
+  push:
+    branches: ["main"]
+  pull_request:
+    branches: ["main"]
+  workflow_dispatch:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    container: simplemagicerm/aftman:latest
+    steps:
+      - uses: actions/checkout@v3
+      - run: /root/.aftman/bin/aftman install --no-trust-check
+      - run: ~/.aftman/bin/wally install
+      - run: ~/.aftman/bin/stylua --check .
+      - run: ~/.aftman/bin/selene update-roblox-std
+      - run: git config --global --add safe.directory $(pwd)
+      - run: ~/.aftman/bin/selene $(git ls-files | grep '\.lua$')
