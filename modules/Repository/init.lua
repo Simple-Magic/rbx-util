@@ -7,8 +7,8 @@ local Repository = {
 }
 Repository.__index = Repository
 
-function Repository.new(state)
-	local self = setmetatable(state or {}, Repository)
+function Repository.new(init)
+	local self = setmetatable(init or {}, Repository)
 	self.Entity = self.Entity or {}
 	self.Entity.__index = self.Entity
 	function self.Entity:Start() end
@@ -16,7 +16,7 @@ function Repository.new(state)
 	self.Cache = {} :: Table<string, Profile>
 	Players.PlayerAdded:Connect(function(player: Player) self:OnPlayer(player, true) end)
 	Players.PlayerRemoving:Connect(function(...) self:OnPlayer(...) end)
-	self.Timer = Timer.new(state.Interval or 60)
+	self.Timer = Timer.new(init.Interval or 60)
 	self.Timer.Tick:Connect(function() self:OnTick() end)
 	self.Timer:Start()
 	return self
