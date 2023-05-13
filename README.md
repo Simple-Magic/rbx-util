@@ -68,3 +68,7 @@ Bundle of bar widgets. Includes Health and Clock UI.
 
 - ClockService
   - :SetClock(startMillis: number, endMillis: number)
+
+## [PlayerList](https://wally.run/package/rasmusmerzin/playerlist?version=1.0.2)
+
+## [IsoCamera](https://wally.run/package/rasmusmerzin/isocamera?version=1.0.0)
