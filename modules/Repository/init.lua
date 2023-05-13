@@ -8,18 +8,18 @@ local Repository = {
 Repository.__index = Repository
 
 function Repository.new(init)
-	local self = setmetatable(init or {}, Repository)
-	self.Entity = self.Entity or {}
-	self.Entity.__index = self.Entity
-	function self.Entity:Start() end
-	self.Store = DataStoreService:GetDataStore(self.Name)
-	self.Cache = {} :: Table<string, Profile>
-	Players.PlayerAdded:Connect(function(player: Player) self:OnPlayer(player, true) end)
-	Players.PlayerRemoving:Connect(function(...) self:OnPlayer(...) end)
-	self.Timer = Timer.new(init.Interval or 60)
-	self.Timer.Tick:Connect(function() self:OnTick() end)
-	self.Timer:Start()
-	return self
+	local this = setmetatable(init or {}, Repository)
+	this.Entity = this.Entity or {}
+	this.Entity.__index = this.Entity
+	function this.Entity:Start() end
+	this.Store = DataStoreService:GetDataStore(this.Name)
+	this.Cache = {} :: Table<string, Profile>
+	Players.PlayerAdded:Connect(function(player: Player) this:OnPlayer(player, true) end)
+	Players.PlayerRemoving:Connect(function(...) this:OnPlayer(...) end)
+	this.Timer = Timer.new(init.Interval or 60)
+	this.Timer.Tick:Connect(function() this:OnTick() end)
+	this.Timer:Start()
+	return this
 end
 
 function Repository:OnTick()
