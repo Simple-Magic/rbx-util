@@ -71,4 +71,8 @@ Bundle of bar widgets. Includes Health and Clock UI.
 
 ## [PlayerList](https://wally.run/package/rasmusmerzin/playerlist?version=1.0.2)
 
+Player list gui which in addition to players shows bots.
+
 ## [IsoCamera](https://wally.run/package/rasmusmerzin/isocamera?version=1.0.0)
+
+Isometric view camera.
