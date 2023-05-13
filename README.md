@@ -47,17 +47,24 @@ type Repository = {
 Bundle of services for sending messages to clients.
 
 - AnnouncementService
-  - :Announce
-  - :AnnounceFor
+  - :Announce(message: string, options: AnnouncementOptions?)
+  - :AnnounceFor(player: Player, message: string, options: AnnouncementOptions?)
 - CountdownService
-  - :Countdown
+  - :Countdown(count: Integer)
 - DialogueService
-  - :DialogueFor
+  - :DialogueFor(player: Player, options: DialogueOptions?): Signal
 - HitmarkerService
-  - :HitmarkerFor
+  - :HitmarkerFor(player: Player, content: string)
 - LoadingService
-  - :SetLoading
-  - :SetLoadingFor
+  - :SetLoading(loading: boolean)
+  - :SetLoadingFor(player: Player, loading: boolean)
 - LogService
-  - :LogAll
-  - :LogTo
+  - :LogAll(message: string)
+  - :LogTo(player: Player, message: string)
+
+## [Bar](https://wally.run/package/rasmusmerzin/bar?version=1.0.0)
+
+Bundle of bar widgets. Includes Health and Clock UI.
+
+- ClockService
+  - :SetClock(startMillis: number, endMillis: number)
