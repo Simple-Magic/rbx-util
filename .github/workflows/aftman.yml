@@ -1,4 +1,4 @@
-name: Aftman CI
+name: Aftman
 
 on:
   push:
@@ -14,7 +14,6 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - run: /root/.aftman/bin/aftman install --no-trust-check
-      - run: ~/.aftman/bin/wally install
       - run: ~/.aftman/bin/stylua --check .
       - run: ~/.aftman/bin/selene update-roblox-std
       - run: git config --global --add safe.directory $(pwd)

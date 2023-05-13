@@ -1,0 +1,9 @@
+gitRepoUrl = "https://github.com/Simple-Magic/rbx-util"
+gitSourceBranch = "main"
+
+[home]
+enabled = true
+includeReadme = true
+
+[docusaurus]
+tagline = "Utility modules for Roblox"
