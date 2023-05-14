@@ -13,6 +13,7 @@ type Entity = {
 
 --[=[
 	@class Repository
+	@server
 
 	The Repository class is a DataStore wrapper which handles storing and loading.
 
