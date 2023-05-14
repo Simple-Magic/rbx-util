@@ -1,8 +1,17 @@
+--[=[
+	@class StackQueue
+]=]
 local StackQueue = {}
 StackQueue.__index = StackQueue
 
+--[=[
+	@return StackQueue
+]=]
 function StackQueue.new() return setmetatable({ _Stack = {} }, StackQueue) end
 
+--[=[
+	Append function to queue.
+]=]
 function StackQueue:Append(fn: Function)
 	table.insert(self._Stack, fn)
 	if #self._Stack == 1 then self:_SpawnScheduler() end
