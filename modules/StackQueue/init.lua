@@ -5,9 +5,9 @@ local StackQueue = {}
 StackQueue.__index = StackQueue
 
 --[=[
-	@return StackQueue
+	Creates `StackQueue` instance.
 ]=]
-function StackQueue.new() return setmetatable({ _Stack = {} }, StackQueue) end
+function StackQueue.new(): StackQueue return setmetatable({ _Stack = {} }, StackQueue) end
 
 --[=[
 	Append function to queue.
