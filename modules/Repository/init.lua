@@ -5,10 +5,12 @@ local Timer = require(script.Parent.Timer)
 --[=[
 	@interface Entity
 	.Start (self: Entity, player: Player?) -> nil
+	.Update (self: Entity, player: Player?) -> nil
 	@within Repository
 ]=]
 type Entity = {
 	Start: (self: Entity, player: Player?) -> nil,
+	Update: (self: Entity, player: Player?) -> nil,
 }
 
 --[=[
@@ -56,6 +58,7 @@ function Repository.new(init)
 	this.Entity = this.Entity or {}
 	this.Entity.__index = this.Entity
 	function this.Entity:Start() end
+	function this.Entity:Update() end
 	this.Store = DataStoreService:GetDataStore(this.Name)
 	this.Cache = {} :: Table<string, Profile>
 	Players.PlayerAdded:Connect(function(player: Player) this:_OnPlayer(player, true) end)
@@ -67,19 +70,11 @@ function Repository.new(init)
 end
 
 --[=[
-	Gets an `Entity`.
+	Gets an `Entity` at given id.
 ]=]
 function Repository:Get(id: number | string | Player): Entity
 	local player
-	if type(id) == "number" then
-		id = tostring(id)
-		player = Players:GetPlayerByUserId(id)
-	elseif type(id) == "string" then
-		player = Players:GetPlayerByUserId(tonumber(id) or 0)
-	else
-		id = tostring(id.UserId)
-		player = id
-	end
+	id, player = self:_ResolveId(id)
 	local cache = self.Cache[id]
 	if cache then
 		return cache
@@ -90,6 +85,38 @@ function Repository:Get(id: number | string | Player): Entity
 	end
 end
 
+--[=[
+	Saves an `Entity` at given id.
+]=]
+function Repository:Save(id: number | string | Player)
+	local player
+	id, player = self:_ResolveId(id)
+	local cache = self.Cache[id]
+	if not cache then return end
+	cache:Update(player)
+	self.Store:UpdateAsync(id, function(data)
+		data = data or {}
+		for key, value in pairs(cache) do
+			data[key] = value
+		end
+		return data
+	end)
+end
+
+function Repository:_ResolveId(id: number | string | Player): (string, Player?)
+	local player
+	if type(id) == "number" then
+		player = Players:GetPlayerByUserId(id)
+		id = tostring(id)
+	elseif type(id) == "string" then
+		player = Players:GetPlayerByUserId(tonumber(id) or 0)
+	else
+		player = id
+		id = tostring(id.UserId)
+	end
+	return id, player
+end
+
 function Repository:_OnTick()
 	for _, player in pairs(Players:GetPlayers()) do
 		self:_OnPlayer(player)
@@ -97,19 +124,11 @@ function Repository:_OnTick()
 end
 
 function Repository:_OnPlayer(player: Player, forceUpdate: boolean?)
-	local id = tostring(player.UserId)
-	local cache = self.Cache[id]
+	local cache = self.Cache[tostring(player.UserId)]
 	if cache and not forceUpdate then
-		self.Store:UpdateAsync(id, function(data)
-			data = data or {}
-			for key, value in pairs(cache) do
-				data[key] = value
-			end
-			return data
-		end)
+		self:Save(player)
 	else
-		self.Cache[id] = setmetatable(self.Store:GetAsync(id) or {}, self.Entity)
-		self.Cache[id]:Start(player)
+		self:Get(player)
 	end
 end
 
