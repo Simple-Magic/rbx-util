@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkdocs=self.webpackChunkdocs||[]).push([[7657],{39871:e=>{e.exports=JSON.parse('{"functions":[],"properties":[],"types":[],"name":"PlayerListController","desc":"","source":{"line":13,"path":"modules/PlayerList/PlayerListController.lua"}}')}}]);

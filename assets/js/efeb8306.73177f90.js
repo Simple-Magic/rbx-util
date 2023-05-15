@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkdocs=self.webpackChunkdocs||[]).push([[3171],{32433:e=>{e.exports=JSON.parse('{"functions":[],"properties":[],"types":[],"name":"BarController","desc":"","source":{"line":17,"path":"modules/Bar/BarController.lua"}}')}}]);

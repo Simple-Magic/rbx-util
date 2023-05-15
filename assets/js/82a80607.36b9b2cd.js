@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkdocs=self.webpackChunkdocs||[]).push([[618],{62305:e=>{e.exports=JSON.parse('{"functions":[],"properties":[],"types":[],"name":"LoadingController","desc":"","source":{"line":12,"path":"modules/Message/LoadingController.lua"}}')}}]);
