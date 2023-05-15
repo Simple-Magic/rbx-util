@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkdocs=self.webpackChunkdocs||[]).push([[7628],{88080:e=>{e.exports=JSON.parse('{"functions":[],"properties":[],"types":[],"name":"IsoCameraController","desc":"","source":{"line":10,"path":"modules/IsoCamera/IsoCameraController.lua"}}')}}]);

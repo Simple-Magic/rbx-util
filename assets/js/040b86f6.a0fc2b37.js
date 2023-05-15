@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkdocs=self.webpackChunkdocs||[]).push([[8762],{63050:e=>{e.exports=JSON.parse('{"functions":[],"properties":[],"types":[],"name":"CountdownController","desc":"","source":{"line":14,"path":"modules/Message/CountdownController.lua"}}')}}]);

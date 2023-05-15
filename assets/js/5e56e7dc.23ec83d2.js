@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkdocs=self.webpackChunkdocs||[]).push([[2138],{22256:e=>{e.exports=JSON.parse('{"functions":[],"properties":[],"types":[],"name":"AnnouncementController","desc":"","source":{"line":19,"path":"modules/Message/AnnouncementController.lua"}}')}}]);

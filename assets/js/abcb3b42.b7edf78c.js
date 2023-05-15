@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkdocs=self.webpackChunkdocs||[]).push([[1556],{92709:e=>{e.exports=JSON.parse('{"functions":[],"properties":[],"types":[],"name":"ClockService","desc":"","source":{"line":7,"path":"modules/Bar/ClockService.lua"}}')}}]);

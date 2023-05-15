@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkdocs=self.webpackChunkdocs||[]).push([[4981],{82473:e=>{e.exports=JSON.parse('{"functions":[],"properties":[],"types":[],"name":"HitmarkerController","desc":"","source":{"line":13,"path":"modules/Message/HitmarkerController.lua"}}')}}]);

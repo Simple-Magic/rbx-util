@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkdocs=self.webpackChunkdocs||[]).push([[7050],{63241:e=>{e.exports=JSON.parse('{"functions":[],"properties":[],"types":[],"name":"HealthController","desc":"","source":{"line":11,"path":"modules/Bar/HealthController.lua"}}')}}]);
