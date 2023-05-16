@@ -72,11 +72,11 @@ end
 --[=[
 	Gets an `Entity` at given id.
 ]=]
-function Repository:Get(id: number | string | Player): Entity
+function Repository:Get(id: number | string | Player, forceUpdate: boolean?): Entity
 	local player
 	id, player = self:_ResolveId(id)
 	local cache = self.Cache[id]
-	if cache then
+	if cache and not forceUpdate then
 		return cache
 	else
 		self.Cache[id] = setmetatable(self.Store:GetAsync(id) or {}, self.Entity)
@@ -128,7 +128,7 @@ function Repository:_OnPlayer(player: Player, forceUpdate: boolean?)
 	if cache and not forceUpdate then
 		self:Save(player)
 	else
-		self:Get(player)
+		self:Get(player, forceUpdate)
 	end
 end
 
