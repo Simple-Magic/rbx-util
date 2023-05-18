@@ -4,13 +4,13 @@ local Timer = require(script.Parent.Timer)
 
 --[=[
 	@interface Entity
-	.Start (self: Entity, player: Player?) -> nil
-	.Update (self: Entity, player: Player?) -> nil
+	.Start (self: Entity, player: Player?) -> ()
+	.Update (self: Entity, player: Player?) -> ()
 	@within Repository
 ]=]
 type Entity = {
-	Start: (self: Entity, player: Player?) -> nil,
-	Update: (self: Entity, player: Player?) -> nil,
+	Start: (self: Entity, player: Player?) -> (),
+	Update: (self: Entity, player: Player?) -> (),
 }
 
 --[=[
