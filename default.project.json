@@ -1,0 +1,54 @@
+{
+  "name": "rbx-util",
+  "tree": {
+    "$className": "DataModel",
+
+    "ReplicatedStorage": {
+      "Packages": { "$path": "Packages" }
+    },
+    "ServerStorage": {},
+    "ServerScriptService": {
+      "Main": { "$path": "Main.server.lua" }
+    },
+    "StarterPlayer": {
+      "StarterPlayerScripts": {
+        "Main": { "$path": "Main.client.lua" }
+      }
+    },
+
+    "Players": {
+      "$properties": {
+        "CharacterAutoLoads": true
+      }
+    },
+
+    "Workspace": {
+      "$properties": {
+        "FilteringEnabled": true,
+        "StreamingEnabled": true
+      }
+    },
+
+    "Lighting": {
+      "$properties": {
+        "Ambient": [0, 0, 0],
+        "Brightness": 2,
+        "GlobalShadows": true,
+        "Outlines": false,
+        "Technology": "Voxel"
+      }
+    },
+
+    "SoundService": {
+      "$properties": {
+        "RespectFilteringEnabled": true
+      }
+    },
+
+    "StarterGui": {
+      "$properties": {
+        "ScreenOrientation": "Sensor"
+      }
+    }
+  }
+}

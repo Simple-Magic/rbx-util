@@ -11,9 +11,9 @@ IsoCamera = "rasmusmerzin/isocamera@1.0.0"
 ```toml
 Maid = "rasmusmerzin/maid@1.0.0"
 ```
-# [Message](https://wally.run/package/rasmusmerzin/message?version=0.2.0)
+# [Message](https://wally.run/package/rasmusmerzin/message?version=1.0.0)
 ```toml
-Message = "rasmusmerzin/message@0.2.0"
+Message = "rasmusmerzin/message@1.0.0"
 ```
 # [PlayerList](https://wally.run/package/rasmusmerzin/playerlist?version=1.0.2)
 ```toml

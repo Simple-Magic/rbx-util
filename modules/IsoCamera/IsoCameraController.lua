@@ -76,11 +76,10 @@ function IsoCameraController:RenderStepped()
 	local pos = character:GetPivot().Position
 	Workspace.CurrentCamera.CFrame = CFrame.new(
 		(CFrame.new(pos) * CFrame.Angles(0, self.Angle, 0) * CFrame.new(
-			Vector3.new(1, 1.4, 1) * (200 + 800 * self.Distance)
+			Vector3.new(1, 1.4, 1) * (20 + 100 * self.Distance)
 		)).Position,
 		pos
 	)
-	workspace.CurrentCamera.FieldOfView = 5
 end
 
 return IsoCameraController
