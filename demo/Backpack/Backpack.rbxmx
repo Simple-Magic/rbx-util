@@ -91,7 +91,7 @@
 					<string name="Name">UIListLayout</string>
 					<UDim name="Padding">
 						<S>0</S>
-						<O>8</O>
+						<O>4</O>
 					</UDim>
 					<token name="SortOrder">2</token>
 					<int64 name="SourceAssetId">-1</int64>
