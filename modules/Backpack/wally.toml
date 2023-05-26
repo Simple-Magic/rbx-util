@@ -1,7 +1,7 @@
 [package]
-name = "rasmusmerzin/playerlist"
-description = "PlayerList controller displays children of Players."
-version = "1.0.2"
+name = "rasmusmerzin/backpack"
+description = "Backpack controller displays children of Backpack."
+version = "0.1.0"
 license = "MIT"
 authors = ["Emil Rasmus Merzin"]
 registry = "https://github.com/UpliftGames/wally-index"
@@ -10,3 +10,4 @@ realm = "shared"
 [dependencies]
 Knit = "sleitnick/knit@1"
 Timer = "sleitnick/timer@1"
+

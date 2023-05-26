@@ -1,11 +1,15 @@
 > `moonwave build --publish --code modules`
+# [Backpack](https://wally.run/package/rasmusmerzin/backpack?version=0.1.0)
+```toml
+Backpack = "rasmusmerzin/backpack@0.1.0"
+```
 # [Bar](https://wally.run/package/rasmusmerzin/bar?version=1.0.0)
 ```toml
 Bar = "rasmusmerzin/bar@1.0.0"
 ```
-# [IsoCamera](https://wally.run/package/rasmusmerzin/isocamera?version=1.0.0)
+# [IsoCamera](https://wally.run/package/rasmusmerzin/isocamera?version=1.1.0)
 ```toml
-IsoCamera = "rasmusmerzin/isocamera@1.0.0"
+IsoCamera = "rasmusmerzin/isocamera@1.1.0"
 ```
 # [Maid](https://wally.run/package/rasmusmerzin/maid?version=1.0.0)
 ```toml
