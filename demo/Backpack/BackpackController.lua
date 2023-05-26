@@ -48,6 +48,10 @@ function BackpackController:OnInputEnded(inputObject: InputObject, processed: bo
 		local tool = tools[inputNumber]
 		if not tool then return end
 		self:Toggle(tool)
+	elseif inputObject.KeyCode == Enum.KeyCode.ButtonL1 then
+		self:EquipPrev()
+	elseif inputObject.KeyCode == Enum.KeyCode.ButtonR1 then
+		self:EquipNext()
 	end
 end
 
@@ -73,6 +77,36 @@ function BackpackController:OnTick()
 		if tool.Parent == Player.Backpack then continue end
 		if tool.Parent == Player.Character then continue end
 		self:Remove(tool)
+	end
+end
+
+function BackpackController:EquipNext()
+	local equipped = Player.Character:FindFirstChildWhichIsA("Tool")
+	local tools = self:GetTools()
+	if equipped then
+		local index = table.find(tools, equipped)
+		if index < #tools then
+			self:Equip(tools[index + 1])
+		else
+			self:Unequip(equipped)
+		end
+	elseif #tools > 0 then
+		self:Equip(tools[1])
+	end
+end
+
+function BackpackController:EquipPrev()
+	local equipped = Player.Character:FindFirstChildWhichIsA("Tool")
+	local tools = self:GetTools()
+	if equipped then
+		local index = table.find(tools, equipped)
+		if index > 1 then
+			self:Equip(tools[index - 1])
+		else
+			self:Unequip(equipped)
+		end
+	elseif #tools > 0 then
+		self:Equip(tools[#tools])
 	end
 end
 
