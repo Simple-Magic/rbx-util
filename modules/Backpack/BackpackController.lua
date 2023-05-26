@@ -1,10 +1,9 @@
 local Players = game:GetService("Players")
-local ReplicatedStorage = game:GetService("ReplicatedStorage")
 local StarterGui = game:GetService("StarterGui")
 local StarterPlayer = game:GetService("StarterPlayer")
 local UserInputService = game:GetService("UserInputService")
-local Knit = require(ReplicatedStorage.Packages.Knit)
-local Timer = require(ReplicatedStorage.Packages.Timer)
+local Knit = require(script.Parent.Parent.Knit)
+local Timer = require(script.Parent.Parent.Timer)
 local Player = Players.LocalPlayer
 
 StarterGui:SetCoreGuiEnabled(Enum.CoreGuiType.Backpack, false)

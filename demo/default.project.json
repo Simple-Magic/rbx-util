@@ -4,7 +4,6 @@
     "$className": "DataModel",
 
     "ReplicatedStorage": {
-      "Backpack": { "$path": "Backpack" },
       "Packages": { "$path": "Packages" }
     },
     "ServerStorage": {
