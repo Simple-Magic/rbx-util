@@ -1,6 +1,7 @@
 local Players = game:GetService("Players")
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 local StarterGui = game:GetService("StarterGui")
+local StarterPlayer = game:GetService("StarterPlayer")
 local UserInputService = game:GetService("UserInputService")
 local Knit = require(ReplicatedStorage.Packages.Knit)
 local Timer = require(ReplicatedStorage.Packages.Timer)
@@ -36,8 +37,22 @@ function BackpackController:KnitInit()
 end
 
 function BackpackController:KnitStart()
-	Timer.Simple(0.1, function() self:OnTick() end, true)
 	UserInputService.InputEnded:Connect(function(...) self:OnInputEnded(...) end)
+	Timer.Simple(0.1, function() self:OnTick() end, true)
+	if StarterPlayer.CameraMode == Enum.CameraMode.LockFirstPerson then
+		UserInputService.InputChanged:Connect(function(...) self:OnInputChanged(...) end)
+	end
+end
+
+function BackpackController:OnInputChanged(inputObject: InputObject, processed: boolean)
+	if processed then return end
+	if inputObject.UserInputType == Enum.UserInputType.MouseWheel then
+		if inputObject.Position.Z == 1 then
+			self:EquipPrev()
+		else
+			self:EquipNext()
+		end
+	end
 end
 
 function BackpackController:OnInputEnded(inputObject: InputObject, processed: boolean)
