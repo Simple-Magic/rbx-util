@@ -1,5 +1,5 @@
 [package]
-name = "simple-magic/demo"
+name = "simple-magic/rbx-util"
 version = "0.1.0"
 registry = "https://github.com/UpliftGames/wally-index"
 realm = "shared"
@@ -13,4 +13,5 @@ Message = "rasmusmerzin/message@1"
 PlayerList = "rasmusmerzin/playerlist@1"
 Repository = "rasmusmerzin/repository@1"
 StackQueue = "rasmusmerzin/stackqueue@1"
+Timer = "sleitnick/timer@1"
 compose = "rasmusmerzin/compose@1"

@@ -1,12 +1,15 @@
 {
-  "name": "rbx-util",
+  "name": "demo",
   "tree": {
     "$className": "DataModel",
 
     "ReplicatedStorage": {
+      "Backpack": { "$path": "Backpack" },
       "Packages": { "$path": "Packages" }
     },
-    "ServerStorage": {},
+    "ServerStorage": {
+      "Demo": { "$path": "Server" }
+    },
     "ServerScriptService": {
       "Main": { "$path": "Main.server.lua" }
     },
