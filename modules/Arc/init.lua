@@ -61,7 +61,7 @@ end
 function Arc:Calculate()
 	local direction = self.Omega - self.Alpha
 	local distance = direction.Magnitude
-	local steps = math.floor(distance / 8)
+	local steps = math.floor(distance / 2)
 	for i = 0, steps do
 		local progress = i / steps
 		local position = self.Alpha
