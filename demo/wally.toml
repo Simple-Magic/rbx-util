@@ -5,6 +5,7 @@ registry = "https://github.com/UpliftGames/wally-index"
 realm = "shared"
 
 [dependencies]
+Arc = "rasmusmerzin/arc@0"
 Backpack = "rasmusmerzin/backpack@0"
 Bar = "rasmusmerzin/bar@1"
 Knit = "sleitnick/knit@1"

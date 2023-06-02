@@ -1,6 +1,7 @@
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 local Players = game:GetService("Players")
 local Knit = require(ReplicatedStorage.Packages.Knit)
+local Arc = require(ReplicatedStorage.Packages.Arc)
 
 local AnnouncementService
 local CountdownService
@@ -35,6 +36,7 @@ function DemoService:OnCharacter(player: Player)
 	self:HitmarkerToolFor(player)
 	self:LoadingToolFor(player)
 	self:DialogueToolFor(player)
+	self:ArcToolFor(player)
 end
 
 function DemoService:AnnounceToolFor(player)
@@ -97,6 +99,19 @@ function DemoService:LoadingToolFor(player)
 	tool.Parent = player.Backpack
 	tool.Equipped:Connect(function() LoadingService:SetLoadingFor(player, true) end)
 	tool.Unequipped:Connect(function() LoadingService:SetLoadingFor(player, false) end)
+end
+
+function DemoService:ArcToolFor(player)
+	local tool = Instance.new("Tool")
+	tool.Name = "Arc"
+	tool.RequiresHandle = false
+	tool.CanBeDropped = false
+	tool.Parent = player.Backpack
+	local arc
+	tool.Activated:Connect(function()
+		if arc then arc:Destroy() end
+		arc = Arc.new(Vector3.zero, Vector3.new(32, 0, 32))
+	end)
 end
 
 return DemoService
