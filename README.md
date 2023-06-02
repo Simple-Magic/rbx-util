@@ -1,4 +1,8 @@
 > `moonwave build --publish --code modules`
+# [Arc](https://wally.run/package/rasmusmerzin/arc?version=0.1.0)
+```toml
+Arc = "rasmusmerzin/arc@0.1.0"
+```
 # [Backpack](https://wally.run/package/rasmusmerzin/backpack?version=0.1.0)
 ```toml
 Backpack = "rasmusmerzin/backpack@0.1.0"
