@@ -59,7 +59,6 @@ function Arc:_Construct()
 	self.Part.Parent = Workspace
 	self.Attachments = {} :: Table<number, Attachment>
 	self.Beams = {} :: Table<number, Beam>
-	self:Calculate()
 end
 
 --[=[
@@ -106,15 +105,13 @@ function Arc:Tween(part: BasePart, tweenInfo: TweenInfo)
 	local distance = direction.Magnitude
 	local steps = math.floor(distance / 4)
 	local stepTime = tweenInfo.Time / steps
-	part.Anchored = true
+	local stepInfo = TweenInfo.new(stepTime, Enum.EasingStyle.Linear)
 	for i = 1, steps do
 		local progress = i / steps
 		local position = self.Alpha
 			+ direction * progress
 			+ Vector3.yAxis * self:_GetHeight(progress)
-		TweenService:Create(part, TweenInfo.new(stepTime), {
-			CFrame = CFrame.new(position),
-		}):Play()
+		TweenService:Create(part, stepInfo, { CFrame = CFrame.new(position) }):Play()
 		task.wait(stepTime)
 	end
 end
