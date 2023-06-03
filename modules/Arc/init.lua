@@ -76,14 +76,14 @@ function Arc:Calculate()
 		self.Attachments[i] = self.Attachments[i] or Instance.new("Attachment")
 		self.Attachments[i].CFrame = CFrame.new(position)
 		self.Attachments[i].Name = "Attachment" .. i
-		self.Attachments[i].Parent = self.Part
+		pcall(function() self.Attachments[i].Parent = self.Part end)
 		if i == 0 then continue end
 		self.Beams[i] = self.Beams[i] or Instance.new("Beam")
 		self.Beams[i].Attachment0 = self.Attachments[i - 1]
 		self.Beams[i].Attachment1 = self.Attachments[i]
 		self.Beams[i].Name = "Beam" .. i
 		self.Beams[i].Enabled = self.Visible
-		self.Beams[i].Parent = self.Part
+		pcall(function() self.Beams[i].Parent = self.Part end)
 	end
 	local attachmentCount = #self.Attachments
 	for i = steps + 1, attachmentCount do
