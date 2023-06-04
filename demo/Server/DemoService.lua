@@ -16,7 +16,7 @@ local DemoService = Knit.CreateService({
 	Client = {},
 })
 
-function DemoService.Client:ArcTween(player: Player, alpha: Vector3, omega: Vector3)
+function DemoService.Client:ArcTween(_: Player, alpha: Vector3, omega: Vector3)
 	local arc = Arc.new(alpha, omega)
 	local part = Instance.new("Part")
 	part.Size = Vector3.one
