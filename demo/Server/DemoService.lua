@@ -1,6 +1,8 @@
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 local Players = game:GetService("Players")
+local Workspace = game:GetService("Workspace")
 local Knit = require(ReplicatedStorage.Packages.Knit)
+local Arc = require(ReplicatedStorage.Packages.Arc)
 
 local AnnouncementService
 local CountdownService
@@ -9,7 +11,23 @@ local HitmarkerService
 local LoadingService
 local LogService
 
-local DemoService = Knit.CreateService({ Name = "DemoService" })
+local DemoService = Knit.CreateService({
+	Name = "DemoService",
+	Client = {},
+})
+
+function DemoService.Client:ArcTween(player: Player, alpha: Vector3, omega: Vector3)
+	local arc = Arc.new(alpha, omega)
+	local part = Instance.new("Part")
+	part.Size = Vector3.one
+	part.CanCollide = false
+	part.Anchored = true
+	part.CFrame = CFrame.new(alpha)
+	part.Parent = Workspace
+	arc:Tween(part, TweenInfo.new(1))
+	part.CanCollide = true
+	part.Anchored = false
+end
 
 function DemoService:KnitStart()
 	AnnouncementService = Knit.GetService("AnnouncementService")

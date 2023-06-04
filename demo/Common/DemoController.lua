@@ -6,12 +6,16 @@ local Arc = require(ReplicatedStorage.Packages.Arc)
 local Player = Players.LocalPlayer
 local Mouse = Player:GetMouse()
 
+local DemoService
+
 local DemoController = Knit.CreateController({ Name = "DemoController" })
 
 function DemoController:KnitInit()
 	Player.CharacterAdded:Connect(function() self:OnCharacter() end)
 	if Player.Character then self:OnCharacter() end
 end
+
+function DemoController:KnitStart() DemoService = Knit.GetService("DemoService") end
 
 function DemoController:OnCharacter() self:CreateArcTool() end
 
@@ -30,13 +34,7 @@ function DemoController:CreateArcTool()
 		arc = Arc.new(alpha, omega)
 		arc.Visible = true
 		arc:Calculate()
-		local part = Instance.new("Part")
-		part.Size = Vector3.one
-		part.CanCollide = false
-		part.Anchored = true
-		part.CFrame = CFrame.new(alpha)
-		part.Parent = Workspace
-		arc:Tween(part, TweenInfo.new(1))
+		DemoService:ArcTween(alpha, omega)
 	end)
 end
 
