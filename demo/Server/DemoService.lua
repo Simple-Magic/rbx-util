@@ -10,6 +10,7 @@ local DialogueService
 local HitmarkerService
 local LoadingService
 local LogService
+local AdminService
 
 local DemoService = Knit.CreateService({
 	Name = "DemoService",
@@ -30,6 +31,7 @@ function DemoService.Client:ArcTween(_: Player, alpha: Vector3, omega: Vector3)
 end
 
 function DemoService:KnitStart()
+	AdminService = Knit.GetService("AdminService")
 	AnnouncementService = Knit.GetService("AnnouncementService")
 	CountdownService = Knit.GetService("CountdownService")
 	DialogueService = Knit.GetService("DialogueService")
@@ -40,6 +42,9 @@ function DemoService:KnitStart()
 	for _, player in pairs(Players:GetPlayers()) do
 		self:OnPlayer(player)
 	end
+	AdminService:AddSelector(AdminService.AdminSelector.group(16290672, 32)) -- Simple Magic Studios
+	AdminService:AddSelector(AdminService.AdminSelector.user(3836079781)) -- rasmusmerzin
+	AdminService:CreateStandardCommands()
 end
 
 function DemoService:OnPlayer(player: Player)
