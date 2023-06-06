@@ -43,8 +43,12 @@ end
 	Check if player matches selector.
 ]=]
 function AdminSelector:MatchPlayer(player: Player): boolean
-	if self.UserId == player.UserId then return true end
-	if self.GroupId then return player:GetRankInGroup(self.GroupId) >= (self.MinRank or 1) end
+	if self.UserId == player.UserId then
+		return true
+	end
+	if self.GroupId then
+		return player:GetRankInGroup(self.GroupId) >= (self.MinRank or 1)
+	end
 	return false
 end
 

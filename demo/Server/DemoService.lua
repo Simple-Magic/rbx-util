@@ -44,7 +44,6 @@ function DemoService:KnitStart()
 	end
 	AdminService:AddSelector(AdminService.AdminSelector.group(16290672, 32)) -- Simple Magic Studios
 	AdminService:AddSelector(AdminService.AdminSelector.user(3836079781)) -- rasmusmerzin
-	AdminService:CreateStandardCommands()
 end
 
 function DemoService:OnPlayer(player: Player)

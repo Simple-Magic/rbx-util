@@ -13,6 +13,10 @@ local LogService
 	local AdminService = Knit.GetService("AdminService")
 	```
 ]=]
+--[=[
+	@within AdminService
+	@prop AdminSelector AdminSelector
+]=]
 local AdminService = Knit.CreateService({
 	Name = "AdminService",
 	AdminSelector = AdminSelector,
@@ -113,7 +117,11 @@ end
 --[=[
 	Bind a callback to an admin command endpoint.
 ]=]
-function AdminService:AddCommand(name: string, alias: string?, callback: Function)
+function AdminService:AddCommand(
+	name: string,
+	alias: string?,
+	callback: (origin: TextSource, source: string) -> string
+)
 	if self._Commands[name] then return end
 	self._Commands[name] = Instance.new("TextChatCommand")
 	self._Commands[name].Name = ("%sCommand"):format(name)
@@ -128,54 +136,6 @@ function AdminService:AddCommand(name: string, alias: string?, callback: Functio
 		else
 			LogService:LogTo(player, "You have to be an admin to execute this command.")
 		end
-	end)
-end
-
---[=[
-	Create default admin commands.
-]=]
-function AdminService:CreateStandardCommands()
-	self:AddCommand("Kill", nil, function(origin, source)
-		local player = Players:GetPlayerByUserId(origin.UserId)
-		local count = 0
-		for _, plr in
-			ipairs(AdminService.playersFromNames(AdminService.commandParameters(source), player))
-		do
-			local humanoid = plr.Character and plr.Character:FindFirstChild("Humanoid") :: Humanoid?
-			if humanoid then
-				humanoid.Health = 0
-				count += 1
-			end
-		end
-		return ("Killed %d players."):format(count)
-	end)
-	self:AddCommand("ForceField", "/ff", function(origin, source)
-		local player = Players:GetPlayerByUserId(origin.UserId)
-		local count = 0
-		for _, plr in
-			ipairs(AdminService.playersFromNames(AdminService.commandParameters(source), player))
-		do
-			local ff = plr.Character and plr.Character:FindFirstChild("ForceField")
-			if ff then continue end
-			ff = Instance.new("ForceField")
-			ff.Parent = plr.Character
-			count += 1
-		end
-		return ("Added %d force fields."):format(count)
-	end)
-	self:AddCommand("UnForceField", "/unff", function(origin, source)
-		local player = Players:GetPlayerByUserId(origin.UserId)
-		local count = 0
-		for _, plr in
-			ipairs(AdminService.playersFromNames(AdminService.commandParameters(source), player))
-		do
-			local ff = plr.Character and plr.Character:FindFirstChild("ForceField")
-			if ff then
-				ff:Destroy()
-				count += 1
-			end
-		end
-		return ("Removed %d force fields."):format(count)
 	end)
 end
 

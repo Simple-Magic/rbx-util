@@ -10,7 +10,7 @@ local LogService = Knit.CreateService({
 function LogService:LogAll(msg: string) self.Client.Log:FireAll(msg) end
 
 function LogService:LogTo(player: Player, msg: string)
-	if player:IsA("Player") then self.Client.Log:Fire(player, msg) end
+	if player and player:IsA("Player") then self.Client.Log:Fire(player, msg) end
 end
 
 return LogService
