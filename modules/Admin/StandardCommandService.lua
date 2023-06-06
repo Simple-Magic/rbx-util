@@ -1,20 +1,39 @@
 local Players = game:GetService("Players")
-local ReplicatedStorage = game:GetService("ReplicatedStorage")
-local Knit = require(ReplicatedStorage.Packages.Knit)
+local TextChatService = game:GetService("TextChatService")
+local Knit = require(script.Parent.Parent.Knit)
 
 local AdminService
+local AnnouncementService
+local CountdownService
 
 local StandardCommandService = Knit.CreateService({ Name = "StandardCommandService" })
 
 function StandardCommandService:KnitStart()
 	AdminService = Knit.GetService("AdminService")
+	AnnouncementService = Knit.GetService("AnnouncementService")
+	CountdownService = Knit.GetService("CountdownService")
+	AdminService:AddCommand("Announce", nil, function(...) return self:_Announce(...) end)
+	AdminService:AddCommand("Countdown", nil, function(...) return self:_Countdown(...) end)
 	AdminService:AddCommand("Damage", nil, function(...) return self:_Damage(...) end)
 	AdminService:AddCommand("ForceField", "/ff", function(...) return self:_ForceField(...) end)
+	AdminService:AddCommand("Give", nil, function(...) return self:_Give(...) end)
 	AdminService:AddCommand("Heal", nil, function(...) return self:_Heal(...) end)
+	AdminService:AddCommand("Help", "/?", function(...) return self:_Help(...) end)
 	AdminService:AddCommand("Info", nil, function(...) return self:_Info(...) end)
 	AdminService:AddCommand("Kill", nil, function(...) return self:_Kill(...) end)
 	AdminService:AddCommand("Teleport", "/tp", function(...) return self:_Teleport(...) end)
+	AdminService:AddCommand("Tools", nil, function(...) return self:_Tools(...) end)
 	AdminService:AddCommand("UnForceField", "/unff", function(...) return self:_UnFF(...) end)
+end
+
+function StandardCommandService:_Announce(_: TextSource, source: string)
+	local parameters = AdminService.commandParameters(source)
+	AnnouncementService:Announce(table.concat(parameters, " "))
+end
+
+function StandardCommandService:_Countdown(_: TextSource, source: string)
+	local parameters = AdminService.commandParameters(source)
+	CountdownService:Countdown(tonumber(parameters[1]) or 0)
 end
 
 function StandardCommandService:_Teleport(origin: TextSource, source: string): string
@@ -39,6 +58,20 @@ function StandardCommandService:_Teleport(origin: TextSource, source: string): s
 		count += 1
 	end
 	return ("Teleported %d players."):format(count)
+end
+
+function StandardCommandService:_Give(origin: TextSource, source: string): string
+	local player = Players:GetPlayerByUserId(origin.UserId)
+	local parameters = AdminService.commandParameters(source)
+	local tools = AdminService.tools()
+	local tool = tools[parameters[1]:lower()]
+	table.remove(parameters, 1)
+	local players = AdminService.playersFromNames(parameters, player)
+	for _, plr in ipairs(players) do
+		local clone = tool:Clone()
+		clone.Parent = plr.Backpack
+	end
+	return ("Gave %d %s's."):format(#players, tool.Name)
 end
 
 function StandardCommandService:_Damage(origin: TextSource, source: string): string
@@ -70,6 +103,24 @@ function StandardCommandService:_Heal(origin: TextSource, source: string): strin
 		end
 	end
 	return ("Healed %d players."):format(count)
+end
+
+function StandardCommandService:_Help(): string
+	local output = "<b>Commands:</b>\n"
+	for _, child in ipairs(TextChatService:GetChildren()) do
+		if child:IsA("TextChatCommand") then
+			output ..= ("- %s, %s\n"):format(child.PrimaryAlias, child.SecondaryAlias)
+		end
+	end
+	return output
+end
+
+function StandardCommandService:_Tools(): string
+	local output = "<b>Tools:</b>\n"
+	for _, tool in pairs(AdminService.tools()) do
+		output ..= ("- %s\n"):format(tool.Name)
+	end
+	return output
 end
 
 function StandardCommandService:_Info(origin: TextSource, source: string): string

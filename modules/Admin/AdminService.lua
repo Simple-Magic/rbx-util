@@ -1,7 +1,9 @@
+local Players = game:GetService("Players")
+local ReplicatedStorage = game:GetService("ReplicatedStorage")
+local ServerStorage = game:GetService("ServerStorage")
+local TextChatService = game:GetService("TextChatService")
 local Knit = require(script.Parent.Parent.Knit)
 local AdminSelector = require(script.Parent.AdminSelector)
-local Players = game:GetService("Players")
-local TextChatService = game:GetService("TextChatService")
 
 local LogService
 
@@ -58,6 +60,17 @@ function AdminService.playersFromNames(names: { string }, me: Player): { Player 
 		if name:lower() == "all" then return Players:GetChildren() end
 	end
 	return players
+end
+
+function AdminService.tools(): Table<string, Tool>
+	local tools = {}
+	for _, descendant in ipairs(ReplicatedStorage:GetDescendants()) do
+		if descendant:IsA("Tool") then tools[descendant.Name:lower()] = descendant end
+	end
+	for _, descendant in ipairs(ServerStorage:GetDescendants()) do
+		if descendant:IsA("Tool") then tools[descendant.Name:lower()] = descendant end
+	end
+	return tools
 end
 
 function AdminService:KnitStart()

@@ -32,8 +32,6 @@ end
 
 function DemoService:KnitStart()
 	AdminService = Knit.GetService("AdminService")
-	AnnouncementService = Knit.GetService("AnnouncementService")
-	CountdownService = Knit.GetService("CountdownService")
 	DialogueService = Knit.GetService("DialogueService")
 	HitmarkerService = Knit.GetService("HitmarkerService")
 	LoadingService = Knit.GetService("LoadingService")
@@ -52,31 +50,9 @@ function DemoService:OnPlayer(player: Player)
 end
 
 function DemoService:OnCharacter(player: Player)
-	self:AnnounceToolFor(player)
-	self:CountdownToolFor(player)
 	self:HitmarkerToolFor(player)
 	self:LoadingToolFor(player)
 	self:DialogueToolFor(player)
-end
-
-function DemoService:AnnounceToolFor(player)
-	local tool = Instance.new("Tool")
-	tool.Name = "Announce"
-	tool.RequiresHandle = false
-	tool.CanBeDropped = false
-	tool.Parent = player.Backpack
-	tool.Activated:Connect(
-		function() AnnouncementService:AnnounceFor(player, "Sample Announcement") end
-	)
-end
-
-function DemoService:CountdownToolFor(player)
-	local tool = Instance.new("Tool")
-	tool.Name = "Countdown"
-	tool.RequiresHandle = false
-	tool.CanBeDropped = false
-	tool.Parent = player.Backpack
-	tool.Activated:Connect(function() CountdownService:Countdown(3) end)
 end
 
 function DemoService:DialogueToolFor(player)

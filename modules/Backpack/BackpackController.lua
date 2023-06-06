@@ -149,11 +149,14 @@ function BackpackController:Add(tool: Tool, index: number?)
 		self.Buttons[tool].Parent = self.Gui.Frame
 	end
 	local equipped = tool.Parent == Player.Character
-	local width = equipped and 128 or 32
+	local width = equipped and 96 or 32
 	local height = equipped and 48 or 32
-	local text = equipped and tool.Name or tostring(index)
 	self.Buttons[tool].Size = UDim2.new(0, width, 0, height)
-	self.Buttons[tool].Text = text
+	self.Buttons[tool].Text = equipped and tool.Name or tostring(index)
+	self.Buttons[tool].LayoutOrder = index
+	self.Buttons[tool].ImageLabel.Image = tool.TextureId
+	self.Buttons[tool].ImageLabel.Size = equipped and UDim2.new(0, height, 0, height)
+		or UDim2.new(1, 0, 1, 0)
 end
 
 function BackpackController:Remove(tool: Tool)

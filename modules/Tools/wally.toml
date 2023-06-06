@@ -1,13 +1,13 @@
 [package]
-name = "rasmusmerzin/backpack"
-description = "Backpack controller displays children of Backpack."
-version = "0.2.2"
+name = "rasmusmerzin/tools"
+description = "Tool bundle."
+version = "0.1.3"
 license = "MIT"
 authors = ["Emil Rasmus Merzin"]
 registry = "https://github.com/UpliftGames/wally-index"
 realm = "shared"
 
 [dependencies]
+Component = "sleitnick/component@2"
 Knit = "sleitnick/knit@1"
-Timer = "sleitnick/timer@1"
-
+Trove = "sleitnick/trove@0.5"
