@@ -7,6 +7,8 @@ type DialogueOptions = {
 	Title: string?,
 	Description: string?,
 	FreezePlayer: boolean?,
+	OkText: string?,
+	CancelText: string?,
 }
 
 local DialogueService
@@ -25,6 +27,8 @@ function DialogueController:CreateDialogue(id: number, options: DialogueOptions?
 	self.Gui.Frame.Title.Text = options.Title or "?"
 	self.Gui.Frame.Description.Text = options.Description or "..."
 	if options.FreezePlayer then Players.LocalPlayer.Character.HumanoidRootPart.Anchored = true end
+	if options.OkText then self.Gui.Frame.OkButton.Text = options.OkText end
+	if options.CancelText then self.Gui.Frame.CancelButton.Text = options.CancelText end
 	self.Gui.Frame.OkButton.MouseButton1Click:Connect(function()
 		self.Gui:Destroy()
 		self.Gui = nil

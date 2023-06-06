@@ -2,7 +2,7 @@
 	<Meta name="ExplicitAutoJoints">true</Meta>
 	<External>null</External>
 	<External>nil</External>
-	<Item class="Tool" referent="RBXAF755E80C83B42EB94777DF83CC495DA">
+	<Item class="Tool" referent="RBX298BEAEA3F8F4A0BAF3964ED480818BA">
 		<Properties>
 			<BinaryString name="AttributesSerialize"></BinaryString>
 			<bool name="CanBeDropped">true</bool>
@@ -46,34 +46,34 @@
 			<token name="ModelStreamingMode">0</token>
 			<string name="Name">Pistol</string>
 			<bool name="NeedsPivotMigration">false</bool>
-			<Ref name="PrimaryPart">null</Ref>
+			<Ref name="PrimaryPart">RBX8928B141E0944DFDA5D6255175B617B1</Ref>
 			<bool name="RequiresHandle">true</bool>
 			<float name="ScaleFactor">1</float>
 			<int64 name="SourceAssetId">-1</int64>
-			<BinaryString name="Tags">RHJvcHBhYmxlAFBpc3RvbA==</BinaryString>
+			<BinaryString name="Tags">RHJvcHBhYmxlAEd1bg==</BinaryString>
 			<Content name="TextureId"><url>rbxassetid://8373143176</url></Content>
 			<string name="ToolTip"></string>
 			<OptionalCoordinateFrame name="WorldPivotData"></OptionalCoordinateFrame>
 		</Properties>
-		<Item class="Animation" referent="RBX6A074A8EF3534BAB8067CEA45D70D65F">
+		<Item class="Animation" referent="RBX286EB64B95A642999AA5FA82E19BD7E1">
 			<Properties>
 				<Content name="AnimationId"><url>rbxassetid://8231181796</url></Content>
 				<BinaryString name="AttributesSerialize"></BinaryString>
-				<string name="Name">FireAnimation</string>
+				<string name="Name">Shot</string>
 				<int64 name="SourceAssetId">-1</int64>
 				<BinaryString name="Tags"></BinaryString>
 			</Properties>
 		</Item>
-		<Item class="Animation" referent="RBX8F840FC11E9C464CA634F74FFD518AB1">
+		<Item class="Animation" referent="RBXF46CE1C75476400E909A438F5B3E4E0E">
 			<Properties>
 				<Content name="AnimationId"><url>rbxassetid://8369775010</url></Content>
 				<BinaryString name="AttributesSerialize"></BinaryString>
-				<string name="Name">ReloadAnimation</string>
+				<string name="Name">Reload</string>
 				<int64 name="SourceAssetId">-1</int64>
 				<BinaryString name="Tags"></BinaryString>
 			</Properties>
 		</Item>
-		<Item class="Part" referent="RBX33BE205CB6584A48A406223C9216D646">
+		<Item class="Part" referent="RBX8928B141E0944DFDA5D6255175B617B1">
 			<Properties>
 				<bool name="Anchored">false</bool>
 				<BinaryString name="AttributesSerialize"></BinaryString>
@@ -167,7 +167,7 @@
 					<Z>1.23862004</Z>
 				</Vector3>
 			</Properties>
-			<Item class="SpecialMesh" referent="RBX4AA1A74E22354DD69CA8B0BC87F4F395">
+			<Item class="SpecialMesh" referent="RBX7C1F448261A24281BFABC8360C0BD199">
 				<Properties>
 					<BinaryString name="AttributesSerialize"></BinaryString>
 					<Content name="MeshId"><url>http://www.roblox.com/asset/?id=72012879</url></Content>
@@ -193,7 +193,7 @@
 					</Vector3>
 				</Properties>
 			</Item>
-			<Item class="Sound" referent="RBX3111CE33FEED4657838A320C876459FA">
+			<Item class="Sound" referent="RBX23AB2223F7EB4CF8A54110E460523950">
 				<Properties>
 					<BinaryString name="AttributesSerialize"></BinaryString>
 					<float name="EmitterSize">10</float>
@@ -215,7 +215,7 @@
 					<float name="xmlRead_MaxDistance_3">500</float>
 				</Properties>
 			</Item>
-			<Item class="Sound" referent="RBXDF797F3715814D1A88D9657541405ED5">
+			<Item class="Sound" referent="RBX35E2DBEB04224F209366CBF239D7CB3A">
 				<Properties>
 					<BinaryString name="AttributesSerialize"></BinaryString>
 					<float name="EmitterSize">10</float>
@@ -237,7 +237,7 @@
 					<float name="xmlRead_MaxDistance_3">500</float>
 				</Properties>
 			</Item>
-			<Item class="Sound" referent="RBXF2C94DEFF268483CB20BC61B69AB95D6">
+			<Item class="Sound" referent="RBXB41758D770ED48A79F32D53E4165819F">
 				<Properties>
 					<BinaryString name="AttributesSerialize"></BinaryString>
 					<float name="EmitterSize">10</float>

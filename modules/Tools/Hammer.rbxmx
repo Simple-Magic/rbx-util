@@ -2,7 +2,7 @@
 	<Meta name="ExplicitAutoJoints">true</Meta>
 	<External>null</External>
 	<External>nil</External>
-	<Item class="Tool" referent="RBX8D82042ACC0B40C98799CE3FF74C4FB2">
+	<Item class="Tool" referent="RBX77D0358BC75D4CCFB4E58EC1037FDAA8">
 		<Properties>
 			<BinaryString name="AttributesSerialize"></BinaryString>
 			<bool name="CanBeDropped">true</bool>
@@ -46,31 +46,16 @@
 			<token name="ModelStreamingMode">0</token>
 			<string name="Name">Hammer</string>
 			<bool name="NeedsPivotMigration">false</bool>
-			<Ref name="PrimaryPart">null</Ref>
+			<Ref name="PrimaryPart">RBXF5D60B00940B4CF98C532078AA17E39A</Ref>
 			<bool name="RequiresHandle">true</bool>
 			<float name="ScaleFactor">1</float>
 			<int64 name="SourceAssetId">-1</int64>
-			<BinaryString name="Tags">SGFtbWVyAERyb3BwYWJsZQ==</BinaryString>
+			<BinaryString name="Tags">RHJvcHBhYmxlAE1lbGVl</BinaryString>
 			<Content name="TextureId"><null></null></Content>
 			<string name="ToolTip"></string>
-			<OptionalCoordinateFrame name="WorldPivotData">
-				<CFrame>
-					<X>180.377655</X>
-					<Y>2.00045156</Y>
-					<Z>436.667664</Z>
-					<R00>-0.492368996</R00>
-					<R01>0.247718021</R01>
-					<R02>-0.834391177</R02>
-					<R10>0.0870269984</R10>
-					<R11>0.967851639</R11>
-					<R12>0.235986337</R12>
-					<R20>0.866024971</R20>
-					<R21>0.0435777903</R21>
-					<R22>-0.498098284</R22>
-				</CFrame>
-			</OptionalCoordinateFrame>
+			<OptionalCoordinateFrame name="WorldPivotData"></OptionalCoordinateFrame>
 		</Properties>
-		<Item class="Part" referent="RBX442381F4EB11437BA6478B6ADAC42EE8">
+		<Item class="Part" referent="RBXF5D60B00940B4CF98C532078AA17E39A">
 			<Properties>
 				<bool name="Anchored">false</bool>
 				<BinaryString name="AttributesSerialize"></BinaryString>
@@ -156,7 +141,7 @@
 					<Y>0</Y>
 					<Z>0</Z>
 				</Vector3>
-				<token name="formFactorRaw">2</token>
+				<token name="formFactorRaw">1</token>
 				<token name="shape">1</token>
 				<Vector3 name="size">
 					<X>1</X>
@@ -164,7 +149,7 @@
 					<Z>1</Z>
 				</Vector3>
 			</Properties>
-			<Item class="SpecialMesh" referent="RBXB3F4F15BA7194D0DB8C30FE269533669">
+			<Item class="SpecialMesh" referent="RBXC59735AB4629440593355E3858CA7C16">
 				<Properties>
 					<BinaryString name="AttributesSerialize"></BinaryString>
 					<Content name="MeshId"><url>rbxasset://fonts/hammer.mesh</url></Content>
@@ -190,6 +175,15 @@
 					</Vector3>
 				</Properties>
 			</Item>
+		</Item>
+		<Item class="Animation" referent="RBXD19E10654C9647F18CF189FF56668DF6">
+			<Properties>
+				<Content name="AnimationId"><url>rbxassetid://13619126531</url></Content>
+				<BinaryString name="AttributesSerialize"></BinaryString>
+				<string name="Name">Slash</string>
+				<int64 name="SourceAssetId">-1</int64>
+				<BinaryString name="Tags"></BinaryString>
+			</Properties>
 		</Item>
 	</Item>
 	<SharedStrings>

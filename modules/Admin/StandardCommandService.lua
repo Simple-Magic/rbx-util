@@ -5,6 +5,8 @@ local Knit = require(script.Parent.Parent.Knit)
 local AdminService
 local AnnouncementService
 local CountdownService
+local DialogueService
+local LogService
 
 local StandardCommandService = Knit.CreateService({ Name = "StandardCommandService" })
 
@@ -12,6 +14,8 @@ function StandardCommandService:KnitStart()
 	AdminService = Knit.GetService("AdminService")
 	AnnouncementService = Knit.GetService("AnnouncementService")
 	CountdownService = Knit.GetService("CountdownService")
+	DialogueService = Knit.GetService("DialogueService")
+	LogService = Knit.GetService("LogService")
 	AdminService:AddCommand("Announce", nil, function(...) return self:_Announce(...) end)
 	AdminService:AddCommand("Countdown", nil, function(...) return self:_Countdown(...) end)
 	AdminService:AddCommand("Damage", nil, function(...) return self:_Damage(...) end)
@@ -19,6 +23,7 @@ function StandardCommandService:KnitStart()
 	AdminService:AddCommand("Give", nil, function(...) return self:_Give(...) end)
 	AdminService:AddCommand("Heal", nil, function(...) return self:_Heal(...) end)
 	AdminService:AddCommand("Help", "/?", function(...) return self:_Help(...) end)
+	AdminService:AddCommand("Vote", nil, function(...) return self:_Vote(...) end)
 	AdminService:AddCommand("Info", nil, function(...) return self:_Info(...) end)
 	AdminService:AddCommand("Kill", nil, function(...) return self:_Kill(...) end)
 	AdminService:AddCommand("Teleport", "/tp", function(...) return self:_Teleport(...) end)
@@ -34,6 +39,38 @@ end
 function StandardCommandService:_Countdown(_: TextSource, source: string)
 	local parameters = AdminService.commandParameters(source)
 	CountdownService:Countdown(tonumber(parameters[1]) or 0)
+end
+
+function StandardCommandService:_Vote(_: TextSource, source: string)
+	local parameters = AdminService.commandParameters(source)
+	local description = table.concat(parameters, " ")
+	local players = Players:GetPlayers()
+	local votes = {}
+	for _, player in ipairs(players) do
+		DialogueService:DialogueFor(player, {
+			Title = "Vote?",
+			Description = description,
+			FreezePlayer = true,
+			OkText = "Yes",
+			CancelText = "No",
+		}):ConnectOnce(function(response: boolean?) table.insert(votes, response) end)
+	end
+	local start = DateTime.now().UnixTimestampMillis
+	repeat
+		task.wait()
+	until #votes >= #players or DateTime.now().UnixTimestampMillis > start + 10e3
+	local yesCount = 0
+	local noCount = 0
+	for _, vote in ipairs(votes) do
+		if vote then
+			yesCount += 1
+		elseif vote == false then
+			noCount += 1
+		end
+	end
+	LogService:LogAll(
+		("%s\n%d voted 'yes' and %d voted 'no'."):format(description, yesCount, noCount)
+	)
 end
 
 function StandardCommandService:_Teleport(origin: TextSource, source: string): string
