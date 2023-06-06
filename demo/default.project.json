@@ -10,7 +10,6 @@
     "ServerStorage": {
       "Demo": { "$path": "Server" }
     },
-    "StarterPack": { "$path": "../modules/Tools" },
     "ServerScriptService": {
       "Main": { "$path": "Main.server.lua" }
     },

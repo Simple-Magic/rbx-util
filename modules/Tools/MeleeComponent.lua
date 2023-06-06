@@ -1,8 +1,7 @@
 local Players = game:GetService("Players")
-local ReplicatedStorage = game:GetService("ReplicatedStorage")
 local RunService = game:GetService("RunService")
-local Component = require(ReplicatedStorage.Packages.Component)
-local Trove = require(ReplicatedStorage.Packages.Trove)
+local Component = require(script.Parent.Parent.Component)
+local Trove = require(script.Parent.Parent.Trove)
 
 if RunService:IsClient() then return end
 

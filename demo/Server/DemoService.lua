@@ -4,12 +4,8 @@ local Workspace = game:GetService("Workspace")
 local Knit = require(ReplicatedStorage.Packages.Knit)
 local Arc = require(ReplicatedStorage.Packages.Arc)
 
-local AnnouncementService
-local CountdownService
-local DialogueService
 local HitmarkerService
 local LoadingService
-local LogService
 local AdminService
 
 local DemoService = Knit.CreateService({
@@ -32,10 +28,8 @@ end
 
 function DemoService:KnitStart()
 	AdminService = Knit.GetService("AdminService")
-	DialogueService = Knit.GetService("DialogueService")
 	HitmarkerService = Knit.GetService("HitmarkerService")
 	LoadingService = Knit.GetService("LoadingService")
-	LogService = Knit.GetService("LogService")
 	Players.PlayerAdded:Connect(function(...) self:OnPlayer(...) end)
 	for _, player in pairs(Players:GetPlayers()) do
 		self:OnPlayer(player)
@@ -52,30 +46,6 @@ end
 function DemoService:OnCharacter(player: Player)
 	self:HitmarkerToolFor(player)
 	self:LoadingToolFor(player)
-	self:DialogueToolFor(player)
-end
-
-function DemoService:DialogueToolFor(player)
-	local tool = Instance.new("Tool")
-	tool.Name = "Dialogue"
-	tool.RequiresHandle = false
-	tool.CanBeDropped = false
-	tool.Parent = player.Backpack
-	tool.Activated:Connect(function()
-		DialogueService:DialogueFor(player, {
-			Title = "Sample Dialogue",
-			Description = "Sample Dialogue",
-			FreezePlayer = true,
-		}):ConnectOnce(function(response: boolean?)
-			if response then
-				LogService:LogTo(player, "Dialogue: OK")
-			elseif response == false then
-				LogService:LogTo(player, "Dialogue: Cancel")
-			else
-				LogService:LogTo(player, "Dialogue: Blocked")
-			end
-		end)
-	end)
 end
 
 function DemoService:HitmarkerToolFor(player)

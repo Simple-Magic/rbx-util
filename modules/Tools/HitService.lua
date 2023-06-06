@@ -1,5 +1,6 @@
-local ReplicatedStorage = game:GetService("ReplicatedStorage")
-local Knit = require(ReplicatedStorage.Packages.Knit)
+local Knit = require(script.Parent.Parent.Knit)
+require(script.Parent.GunComponent)
+require(script.Parent.MeleeComponent)
 
 local HitService = Knit.CreateService({
 	Name = "HitService",
