@@ -22,14 +22,16 @@ function BulletService:Create(gun: GunComponent, target: Vector3)
 	local beam = Instance.new("Beam")
 	beam.Attachment0 = gun.Instance.Handle.MuzzleAttachment
 	beam.Attachment1 = attachment
+	beam.Width0 = 0.2
+	beam.Width1 = 0.2
 	beam.Parent = part
 	part.Parent = Workspace
 	Debris:AddItem(part, 0.1)
-	if raycastResult.Instance then
-		local humanoid = raycastResult.Instance.Parent:FindFirstChild("Humanoid")
-			or raycastResult.Instance.Parent.Parent:FindFirstChild("Humanoid")
-		DamageService:Damage(humanoid, gun.Config.Damage, gun:GetPlayer())
-	end
+	if not raycastResult.Instance then return end
+	local humanoid = raycastResult.Instance.Parent:FindFirstChild("Humanoid")
+		or raycastResult.Instance.Parent.Parent:FindFirstChild("Humanoid")
+	if not humanoid then return end
+	DamageService:Damage(humanoid, gun.Config.Damage, gun:GetPlayer())
 end
 
 function BulletService:Cast(origin: Vector3, target: Vector3): RaycastResult?

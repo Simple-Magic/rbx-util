@@ -3,5 +3,10 @@
     "ClipSize": 9,
     "Damage": 12,
     "ReloadTime": 2
+  },
+  "Rifle": {
+    "ClipSize": 30,
+    "Damage": 18,
+    "ReloadTime": 3
   }
 }
