@@ -1,6 +1,5 @@
 local Knit = require(script.Parent.Parent.Knit)
 local GunComponent = require(script.Parent.GunComponent)
-require(script.Parent.MeleeComponent)
 
 local GunService = Knit.CreateService({
 	Name = "GunService",

@@ -2,7 +2,7 @@
 	<Meta name="ExplicitAutoJoints">true</Meta>
 	<External>null</External>
 	<External>nil</External>
-	<Item class="Tool" referent="RBX77D0358BC75D4CCFB4E58EC1037FDAA8">
+	<Item class="Tool" referent="RBX43BA842316F748DDB1C5D2C84B6CA6B9">
 		<Properties>
 			<BinaryString name="AttributesSerialize"></BinaryString>
 			<bool name="CanBeDropped">true</bool>
@@ -46,16 +46,16 @@
 			<token name="ModelStreamingMode">0</token>
 			<string name="Name">Hammer</string>
 			<bool name="NeedsPivotMigration">false</bool>
-			<Ref name="PrimaryPart">RBXF5D60B00940B4CF98C532078AA17E39A</Ref>
+			<Ref name="PrimaryPart">null</Ref>
 			<bool name="RequiresHandle">true</bool>
 			<float name="ScaleFactor">1</float>
 			<int64 name="SourceAssetId">-1</int64>
-			<BinaryString name="Tags">RHJvcHBhYmxlAE1lbGVl</BinaryString>
+			<BinaryString name="Tags">RHJvcHBhYmxlAEhhbW1lcg==</BinaryString>
 			<Content name="TextureId"><null></null></Content>
 			<string name="ToolTip"></string>
 			<OptionalCoordinateFrame name="WorldPivotData"></OptionalCoordinateFrame>
 		</Properties>
-		<Item class="Part" referent="RBXF5D60B00940B4CF98C532078AA17E39A">
+		<Item class="Part" referent="RBX818CF8DB4B03412B9CC1AB25A104B8AB">
 			<Properties>
 				<bool name="Anchored">false</bool>
 				<BinaryString name="AttributesSerialize"></BinaryString>
@@ -149,7 +149,7 @@
 					<Z>1</Z>
 				</Vector3>
 			</Properties>
-			<Item class="SpecialMesh" referent="RBXC59735AB4629440593355E3858CA7C16">
+			<Item class="SpecialMesh" referent="RBX732237D1475641B2884FFBBEB5D69293">
 				<Properties>
 					<BinaryString name="AttributesSerialize"></BinaryString>
 					<Content name="MeshId"><url>rbxasset://fonts/hammer.mesh</url></Content>
@@ -176,7 +176,7 @@
 				</Properties>
 			</Item>
 		</Item>
-		<Item class="Animation" referent="RBXD19E10654C9647F18CF189FF56668DF6">
+		<Item class="Animation" referent="RBXF954CA1525934BB1BF84C36ABCB4423D">
 			<Properties>
 				<Content name="AnimationId"><url>rbxassetid://13619126531</url></Content>
 				<BinaryString name="AttributesSerialize"></BinaryString>

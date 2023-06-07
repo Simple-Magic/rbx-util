@@ -2,7 +2,7 @@
 	<Meta name="ExplicitAutoJoints">true</Meta>
 	<External>null</External>
 	<External>nil</External>
-	<Item class="Tool" referent="RBXAC250C52BCAF44A89666D724344C3522">
+	<Item class="Tool" referent="RBX8EC48D7F8B6F49699D861A86EDAE0384">
 		<Properties>
 			<BinaryString name="AttributesSerialize"></BinaryString>
 			<bool name="CanBeDropped">true</bool>
@@ -46,16 +46,16 @@
 			<token name="ModelStreamingMode">0</token>
 			<string name="Name">Wrench</string>
 			<bool name="NeedsPivotMigration">false</bool>
-			<Ref name="PrimaryPart">RBXA1AE5A4044E04E22987572FE29047FA1</Ref>
+			<Ref name="PrimaryPart">null</Ref>
 			<bool name="RequiresHandle">true</bool>
 			<float name="ScaleFactor">1</float>
 			<int64 name="SourceAssetId">-1</int64>
-			<BinaryString name="Tags">RHJvcHBhYmxlAE1lbGVl</BinaryString>
+			<BinaryString name="Tags">RHJvcHBhYmxlAFdyZW5jaA==</BinaryString>
 			<Content name="TextureId"><null></null></Content>
 			<string name="ToolTip"></string>
 			<OptionalCoordinateFrame name="WorldPivotData"></OptionalCoordinateFrame>
 		</Properties>
-		<Item class="Part" referent="RBXA1AE5A4044E04E22987572FE29047FA1">
+		<Item class="Part" referent="RBX18F353AAA5BE4E2F802CE36B6DA25BF0">
 			<Properties>
 				<bool name="Anchored">false</bool>
 				<BinaryString name="AttributesSerialize"></BinaryString>
@@ -149,7 +149,7 @@
 					<Z>3</Z>
 				</Vector3>
 			</Properties>
-			<Item class="SpecialMesh" referent="RBX7389F7A2BD214423A0A3A4451ED3E057">
+			<Item class="SpecialMesh" referent="RBXF6E4C1F2DDDC4E02BE2BD924BB8C4D5C">
 				<Properties>
 					<BinaryString name="AttributesSerialize"></BinaryString>
 					<Content name="MeshId"><url>http://www.roblox.com/asset/?id=16884681</url></Content>
@@ -176,7 +176,7 @@
 				</Properties>
 			</Item>
 		</Item>
-		<Item class="Animation" referent="RBXF68D93FB725F414AAB82E0133DA19D73">
+		<Item class="Animation" referent="RBX93C47A1504F645B48069555650F6CA10">
 			<Properties>
 				<Content name="AnimationId"><url>rbxassetid://13619126531</url></Content>
 				<BinaryString name="AttributesSerialize"></BinaryString>
