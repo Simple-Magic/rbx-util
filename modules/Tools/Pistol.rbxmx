@@ -2,7 +2,7 @@
 	<Meta name="ExplicitAutoJoints">true</Meta>
 	<External>null</External>
 	<External>nil</External>
-	<Item class="Tool" referent="RBX298BEAEA3F8F4A0BAF3964ED480818BA">
+	<Item class="Tool" referent="RBX94DCB9CFFD6A45A0A8B2701F5FDCA1B3">
 		<Properties>
 			<BinaryString name="AttributesSerialize"></BinaryString>
 			<bool name="CanBeDropped">true</bool>
@@ -46,7 +46,7 @@
 			<token name="ModelStreamingMode">0</token>
 			<string name="Name">Pistol</string>
 			<bool name="NeedsPivotMigration">false</bool>
-			<Ref name="PrimaryPart">RBX8928B141E0944DFDA5D6255175B617B1</Ref>
+			<Ref name="PrimaryPart">null</Ref>
 			<bool name="RequiresHandle">true</bool>
 			<float name="ScaleFactor">1</float>
 			<int64 name="SourceAssetId">-1</int64>
@@ -55,7 +55,7 @@
 			<string name="ToolTip"></string>
 			<OptionalCoordinateFrame name="WorldPivotData"></OptionalCoordinateFrame>
 		</Properties>
-		<Item class="Animation" referent="RBX286EB64B95A642999AA5FA82E19BD7E1">
+		<Item class="Animation" referent="RBXB742F14D99E5407584FBBE8BEFE9ECBC">
 			<Properties>
 				<Content name="AnimationId"><url>rbxassetid://8231181796</url></Content>
 				<BinaryString name="AttributesSerialize"></BinaryString>
@@ -64,7 +64,7 @@
 				<BinaryString name="Tags"></BinaryString>
 			</Properties>
 		</Item>
-		<Item class="Animation" referent="RBXF46CE1C75476400E909A438F5B3E4E0E">
+		<Item class="Animation" referent="RBX116806913CCC445CB88DE0F1C756A45A">
 			<Properties>
 				<Content name="AnimationId"><url>rbxassetid://8369775010</url></Content>
 				<BinaryString name="AttributesSerialize"></BinaryString>
@@ -73,7 +73,7 @@
 				<BinaryString name="Tags"></BinaryString>
 			</Properties>
 		</Item>
-		<Item class="Part" referent="RBX8928B141E0944DFDA5D6255175B617B1">
+		<Item class="Part" referent="RBXAE45A9724A53496BA02BCC04C04C3660">
 			<Properties>
 				<bool name="Anchored">false</bool>
 				<BinaryString name="AttributesSerialize"></BinaryString>
@@ -167,7 +167,7 @@
 					<Z>1.23862004</Z>
 				</Vector3>
 			</Properties>
-			<Item class="SpecialMesh" referent="RBX7C1F448261A24281BFABC8360C0BD199">
+			<Item class="SpecialMesh" referent="RBX9F935FA10B9D424C9178745C7D8369DC">
 				<Properties>
 					<BinaryString name="AttributesSerialize"></BinaryString>
 					<Content name="MeshId"><url>http://www.roblox.com/asset/?id=72012879</url></Content>
@@ -193,7 +193,7 @@
 					</Vector3>
 				</Properties>
 			</Item>
-			<Item class="Sound" referent="RBX23AB2223F7EB4CF8A54110E460523950">
+			<Item class="Sound" referent="RBX4C5515FE154C4CDCA43BC8F20A856733">
 				<Properties>
 					<BinaryString name="AttributesSerialize"></BinaryString>
 					<float name="EmitterSize">10</float>
@@ -215,7 +215,7 @@
 					<float name="xmlRead_MaxDistance_3">500</float>
 				</Properties>
 			</Item>
-			<Item class="Sound" referent="RBX35E2DBEB04224F209366CBF239D7CB3A">
+			<Item class="Sound" referent="RBX5F61953E31684E698971A4264633F3A8">
 				<Properties>
 					<BinaryString name="AttributesSerialize"></BinaryString>
 					<float name="EmitterSize">10</float>
@@ -237,7 +237,7 @@
 					<float name="xmlRead_MaxDistance_3">500</float>
 				</Properties>
 			</Item>
-			<Item class="Sound" referent="RBXB41758D770ED48A79F32D53E4165819F">
+			<Item class="Sound" referent="RBX91863BA8A47C401A8BB854E6EC316098">
 				<Properties>
 					<BinaryString name="AttributesSerialize"></BinaryString>
 					<float name="EmitterSize">10</float>
@@ -257,6 +257,29 @@
 					<double name="TimePosition">0</double>
 					<float name="Volume">1</float>
 					<float name="xmlRead_MaxDistance_3">500</float>
+				</Properties>
+			</Item>
+			<Item class="Attachment" referent="RBX7AEFDD060E4F41E2890E09F57ED0F4FA">
+				<Properties>
+					<BinaryString name="AttributesSerialize"></BinaryString>
+					<CoordinateFrame name="CFrame">
+						<X>0</X>
+						<Y>1</Y>
+						<Z>0.5</Z>
+						<R00>1</R00>
+						<R01>0</R01>
+						<R02>0</R02>
+						<R10>0</R10>
+						<R11>1</R11>
+						<R12>0</R12>
+						<R20>0</R20>
+						<R21>0</R21>
+						<R22>1</R22>
+					</CoordinateFrame>
+					<string name="Name">MuzzleAttachment</string>
+					<int64 name="SourceAssetId">-1</int64>
+					<BinaryString name="Tags"></BinaryString>
+					<bool name="Visible">false</bool>
 				</Properties>
 			</Item>
 		</Item>
