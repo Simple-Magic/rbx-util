@@ -1,0 +1,7 @@
+{
+  "Pistol": {
+    "ClipSize": 9,
+    "Damage": 12,
+    "ReloadTime": 2
+  }
+}

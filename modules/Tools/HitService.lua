@@ -1,6 +1,4 @@
 local Knit = require(script.Parent.Parent.Knit)
-require(script.Parent.GunComponent)
-require(script.Parent.MeleeComponent)
 
 local HitService = Knit.CreateService({
 	Name = "HitService",

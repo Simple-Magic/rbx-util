@@ -21,6 +21,8 @@ function DroppableComponent:Construct()
 	end
 end
 
+function DroppableComponent:Stop() self.Trove:Clean() end
+
 function DroppableComponent:Start()
 	DroppableService = DroppableService or Knit.GetService("DroppableService")
 	if RunService:IsServer() then
@@ -33,8 +35,7 @@ function DroppableComponent:Start()
 		self:OnAncestryChanged()
 	elseif RunService:IsClient() then
 		self.Trove:Connect(self.Instance.Equipped, function()
-			if self.Instance.Parent ~= Players.LocalPlayer.Character then return end
-			self:OnEquipped()
+			if self.Instance.Parent == Players.LocalPlayer.Character then self:OnEquipped() end
 		end)
 		self.Trove:Connect(self.Instance.Unequipped, function() self:OnUnequipped() end)
 		self.Trove:Connect(
@@ -43,8 +44,6 @@ function DroppableComponent:Start()
 		)
 	end
 end
-
-function DroppableComponent:Stop() self.Trove:Clean() end
 
 function DroppableComponent:GetPlayer(): Player?
 	if self.Instance.Parent.Parent and self.Instance.Parent.Parent:IsA("Player") then
