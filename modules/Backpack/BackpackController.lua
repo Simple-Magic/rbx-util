@@ -70,17 +70,28 @@ function BackpackController:OnInputEnded(inputObject: InputObject, processed: bo
 end
 
 function BackpackController:GetTools(): { Tool }
-	local tools = {} :: { Tool }
-	for _, child in pairs(Player.Backpack:GetChildren()) do
-		if child:IsA("Tool") then table.insert(tools, child) end
-	end
-	if Player.Character then
-		for _, child in pairs(Player.Character:GetChildren()) do
-			if child:IsA("Tool") then table.insert(tools, child) end
+	self.Tools = (self.Tools or {}) :: { Tool }
+	for _, child in ipairs(Player.Backpack:GetChildren()) do
+		if child:IsA("Tool") and not table.find(self.Tools, child) then
+			table.insert(self.Tools, child)
 		end
 	end
-	table.sort(tools, function(lhs: Tool, rhs: Tool) return lhs.Name < rhs.Name end)
-	return tools
+	if Player.Character then
+		local equipped = Player.Character:FindFirstChildWhichIsA("Tool")
+		if equipped and not table.find(self.Tools, equipped) then
+			table.insert(self.Tools, equipped)
+		end
+	end
+	local toRemove = {}
+	for index, child in ipairs(self.Tools) do
+		if child.Parent ~= Player.Backpack and child.Parent ~= Player.Character then
+			table.insert(toRemove, 1, index)
+		end
+	end
+	for _, index in ipairs(toRemove) do
+		table.remove(self.Tools, index)
+	end
+	return self.Tools
 end
 
 function BackpackController:OnTick()
