@@ -6,15 +6,15 @@ local Component = require(script.Parent.Parent.Component)
 local Knit = require(script.Parent.Parent.Knit)
 local Trove = require(script.Parent.Parent.Trove)
 
-local ItemService
+local PropService
 
-local ItemComponent = Component.new({ Tag = "Item" })
+local PropComponent = Component.new({ Tag = "Prop" })
 
-function ItemComponent:Construct() self.Trove = Trove.new() end
+function PropComponent:Construct() self.Trove = Trove.new() end
 
-function ItemComponent:Start()
+function PropComponent:Start()
 	Knit.OnStart():await()
-	ItemService = ItemService or Knit.GetService("ItemService")
+	PropService = PropService or Knit.GetService("PropService")
 	if RunService:IsServer() then
 		self.PointLight = self.Trove:Add(Instance.new("PointLight"))
 		self.PointLight.Parent = self.Instance.Handle
@@ -26,7 +26,7 @@ function ItemComponent:Start()
 		self.Trove:Connect(self.Instance.AncestryChanged, function() self:OnServerAncestry() end)
 		self.Trove:Connect(
 			self.ProximityPrompt.Triggered,
-			function(player) ItemService:PickUp(player, self.Instance) end
+			function(player) PropService:PickUp(player, self.Instance) end
 		)
 		task.wait()
 		self:OnServerAncestry()
@@ -37,16 +37,20 @@ function ItemComponent:Start()
 	end
 end
 
-function ItemComponent:Stop() self.Trove:Clean() end
+function PropComponent:Stop() self.Trove:Clean() end
 
-function ItemComponent:GetPlayer(): Player?
-	return Players:GetPlayerFromCharacter(self.Instance.Parent)
-		or Players:GetPlayerFromCharacter(self.Instance.Parent.Parent)
+function PropComponent:GetPlayer(): Player?
+	for _, child in ipairs(Players:GetChildren()) do
+		local character = child:IsA("Player") and child.Character or child:GetAttribute("Character")
+		if character == self.Instance.Parent or character == self.Instance.Parent.Parent then
+			return child
+		end
+	end
 end
 
-function ItemComponent:GetGrip(): Attachment? return self.Instance.Handle:FindFirstChild("Grip") end
+function PropComponent:GetGrip(): Attachment? return self.Instance.Handle:FindFirstChild("Grip") end
 
-function ItemComponent:OnClientAncestry()
+function PropComponent:OnClientAncestry()
 	self.AncestryTrove = self.AncestryTrove or Trove.new()
 	self.AncestryTrove:Clean()
 	self.AncestrySequence = (self.AncestrySequence or 0) + 1
@@ -59,10 +63,10 @@ function ItemComponent:OnClientAncestry()
 	end
 end
 
-function ItemComponent:OnUserInputBegan(inputObject: InputObject, processed: boolean)
+function PropComponent:OnUserInputBegan(inputObject: InputObject, processed: boolean)
 	if processed then return end
 	if inputObject.KeyCode == Enum.KeyCode.G or inputObject.KeyCode == Enum.KeyCode.ButtonB then
-		ItemService:Drop(self.Instance)
+		PropService:Drop(self.Instance)
 	elseif
 		self.Instance.Parent.Name:match("^Right")
 		and (
@@ -71,7 +75,7 @@ function ItemComponent:OnUserInputBegan(inputObject: InputObject, processed: boo
 		)
 	then
 		repeat
-			ItemService:Activate(self.Instance)
+			PropService:Activate(self.Instance)
 			task.wait(0.1)
 		until not UserInputService:IsMouseButtonPressed(Enum.UserInputType.MouseButton1)
 			and not UserInputService:IsKeyDown(Enum.KeyCode.ButtonR2)
@@ -83,14 +87,14 @@ function ItemComponent:OnUserInputBegan(inputObject: InputObject, processed: boo
 		)
 	then
 		repeat
-			ItemService:Activate(self.Instance)
+			PropService:Activate(self.Instance)
 			task.wait(0.1)
 		until not UserInputService:IsMouseButtonPressed(Enum.UserInputType.MouseButton2)
 			and not UserInputService:IsKeyDown(Enum.KeyCode.ButtonL2)
 	end
 end
 
-function ItemComponent:OnServerAncestry()
+function PropComponent:OnServerAncestry()
 	self.AncestrySequence = (self.AncestrySequence or 0) + 1
 	if self.Weld then self.Weld:Destroy() end
 	local player = self:GetPlayer()
@@ -124,7 +128,7 @@ function ItemComponent:OnServerAncestry()
 	end
 end
 
-function ItemComponent:Float()
+function PropComponent:Float()
 	local raycastParams = RaycastParams.new()
 	raycastParams.FilterType = Enum.RaycastFilterType.Exclude
 	raycastParams.FilterDescendantsInstances = { self.Instance }
@@ -152,4 +156,4 @@ function ItemComponent:Float()
 	self.Instance.Handle.CFrame *= CFrame.Angles(0, 0.05, 0)
 end
 
-return ItemComponent
+return PropComponent

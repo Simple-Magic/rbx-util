@@ -1,7 +1,7 @@
 local CollectionService = game:GetService("CollectionService")
 local RunService = game:GetService("RunService")
 local Component = require(script.Parent.Parent.Component)
-local ItemComponent = require(script.Parent.ItemComponent)
+local PropComponent = require(script.Parent.PropComponent)
 local Knit = require(script.Parent.Parent.Knit)
 local Trove = require(script.Parent.Parent.Trove)
 
@@ -15,7 +15,7 @@ function MeleeComponent:Start()
 	Knit.OnStart():await()
 	DamageService = DamageService or Knit.GetService("DamageService")
 	if RunService:IsServer() then
-		CollectionService:AddTag(self.Instance, "Item")
+		CollectionService:AddTag(self.Instance, "Prop")
 		self.Trove:Connect(self.Instance.AncestryChanged, function() self:OnServerAncestry() end)
 		task.wait()
 		self:OnServerAncestry()
@@ -34,8 +34,8 @@ end
 function MeleeComponent:OnServerAncestry()
 	self.AncestryTrove = self.AncestryTrove or Trove.new()
 	self.AncestryTrove:Clean()
-	local item = self:GetComponent(ItemComponent)
-	local player = item and item:GetPlayer()
+	local prop = self:GetComponent(PropComponent)
+	local player = prop and prop:GetPlayer()
 	if player then
 		self.Instance.Handle.CanTouch = true
 		self.AncestryTrove:Connect(
@@ -47,8 +47,8 @@ end
 
 function MeleeComponent:OnTouch(part: BasePart)
 	if self.Debounce then return end
-	local item = self:GetComponent(ItemComponent)
-	local player = item and item:GetPlayer()
+	local prop = self:GetComponent(PropComponent)
+	local player = prop and prop:GetPlayer()
 	if not player then return end
 	local humanoid = part.Parent:FindFirstChild("Humanoid")
 	if not humanoid then return end

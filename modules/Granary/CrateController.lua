@@ -19,23 +19,21 @@ function CrateController:OpenStore(crate: BasePart)
 	self.Gui.Parent = Players.LocalPlayer.PlayerGui
 	self.ButtonTemplate = self.Gui.ScrollingFrame.TextButton
 	self.ButtonTemplate.Parent = nil
-	for _, item in ipairs(script.Parent.Items:GetChildren()) do
+	local items = script.Parent.Items:GetChildren()
+	table.insert(items, nil)
+	for _, item in ipairs(items) do
 		local button = self.ButtonTemplate:Clone()
-		button.Name = item.Name
-		button.Text = item.Name
+		button.Name = item and item.Name or "Close"
+		button.Text = item and item.Name or "Close"
 		button.Parent = self.Gui.ScrollingFrame
 		button.MouseButton1Click:Connect(function()
-			CrateService:Buy(item):await()
+			if item then CrateService:Buy(item):await() end
 			self.Gui:Destroy()
 			self.Gui = nil
 		end)
 	end
 	local size = self.Gui.ScrollingFrame.UIGridLayout.AbsoluteContentSize
 	self.Gui.ScrollingFrame.CanvasSize = UDim2.new(0, size.X, 0, size.Y)
-	self.Gui.CloseButton.MouseButton1Click:Connect(function()
-		self.Gui:Destroy()
-		self.Gui = nil
-	end)
 	repeat
 		if not Player.Character then break end
 		local distance = (crate:GetPivot().Position - Player.Character:GetPivot().Position).Magnitude

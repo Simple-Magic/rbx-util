@@ -2,7 +2,7 @@
 	<Meta name="ExplicitAutoJoints">true</Meta>
 	<External>null</External>
 	<External>nil</External>
-	<Item class="Tool" referent="RBX2A3949035DA14A79A15FCC26BC7C6608">
+	<Item class="Tool" referent="RBX8A17822F576E4FDABAED34372AF8F50E">
 		<Properties>
 			<BinaryString name="AttributesSerialize"></BinaryString>
 			<bool name="CanBeDropped">true</bool>
@@ -44,18 +44,18 @@
 				<Z>0</Z>
 			</Vector3>
 			<token name="ModelStreamingMode">0</token>
-			<string name="Name">Pistol</string>
+			<string name="Name">AssaultRifle</string>
 			<bool name="NeedsPivotMigration">false</bool>
 			<Ref name="PrimaryPart">null</Ref>
 			<bool name="RequiresHandle">true</bool>
 			<float name="ScaleFactor">1</float>
 			<int64 name="SourceAssetId">-1</int64>
-			<BinaryString name="Tags">SXRlbQBHdW4=</BinaryString>
+			<BinaryString name="Tags">R3VuAFByb3A=</BinaryString>
 			<Content name="TextureId"><null></null></Content>
 			<string name="ToolTip"></string>
 			<OptionalCoordinateFrame name="WorldPivotData"></OptionalCoordinateFrame>
 		</Properties>
-		<Item class="Part" referent="RBX1C9CEA4198A648CB92CD5D9080BBE105">
+		<Item class="Part" referent="RBX08A8B8152C584A2D85E2EA104965BCD4">
 			<Properties>
 				<bool name="Anchored">false</bool>
 				<BinaryString name="AttributesSerialize"></BinaryString>
@@ -68,9 +68,9 @@
 				<token name="BottomSurface">4</token>
 				<token name="BottomSurfaceInput">0</token>
 				<CoordinateFrame name="CFrame">
-					<X>-11.3999996</X>
-					<Y>0.474999964</Y>
-					<Z>0.600000381</Z>
+					<X>-11.7000122</X>
+					<Y>0.749999642</Y>
+					<Z>-8.25</Z>
 					<R00>0</R00>
 					<R01>-1</R01>
 					<R02>0</R02>
@@ -81,13 +81,13 @@
 					<R21>0</R21>
 					<R22>0</R22>
 				</CoordinateFrame>
-				<bool name="CanCollide">true</bool>
+				<bool name="CanCollide">false</bool>
 				<bool name="CanQuery">true</bool>
 				<bool name="CanTouch">true</bool>
 				<bool name="CastShadow">true</bool>
 				<string name="CollisionGroup">Default</string>
 				<int name="CollisionGroupId">0</int>
-				<Color3uint8 name="Color3uint8">4294967244</Color3uint8>
+				<Color3uint8 name="Color3uint8">4279970357</Color3uint8>
 				<PhysicalProperties name="CustomPhysicalProperties">
 					<CustomPhysics>false</CustomPhysics>
 				</PhysicalProperties>
@@ -145,15 +145,15 @@
 				<token name="formFactorRaw">1</token>
 				<token name="shape">1</token>
 				<Vector3 name="size">
-					<X>0.271428585</X>
-					<Y>1.62857151</Y>
-					<Z>0.949999988</Z>
+					<X>0.400000006</X>
+					<Y>3.4000001</Y>
+					<Z>0.800000012</Z>
 				</Vector3>
 			</Properties>
-			<Item class="SpecialMesh" referent="RBXFB19CB44290441FC822CAE43C4885DAB">
+			<Item class="SpecialMesh" referent="RBX2C09F1454EA841F5955C3D18F5DD1FA8">
 				<Properties>
 					<BinaryString name="AttributesSerialize"></BinaryString>
-					<Content name="MeshId"><url>http://www.roblox.com/asset/?id=72012879</url></Content>
+					<Content name="MeshId"><url>http://www.roblox.com/asset/?id=72012671</url></Content>
 					<token name="MeshType">5</token>
 					<string name="Name">Mesh</string>
 					<Vector3 name="Offset">
@@ -162,13 +162,13 @@
 						<Z>0</Z>
 					</Vector3>
 					<Vector3 name="Scale">
-						<X>1.69642866</X>
-						<Y>1.69642866</Y>
-						<Z>1.69642854</Z>
+						<X>1</X>
+						<Y>1</Y>
+						<Z>1</Z>
 					</Vector3>
 					<int64 name="SourceAssetId">-1</int64>
 					<BinaryString name="Tags"></BinaryString>
-					<Content name="TextureId"><url>http://www.roblox.com/asset/?id=72012859</url></Content>
+					<Content name="TextureId"><url>http://www.roblox.com/asset/?id=72012605</url></Content>
 					<Vector3 name="VertexColor">
 						<X>2</X>
 						<Y>2</Y>
@@ -176,13 +176,13 @@
 					</Vector3>
 				</Properties>
 			</Item>
-			<Item class="Attachment" referent="RBXF0AF6E3F1C7C4FDA9A1457CD5537564C">
+			<Item class="Attachment" referent="RBX78D8E42D0AA9450DBC0E52A256061205">
 				<Properties>
 					<BinaryString name="AttributesSerialize"></BinaryString>
 					<CoordinateFrame name="CFrame">
 						<X>0</X>
-						<Y>-0.54285717</Y>
-						<Z>-0.135714114</Z>
+						<Y>-0.649999619</Y>
+						<Z>-0.25000006</Z>
 						<R00>1</R00>
 						<R01>0</R01>
 						<R02>0</R02>
@@ -199,7 +199,30 @@
 					<bool name="Visible">false</bool>
 				</Properties>
 			</Item>
-			<Item class="Sound" referent="RBXD8B2E4E0353143CDA85CD0804D9AE8FF">
+			<Item class="Attachment" referent="RBX8BB957B19E704CF5A3AAE774A44AD70D">
+				<Properties>
+					<BinaryString name="AttributesSerialize"></BinaryString>
+					<CoordinateFrame name="CFrame">
+						<X>0</X>
+						<Y>1.65000057</Y>
+						<Z>0.149999976</Z>
+						<R00>1</R00>
+						<R01>0</R01>
+						<R02>0</R02>
+						<R10>0</R10>
+						<R11>0</R11>
+						<R12>-1</R12>
+						<R20>0</R20>
+						<R21>1</R21>
+						<R22>0</R22>
+					</CoordinateFrame>
+					<string name="Name">Muzzle</string>
+					<int64 name="SourceAssetId">-1</int64>
+					<BinaryString name="Tags"></BinaryString>
+					<bool name="Visible">false</bool>
+				</Properties>
+			</Item>
+			<Item class="Sound" referent="RBX5EEA4BD776CF41B599879D390D59BFDA">
 				<Properties>
 					<BinaryString name="AttributesSerialize"></BinaryString>
 					<float name="EmitterSize">10</float>
@@ -219,29 +242,6 @@
 					<double name="TimePosition">0</double>
 					<float name="Volume">0.5</float>
 					<float name="xmlRead_MaxDistance_3">10000</float>
-				</Properties>
-			</Item>
-			<Item class="Attachment" referent="RBX2C5E305755864C8ABAA5A9259D36CC0B">
-				<Properties>
-					<BinaryString name="AttributesSerialize"></BinaryString>
-					<CoordinateFrame name="CFrame">
-						<X>0</X>
-						<Y>0.757143021</Y>
-						<Z>0.364285886</Z>
-						<R00>1</R00>
-						<R01>0</R01>
-						<R02>0</R02>
-						<R10>0</R10>
-						<R11>0</R11>
-						<R12>-1</R12>
-						<R20>0</R20>
-						<R21>1</R21>
-						<R22>0</R22>
-					</CoordinateFrame>
-					<string name="Name">Muzzle</string>
-					<int64 name="SourceAssetId">-1</int64>
-					<BinaryString name="Tags"></BinaryString>
-					<bool name="Visible">false</bool>
 				</Properties>
 			</Item>
 		</Item>

@@ -2,32 +2,32 @@ local Players = game:GetService("Players")
 local Workspace = game:GetService("Workspace")
 local Knit = require(script.Parent.Parent.Knit)
 local GunComponent = require(script.Parent.GunComponent)
-local ItemComponent = require(script.Parent.ItemComponent)
+local PropComponent = require(script.Parent.PropComponent)
 local MeleeComponent = require(script.Parent.MeleeComponent)
 
 local FirstPersonService
 
-local ItemService = Knit.CreateService({
-	Name = "ItemService",
+local PropService = Knit.CreateService({
+	Name = "PropService",
 	Client = {},
 	Left = {} :: Table<Player, BasePart>,
 	Right = {} :: Table<Player, BasePart>,
-	Items = script.Parent.Items:GetChildren(),
+	Props = script.Parent.Props:GetChildren(),
 })
 
-function ItemService:KnitInit()
+function PropService:KnitInit()
 	Players.PlayerAdded:Connect(function(...) self:OnPlayer(...) end)
 	for _, player in ipairs(Players:GetPlayers()) do
 		self:OnPlayer(player)
 	end
 end
 
-function ItemService:OnPlayer(player: Player)
+function PropService:OnPlayer(player: Player)
 	player.CharacterAdded:Connect(function() self:OnCharacter(player) end)
 	if player.Character then self:OnCharacter(player) end
 end
 
-function ItemService:OnCharacter(player: Player)
+function PropService:OnCharacter(player: Player)
 	player.Character.ChildAdded:Connect(function(child)
 		if child:IsA("Tool") then
 			task.wait()
@@ -36,9 +36,9 @@ function ItemService:OnCharacter(player: Player)
 	end)
 end
 
-function ItemService:KnitStart() FirstPersonService = Knit.GetService("FirstPersonService") end
+function PropService:KnitStart() FirstPersonService = Knit.GetService("FirstPersonService") end
 
-function ItemService:PickUp(player: Player, instance: Tool)
+function PropService:PickUp(player: Player, instance: Tool)
 	if self.Right[player] then
 		if self.Left[player] then self.Client:Drop(player, self.Left[player]) end
 		instance.Parent = player.Character.LeftHand
@@ -49,7 +49,7 @@ function ItemService:PickUp(player: Player, instance: Tool)
 	end
 end
 
-function ItemService.Client:Drop(player: Player, instance: Tool)
+function PropService.Client:Drop(player: Player, instance: Tool)
 	instance.Parent = Workspace
 	instance:PivotTo(player.Character:GetPivot() * CFrame.new(0, 0, -3 - math.random() * 5))
 	if self.Server.Left[player] == instance then
@@ -59,7 +59,7 @@ function ItemService.Client:Drop(player: Player, instance: Tool)
 	end
 end
 
-function ItemService.Client:Activate(player: Player, instance: BasePart)
+function PropService.Client:Activate(player: Player, instance: BasePart)
 	local melee = MeleeComponent:FromInstance(instance)
 	local gun = GunComponent:FromInstance(instance)
 	local blocked
@@ -74,4 +74,4 @@ function ItemService.Client:Activate(player: Player, instance: BasePart)
 	end
 end
 
-return ItemService
+return PropService
