@@ -4,12 +4,9 @@
     "$className": "DataModel",
 
     "ReplicatedStorage": {
-      "Demo": { "$path": "Common" },
       "Packages": { "$path": "Packages" }
     },
-    "ServerStorage": {
-      "Demo": { "$path": "Server" }
-    },
+    "ServerStorage": {},
     "ServerScriptService": {
       "Main": { "$path": "Main.server.lua" }
     },

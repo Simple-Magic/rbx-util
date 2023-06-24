@@ -1,0 +1,252 @@
+<roblox xmlns:xmime="http://www.w3.org/2005/05/xmlmime" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.roblox.com/roblox.xsd" version="4">
+	<Meta name="ExplicitAutoJoints">true</Meta>
+	<External>null</External>
+	<External>nil</External>
+	<Item class="Tool" referent="RBX95E32D45EC8E4302982D58BAEAEF7173">
+		<Properties>
+			<BinaryString name="AttributesSerialize"></BinaryString>
+			<bool name="CanBeDropped">true</bool>
+			<bool name="Enabled">true</bool>
+			<CoordinateFrame name="Grip">
+				<X>0</X>
+				<Y>0</Y>
+				<Z>0</Z>
+				<R00>1</R00>
+				<R01>0</R01>
+				<R02>0</R02>
+				<R10>0</R10>
+				<R11>1</R11>
+				<R12>0</R12>
+				<R20>0</R20>
+				<R21>0</R21>
+				<R22>1</R22>
+			</CoordinateFrame>
+			<token name="LevelOfDetail">0</token>
+			<bool name="ManualActivationOnly">false</bool>
+			<CoordinateFrame name="ModelMeshCFrame">
+				<X>0</X>
+				<Y>0</Y>
+				<Z>0</Z>
+				<R00>1</R00>
+				<R01>0</R01>
+				<R02>0</R02>
+				<R10>0</R10>
+				<R11>1</R11>
+				<R12>0</R12>
+				<R20>0</R20>
+				<R21>0</R21>
+				<R22>1</R22>
+			</CoordinateFrame>
+			<SharedString name="ModelMeshData">yuZpQdnvvUBOTYh1jqZ2cA==</SharedString>
+			<Vector3 name="ModelMeshSize">
+				<X>0</X>
+				<Y>0</Y>
+				<Z>0</Z>
+			</Vector3>
+			<token name="ModelStreamingMode">0</token>
+			<string name="Name">Shotgun</string>
+			<bool name="NeedsPivotMigration">false</bool>
+			<Ref name="PrimaryPart">null</Ref>
+			<bool name="RequiresHandle">true</bool>
+			<float name="ScaleFactor">1</float>
+			<int64 name="SourceAssetId">-1</int64>
+			<BinaryString name="Tags">SXRlbQBHdW4=</BinaryString>
+			<Content name="TextureId"><null></null></Content>
+			<string name="ToolTip"></string>
+			<OptionalCoordinateFrame name="WorldPivotData"></OptionalCoordinateFrame>
+		</Properties>
+		<Item class="Part" referent="RBXC8D0126576CD4DD39C319FC92C6F7A96">
+			<Properties>
+				<bool name="Anchored">false</bool>
+				<BinaryString name="AttributesSerialize"></BinaryString>
+				<float name="BackParamA">-0.5</float>
+				<float name="BackParamB">0.5</float>
+				<token name="BackSurface">0</token>
+				<token name="BackSurfaceInput">0</token>
+				<float name="BottomParamA">-0.5</float>
+				<float name="BottomParamB">0.5</float>
+				<token name="BottomSurface">4</token>
+				<token name="BottomSurfaceInput">0</token>
+				<CoordinateFrame name="CFrame">
+					<X>-11.5</X>
+					<Y>0.550000191</Y>
+					<Z>-5.85000038</Z>
+					<R00>0</R00>
+					<R01>-1</R01>
+					<R02>0</R02>
+					<R10>0</R10>
+					<R11>0</R11>
+					<R12>1</R12>
+					<R20>-1</R20>
+					<R21>0</R21>
+					<R22>0</R22>
+				</CoordinateFrame>
+				<bool name="CanCollide">true</bool>
+				<bool name="CanQuery">true</bool>
+				<bool name="CanTouch">true</bool>
+				<bool name="CastShadow">true</bool>
+				<string name="CollisionGroup">Default</string>
+				<int name="CollisionGroupId">0</int>
+				<Color3uint8 name="Color3uint8">4279970357</Color3uint8>
+				<PhysicalProperties name="CustomPhysicalProperties">
+					<CustomPhysics>false</CustomPhysics>
+				</PhysicalProperties>
+				<bool name="EnableFluidForces">false</bool>
+				<float name="FrontParamA">-0.5</float>
+				<float name="FrontParamB">0.5</float>
+				<token name="FrontSurface">0</token>
+				<token name="FrontSurfaceInput">0</token>
+				<float name="LeftParamA">-0.5</float>
+				<float name="LeftParamB">0.5</float>
+				<token name="LeftSurface">0</token>
+				<token name="LeftSurfaceInput">0</token>
+				<bool name="Locked">false</bool>
+				<bool name="Massless">false</bool>
+				<token name="Material">256</token>
+				<string name="MaterialVariantSerialized"></string>
+				<string name="Name">Handle</string>
+				<CoordinateFrame name="PivotOffset">
+					<X>0</X>
+					<Y>0</Y>
+					<Z>0</Z>
+					<R00>1</R00>
+					<R01>0</R01>
+					<R02>0</R02>
+					<R10>0</R10>
+					<R11>1</R11>
+					<R12>0</R12>
+					<R20>0</R20>
+					<R21>0</R21>
+					<R22>1</R22>
+				</CoordinateFrame>
+				<float name="Reflectance">0</float>
+				<float name="RightParamA">-0.5</float>
+				<float name="RightParamB">0.5</float>
+				<token name="RightSurface">0</token>
+				<token name="RightSurfaceInput">0</token>
+				<int name="RootPriority">0</int>
+				<Vector3 name="RotVelocity">
+					<X>0</X>
+					<Y>0</Y>
+					<Z>0</Z>
+				</Vector3>
+				<int64 name="SourceAssetId">-1</int64>
+				<BinaryString name="Tags"></BinaryString>
+				<float name="TopParamA">-0.5</float>
+				<float name="TopParamB">0.5</float>
+				<token name="TopSurface">3</token>
+				<token name="TopSurfaceInput">0</token>
+				<float name="Transparency">0</float>
+				<Vector3 name="Velocity">
+					<X>0</X>
+					<Y>0</Y>
+					<Z>0</Z>
+				</Vector3>
+				<token name="formFactorRaw">1</token>
+				<token name="shape">1</token>
+				<Vector3 name="size">
+					<X>0.300000012</X>
+					<Y>3</Y>
+					<Z>0.600000024</Z>
+				</Vector3>
+			</Properties>
+			<Item class="SpecialMesh" referent="RBX08EDB42EA07247EFBA437A6576B212BC">
+				<Properties>
+					<BinaryString name="AttributesSerialize"></BinaryString>
+					<Content name="MeshId"><url>http://www.roblox.com/asset/?id=71947462</url></Content>
+					<token name="MeshType">5</token>
+					<string name="Name">Mesh</string>
+					<Vector3 name="Offset">
+						<X>0</X>
+						<Y>0</Y>
+						<Z>0</Z>
+					</Vector3>
+					<Vector3 name="Scale">
+						<X>1</X>
+						<Y>1</Y>
+						<Z>1</Z>
+					</Vector3>
+					<int64 name="SourceAssetId">-1</int64>
+					<BinaryString name="Tags"></BinaryString>
+					<Content name="TextureId"><url>http://www.roblox.com/asset/?id=71947415</url></Content>
+					<Vector3 name="VertexColor">
+						<X>2</X>
+						<Y>2</Y>
+						<Z>2</Z>
+					</Vector3>
+				</Properties>
+			</Item>
+			<Item class="Attachment" referent="RBX2962C28A274F4C06A2D743595ABA063B">
+				<Properties>
+					<BinaryString name="AttributesSerialize"></BinaryString>
+					<CoordinateFrame name="CFrame">
+						<X>0</X>
+						<Y>-1.3928566</Y>
+						<Z>-0.185714126</Z>
+						<R00>1</R00>
+						<R01>0</R01>
+						<R02>0</R02>
+						<R10>0</R10>
+						<R11>0</R11>
+						<R12>-1</R12>
+						<R20>0</R20>
+						<R21>1</R21>
+						<R22>0</R22>
+					</CoordinateFrame>
+					<string name="Name">Grip</string>
+					<int64 name="SourceAssetId">-1</int64>
+					<BinaryString name="Tags"></BinaryString>
+					<bool name="Visible">false</bool>
+				</Properties>
+			</Item>
+			<Item class="Attachment" referent="RBX5CD2BD3EF73142518D8D5A45E5D00515">
+				<Properties>
+					<BinaryString name="AttributesSerialize"></BinaryString>
+					<CoordinateFrame name="CFrame">
+						<X>0</X>
+						<Y>1.6071434</Y>
+						<Z>0.214285851</Z>
+						<R00>1</R00>
+						<R01>0</R01>
+						<R02>0</R02>
+						<R10>0</R10>
+						<R11>0</R11>
+						<R12>-1</R12>
+						<R20>0</R20>
+						<R21>1</R21>
+						<R22>0</R22>
+					</CoordinateFrame>
+					<string name="Name">Muzzle</string>
+					<int64 name="SourceAssetId">-1</int64>
+					<BinaryString name="Tags"></BinaryString>
+					<bool name="Visible">false</bool>
+				</Properties>
+			</Item>
+			<Item class="Sound" referent="RBX19E1D8B282364A3AB8B1B43DB3B2DB68">
+				<Properties>
+					<BinaryString name="AttributesSerialize"></BinaryString>
+					<float name="EmitterSize">10</float>
+					<NumberRange name="LoopRegion">0 60000 </NumberRange>
+					<bool name="Looped">false</bool>
+					<string name="Name">Shot</string>
+					<bool name="PlayOnRemove">false</bool>
+					<NumberRange name="PlaybackRegion">0 60000 </NumberRange>
+					<bool name="PlaybackRegionsEnabled">false</bool>
+					<float name="PlaybackSpeed">1</float>
+					<bool name="Playing">false</bool>
+					<token name="RollOffMode">0</token>
+					<Ref name="SoundGroup">null</Ref>
+					<Content name="SoundId"><url>rbxassetid://134188543</url></Content>
+					<int64 name="SourceAssetId">134188543</int64>
+					<BinaryString name="Tags"></BinaryString>
+					<double name="TimePosition">0</double>
+					<float name="Volume">0.5</float>
+					<float name="xmlRead_MaxDistance_3">10000</float>
+				</Properties>
+			</Item>
+		</Item>
+	</Item>
+	<SharedStrings>
+		<SharedString md5="yuZpQdnvvUBOTYh1jqZ2cA=="></SharedString>
+	</SharedStrings>
+</roblox>

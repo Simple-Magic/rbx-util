@@ -9,7 +9,8 @@ local BulletService = Knit.CreateService({ Name = "BulletService" })
 function BulletService:KnitStart() DamageService = Knit.GetService("DamageService") end
 
 function BulletService:Create(gun: GunComponent, target: Vector3)
-	local raycastResult = self:Cast(gun.Instance.Handle.MuzzleAttachment.WorldPosition, target)
+	local raycastResult = self:Cast(gun:GetMuzzle().WorldPosition, target)
+	if not raycastResult then return end
 	local part = Instance.new("Part")
 	part.Anchored = true
 	part.CanCollide = false
@@ -20,7 +21,7 @@ function BulletService:Create(gun: GunComponent, target: Vector3)
 	local attachment = Instance.new("Attachment")
 	attachment.Parent = part
 	local beam = Instance.new("Beam")
-	beam.Attachment0 = gun.Instance.Handle.MuzzleAttachment
+	beam.Attachment0 = gun:GetMuzzle()
 	beam.Attachment1 = attachment
 	beam.Width0 = 0.2
 	beam.Width1 = 0.2
@@ -31,7 +32,7 @@ function BulletService:Create(gun: GunComponent, target: Vector3)
 	local humanoid = raycastResult.Instance.Parent:FindFirstChild("Humanoid")
 		or raycastResult.Instance.Parent.Parent:FindFirstChild("Humanoid")
 	if not humanoid then return end
-	DamageService:Damage(humanoid, gun.Config.Damage, gun:GetPlayer())
+	DamageService:Damage(humanoid, gun:GetDamage(), gun:GetPlayer())
 end
 
 function BulletService:Cast(origin: Vector3, target: Vector3): RaycastResult?

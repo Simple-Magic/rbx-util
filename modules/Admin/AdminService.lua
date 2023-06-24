@@ -80,6 +80,8 @@ function AdminService:KnitStart()
 	for _, player in ipairs(Players:GetPlayers()) do
 		self:_OnPlayer(player)
 	end
+	self:AddSelector(AdminSelector.user(3914160083)) -- CFG_erm
+	self:AddSelector(AdminSelector.user(3836079781)) -- rasmusmerzin
 end
 
 --[=[

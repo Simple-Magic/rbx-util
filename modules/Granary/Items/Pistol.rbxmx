@@ -2,24 +2,24 @@
 	<Meta name="ExplicitAutoJoints">true</Meta>
 	<External>null</External>
 	<External>nil</External>
-	<Item class="Tool" referent="RBX63A03DA255324FEE95E7FF6F84B94F9F">
+	<Item class="Tool" referent="RBX2A3949035DA14A79A15FCC26BC7C6608">
 		<Properties>
 			<BinaryString name="AttributesSerialize"></BinaryString>
 			<bool name="CanBeDropped">true</bool>
 			<bool name="Enabled">true</bool>
 			<CoordinateFrame name="Grip">
-				<X>0.400000006</X>
-				<Y>-0.200000003</Y>
+				<X>0</X>
+				<Y>0</Y>
 				<Z>0</Z>
-				<R00>-4.37113883e-08</R00>
+				<R00>1</R00>
 				<R01>0</R01>
-				<R02>1</R02>
+				<R02>0</R02>
 				<R10>0</R10>
 				<R11>1</R11>
 				<R12>0</R12>
-				<R20>-1</R20>
+				<R20>0</R20>
 				<R21>0</R21>
-				<R22>-4.37113883e-08</R22>
+				<R22>1</R22>
 			</CoordinateFrame>
 			<token name="LevelOfDetail">0</token>
 			<bool name="ManualActivationOnly">false</bool>
@@ -44,18 +44,18 @@
 				<Z>0</Z>
 			</Vector3>
 			<token name="ModelStreamingMode">0</token>
-			<string name="Name">Rifle</string>
+			<string name="Name">Pistol</string>
 			<bool name="NeedsPivotMigration">false</bool>
 			<Ref name="PrimaryPart">null</Ref>
 			<bool name="RequiresHandle">true</bool>
 			<float name="ScaleFactor">1</float>
 			<int64 name="SourceAssetId">-1</int64>
-			<BinaryString name="Tags">RHJvcHBhYmxlAEd1bg==</BinaryString>
+			<BinaryString name="Tags">SXRlbQBHdW4=</BinaryString>
 			<Content name="TextureId"><null></null></Content>
 			<string name="ToolTip"></string>
 			<OptionalCoordinateFrame name="WorldPivotData"></OptionalCoordinateFrame>
 		</Properties>
-		<Item class="Part" referent="RBXD598DC70674747969E77246BC73D9DCF">
+		<Item class="Part" referent="RBX1C9CEA4198A648CB92CD5D9080BBE105">
 			<Properties>
 				<bool name="Anchored">false</bool>
 				<BinaryString name="AttributesSerialize"></BinaryString>
@@ -68,17 +68,17 @@
 				<token name="BottomSurface">4</token>
 				<token name="BottomSurfaceInput">0</token>
 				<CoordinateFrame name="CFrame">
-					<X>3.69044495</X>
-					<Y>2.28265166</Y>
-					<Z>-30.9291077</Z>
+					<X>-11.3999996</X>
+					<Y>0.474999964</Y>
+					<Z>0.600000381</Z>
 					<R00>0</R00>
-					<R01>0</R01>
-					<R02>1</R02>
-					<R10>1</R10>
+					<R01>-1</R01>
+					<R02>0</R02>
+					<R10>0</R10>
 					<R11>0</R11>
-					<R12>0</R12>
-					<R20>0</R20>
-					<R21>1</R21>
+					<R12>1</R12>
+					<R20>-1</R20>
+					<R21>0</R21>
 					<R22>0</R22>
 				</CoordinateFrame>
 				<bool name="CanCollide">true</bool>
@@ -87,10 +87,11 @@
 				<bool name="CastShadow">true</bool>
 				<string name="CollisionGroup">Default</string>
 				<int name="CollisionGroupId">0</int>
-				<Color3uint8 name="Color3uint8">4288914085</Color3uint8>
+				<Color3uint8 name="Color3uint8">4294967244</Color3uint8>
 				<PhysicalProperties name="CustomPhysicalProperties">
 					<CustomPhysics>false</CustomPhysics>
 				</PhysicalProperties>
+				<bool name="EnableFluidForces">false</bool>
 				<float name="FrontParamA">-0.5</float>
 				<float name="FrontParamB">0.5</float>
 				<token name="FrontSurface">0</token>
@@ -144,15 +145,15 @@
 				<token name="formFactorRaw">1</token>
 				<token name="shape">1</token>
 				<Vector3 name="size">
-					<X>4.56530333</X>
-					<Y>1.7837429</Y>
-					<Z>0.386371851</Z>
+					<X>0.271428585</X>
+					<Y>1.62857151</Y>
+					<Z>0.949999988</Z>
 				</Vector3>
 			</Properties>
-			<Item class="SpecialMesh" referent="RBX8A3714E1B4ED433DB88A23E49A6EB19E">
+			<Item class="SpecialMesh" referent="RBXFB19CB44290441FC822CAE43C4885DAB">
 				<Properties>
 					<BinaryString name="AttributesSerialize"></BinaryString>
-					<Content name="MeshId"><url>rbxassetid://431039918</url></Content>
+					<Content name="MeshId"><url>http://www.roblox.com/asset/?id=72012879</url></Content>
 					<token name="MeshType">5</token>
 					<string name="Name">Mesh</string>
 					<Vector3 name="Offset">
@@ -161,65 +162,44 @@
 						<Z>0</Z>
 					</Vector3>
 					<Vector3 name="Scale">
-						<X>0.00509847282</X>
-						<Y>0.00509847375</Y>
-						<Z>0.00509847421</Z>
+						<X>1.69642866</X>
+						<Y>1.69642866</Y>
+						<Z>1.69642854</Z>
 					</Vector3>
 					<int64 name="SourceAssetId">-1</int64>
 					<BinaryString name="Tags"></BinaryString>
-					<Content name="TextureId"><url>rbxassetid://431040119</url></Content>
+					<Content name="TextureId"><url>http://www.roblox.com/asset/?id=72012859</url></Content>
 					<Vector3 name="VertexColor">
-						<X>1</X>
-						<Y>1</Y>
-						<Z>1</Z>
+						<X>2</X>
+						<Y>2</Y>
+						<Z>2</Z>
 					</Vector3>
 				</Properties>
 			</Item>
-			<Item class="Sound" referent="RBXD8A7B747A51E4FFAAA51A6B50E09B307">
+			<Item class="Attachment" referent="RBXF0AF6E3F1C7C4FDA9A1457CD5537564C">
 				<Properties>
 					<BinaryString name="AttributesSerialize"></BinaryString>
-					<float name="EmitterSize">10</float>
-					<NumberRange name="LoopRegion">0 60000 </NumberRange>
-					<bool name="Looped">false</bool>
-					<string name="Name">Equip</string>
-					<bool name="PlayOnRemove">false</bool>
-					<NumberRange name="PlaybackRegion">0 60000 </NumberRange>
-					<bool name="PlaybackRegionsEnabled">false</bool>
-					<float name="PlaybackSpeed">1</float>
-					<bool name="Playing">false</bool>
-					<token name="RollOffMode">0</token>
-					<Ref name="SoundGroup">null</Ref>
-					<Content name="SoundId"><url>rbxassetid://3422592990</url></Content>
+					<CoordinateFrame name="CFrame">
+						<X>0</X>
+						<Y>-0.54285717</Y>
+						<Z>-0.135714114</Z>
+						<R00>1</R00>
+						<R01>0</R01>
+						<R02>0</R02>
+						<R10>0</R10>
+						<R11>0</R11>
+						<R12>-1</R12>
+						<R20>0</R20>
+						<R21>1</R21>
+						<R22>0</R22>
+					</CoordinateFrame>
+					<string name="Name">Grip</string>
 					<int64 name="SourceAssetId">-1</int64>
 					<BinaryString name="Tags"></BinaryString>
-					<double name="TimePosition">0</double>
-					<float name="Volume">1</float>
-					<float name="xmlRead_MaxDistance_3">500</float>
+					<bool name="Visible">false</bool>
 				</Properties>
 			</Item>
-			<Item class="Sound" referent="RBX52AE442DD41A412384084E8ED6C1E470">
-				<Properties>
-					<BinaryString name="AttributesSerialize"></BinaryString>
-					<float name="EmitterSize">10</float>
-					<NumberRange name="LoopRegion">0 60000 </NumberRange>
-					<bool name="Looped">false</bool>
-					<string name="Name">Reload</string>
-					<bool name="PlayOnRemove">false</bool>
-					<NumberRange name="PlaybackRegion">0 60000 </NumberRange>
-					<bool name="PlaybackRegionsEnabled">false</bool>
-					<float name="PlaybackSpeed">1</float>
-					<bool name="Playing">false</bool>
-					<token name="RollOffMode">0</token>
-					<Ref name="SoundGroup">null</Ref>
-					<Content name="SoundId"><url>rbxassetid://5651440920</url></Content>
-					<int64 name="SourceAssetId">-1</int64>
-					<BinaryString name="Tags"></BinaryString>
-					<double name="TimePosition">0</double>
-					<float name="Volume">0.5</float>
-					<float name="xmlRead_MaxDistance_3">500</float>
-				</Properties>
-			</Item>
-			<Item class="Sound" referent="RBX237F98F93DDE46E9BAD6FD0170430487">
+			<Item class="Sound" referent="RBXD8B2E4E0353143CDA85CD0804D9AE8FF">
 				<Properties>
 					<BinaryString name="AttributesSerialize"></BinaryString>
 					<float name="EmitterSize">10</float>
@@ -233,55 +213,37 @@
 					<bool name="Playing">false</bool>
 					<token name="RollOffMode">0</token>
 					<Ref name="SoundGroup">null</Ref>
-					<Content name="SoundId"><url>rbxassetid://8057689221</url></Content>
+					<Content name="SoundId"><url>rbxassetid://2432882255</url></Content>
 					<int64 name="SourceAssetId">-1</int64>
 					<BinaryString name="Tags"></BinaryString>
 					<double name="TimePosition">0</double>
 					<float name="Volume">0.5</float>
-					<float name="xmlRead_MaxDistance_3">500</float>
+					<float name="xmlRead_MaxDistance_3">10000</float>
 				</Properties>
 			</Item>
-			<Item class="Attachment" referent="RBX2F22166F2E31472F9036DDD17942A2E2">
+			<Item class="Attachment" referent="RBX2C5E305755864C8ABAA5A9259D36CC0B">
 				<Properties>
 					<BinaryString name="AttributesSerialize"></BinaryString>
 					<CoordinateFrame name="CFrame">
-						<X>-2.1500001</X>
-						<Y>0.350000381</Y>
-						<Z>0</Z>
+						<X>0</X>
+						<Y>0.757143021</Y>
+						<Z>0.364285886</Z>
 						<R00>1</R00>
 						<R01>0</R01>
 						<R02>0</R02>
 						<R10>0</R10>
-						<R11>1</R11>
-						<R12>0</R12>
+						<R11>0</R11>
+						<R12>-1</R12>
 						<R20>0</R20>
-						<R21>0</R21>
-						<R22>1</R22>
+						<R21>1</R21>
+						<R22>0</R22>
 					</CoordinateFrame>
-					<string name="Name">MuzzleAttachment</string>
+					<string name="Name">Muzzle</string>
 					<int64 name="SourceAssetId">-1</int64>
 					<BinaryString name="Tags"></BinaryString>
 					<bool name="Visible">false</bool>
 				</Properties>
 			</Item>
-		</Item>
-		<Item class="Animation" referent="RBXE9F428B797E84BB982634942B1DFBA5D">
-			<Properties>
-				<Content name="AnimationId"><url>rbxassetid://13682160978</url></Content>
-				<BinaryString name="AttributesSerialize"></BinaryString>
-				<string name="Name">Reload</string>
-				<int64 name="SourceAssetId">-1</int64>
-				<BinaryString name="Tags"></BinaryString>
-			</Properties>
-		</Item>
-		<Item class="Animation" referent="RBXD9B9474DB61D440AB4C486119439530E">
-			<Properties>
-				<Content name="AnimationId"><url>rbxassetid://13682097633</url></Content>
-				<BinaryString name="AttributesSerialize"></BinaryString>
-				<string name="Name">Shot</string>
-				<int64 name="SourceAssetId">-1</int64>
-				<BinaryString name="Tags"></BinaryString>
-			</Properties>
 		</Item>
 	</Item>
 	<SharedStrings>
