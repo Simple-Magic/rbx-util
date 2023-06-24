@@ -8,7 +8,7 @@ local CrateService = Knit.CreateService({
 	},
 })
 
-function CrateService:Open(player: Player) self.Client.Store:Fire(player) end
+function CrateService:Open(player: Player, crate: BasePart) self.Client.Store:Fire(player, crate) end
 
 function CrateService.Client:Buy(player: Player, template: Tool)
 	local clone = template:Clone()

@@ -49,7 +49,6 @@ function ItemComponent:GetGrip(): Attachment? return self.Instance.Handle:FindFi
 function ItemComponent:OnClientAncestry()
 	self.AncestryTrove = self.AncestryTrove or Trove.new()
 	self.AncestryTrove:Clean()
-	self.Input = {}
 	self.AncestrySequence = (self.AncestrySequence or 0) + 1
 	local player = self:GetPlayer()
 	if player == Players.LocalPlayer then
@@ -57,48 +56,37 @@ function ItemComponent:OnClientAncestry()
 			UserInputService.InputBegan,
 			function(...) self:OnUserInputBegan(...) end
 		)
-		self.AncestryTrove:Connect(
-			UserInputService.InputEnded,
-			function(...) self:OnUserInputEnded(...) end
-		)
 	end
-end
-
-function ItemComponent:OnUserInputEnded(inputObject: InputObject, processed: boolean)
-	self.Input[inputObject.KeyCode] = nil
-	self.Input[inputObject.UserInputType] = nil
 end
 
 function ItemComponent:OnUserInputBegan(inputObject: InputObject, processed: boolean)
 	if processed then return end
-	self.Input[inputObject.KeyCode] = true
-	self.Input[inputObject.UserInputType] = true
 	if inputObject.KeyCode == Enum.KeyCode.G or inputObject.KeyCode == Enum.KeyCode.ButtonB then
 		ItemService:Drop(self.Instance)
 	elseif
 		self.Instance.Parent.Name:match("^Right")
 		and (
 			inputObject.UserInputType == Enum.UserInputType.MouseButton1
-			or inputObject.KeyCode == Enum.KeyCode.ButtonL1
+			or inputObject.KeyCode == Enum.KeyCode.ButtonR2
 		)
 	then
 		repeat
 			ItemService:Activate(self.Instance)
 			task.wait(0.1)
-		until not self.Input[Enum.UserInputType.MouseButton1]
-			and not self.Input[Enum.KeyCode.ButtonL1]
+		until not UserInputService:IsMouseButtonPressed(Enum.UserInputType.MouseButton1)
+			and not UserInputService:IsKeyDown(Enum.KeyCode.ButtonR2)
 	elseif
 		self.Instance.Parent.Name:match("^Left")
 		and (
 			inputObject.UserInputType == Enum.UserInputType.MouseButton2
-			or inputObject.KeyCode == Enum.KeyCode.ButtonR1
+			or inputObject.KeyCode == Enum.KeyCode.ButtonL2
 		)
 	then
 		repeat
 			ItemService:Activate(self.Instance)
 			task.wait(0.1)
-		until not self.Input[Enum.UserInputType.MouseButton2]
-			and not self.Input[Enum.KeyCode.ButtonR1]
+		until not UserInputService:IsMouseButtonPressed(Enum.UserInputType.MouseButton2)
+			and not UserInputService:IsKeyDown(Enum.KeyCode.ButtonL2)
 	end
 end
 

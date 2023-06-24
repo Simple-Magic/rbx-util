@@ -20,7 +20,7 @@ function CrateComponent:Start()
 		self.ProximityPrompt.Parent = self.Instance
 		self.Trove:Connect(
 			self.ProximityPrompt.Triggered,
-			function(player) CrateService:Open(player) end
+			function(player) CrateService:Open(player, self.Instance) end
 		)
 	end
 end
