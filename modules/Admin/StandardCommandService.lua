@@ -106,7 +106,7 @@ function StandardCommandService:_Give(origin: TextSource, source: string): strin
 	local players = AdminService.playersFromNames(parameters, player)
 	for _, plr in ipairs(players) do
 		local clone = tool:Clone()
-		clone.Parent = plr.Backpack
+		clone.Parent = plr.Character
 	end
 	return ("Gave %d %s's."):format(#players, tool.Name)
 end

@@ -1,7 +1,7 @@
 [package]
 name = "rasmusmerzin/admin"
 description = "Admin commands module."
-version = "1.0.0"
+version = "1.0.1"
 license = "MIT"
 authors = ["Emil Rasmus Merzin"]
 registry = "https://github.com/UpliftGames/wally-index"
