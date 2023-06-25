@@ -19,15 +19,15 @@ function CrateController:OpenStore(crate: BasePart)
 	self.Gui.Parent = Players.LocalPlayer.PlayerGui
 	self.ButtonTemplate = self.Gui.ScrollingFrame.TextButton
 	self.ButtonTemplate.Parent = nil
-	local items = script.Parent.Items:GetChildren()
-	table.insert(items, nil)
-	for _, item in ipairs(items) do
+	local props = script.Parent.Props:GetChildren()
+	table.insert(props, 0)
+	for _, item in ipairs(props) do
 		local button = self.ButtonTemplate:Clone()
-		button.Name = item and item.Name or "Close"
-		button.Text = item and item.Name or "Close"
+		button.Name = item ~= 0 and item.Name or "Close"
+		button.Text = item ~= 0 and item.Name or "Close"
 		button.Parent = self.Gui.ScrollingFrame
 		button.MouseButton1Click:Connect(function()
-			if item then CrateService:Buy(item):await() end
+			if item ~= 0 then CrateService:Buy(item):await() end
 			self.Gui:Destroy()
 			self.Gui = nil
 		end)
