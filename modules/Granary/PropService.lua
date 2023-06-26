@@ -59,7 +59,8 @@ function PropService.Client:Drop(player: Player, instance: Tool)
 	end
 end
 
-function PropService.Client:Activate(player: Player, instance: BasePart)
+function PropService.Client:Activate(player: Player, instance: Tool)
+	if not instance.Enabled then return end
 	local melee = MeleeComponent:FromInstance(instance)
 	local gun = GunComponent:FromInstance(instance)
 	local blocked

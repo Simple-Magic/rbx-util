@@ -1,13 +1,14 @@
 [package]
 name = "rasmusmerzin/granary"
-description = "First person module."
-version = "0.1.30"
+description = "First person shooter module."
+version = "0.1.31"
 license = "MIT"
 authors = ["Emil Rasmus Merzin"]
 registry = "https://github.com/UpliftGames/wally-index"
 realm = "shared"
 
 [dependencies]
+Admin = "rasmusmerzin/admin@1"
 Component = "sleitnick/component@2"
 Knit = "sleitnick/knit@1"
 Signal = "sleitnick/signal@1"
