@@ -5,12 +5,16 @@ local Workspace = game:GetService("Workspace")
 local Component = require(script.Parent.Parent.Component)
 local Knit = require(script.Parent.Parent.Knit)
 local Trove = require(script.Parent.Parent.Trove)
+local PropConfig = require(script.Parent.PropConfig)
 
 local PropService
 
 local PropComponent = Component.new({ Tag = "Prop" })
 
-function PropComponent:Construct() self.Trove = Trove.new() end
+function PropComponent:Construct()
+	self.Trove = Trove.new()
+	self.Config = PropConfig[self.Instance.Name]
+end
 
 function PropComponent:Start()
 	Knit.OnStart():await()
@@ -78,32 +82,35 @@ end
 
 function PropComponent:OnUserInputBegan(inputObject: InputObject, processed: boolean)
 	if processed then return end
+	local sleep = 60 / (self.Config.Rate or 300)
 	if inputObject.KeyCode == Enum.KeyCode.G or inputObject.KeyCode == Enum.KeyCode.ButtonB then
 		PropService:Drop(self.Instance)
 	elseif
 		self.Instance.Parent.Name:match("^Right")
-		and (
-			inputObject.UserInputType == Enum.UserInputType.MouseButton1
-			or inputObject.KeyCode == Enum.KeyCode.ButtonR2
-		)
+		and (inputObject.UserInputType == Enum.UserInputType.MouseButton1 or inputObject.KeyCode == Enum.KeyCode.ButtonR2)
+		and not self.Debounce
 	then
+		self.Debounce = true
 		repeat
 			PropService:Activate(self.Instance)
-			task.wait(0.1)
+			task.wait(sleep)
 		until not UserInputService:IsMouseButtonPressed(Enum.UserInputType.MouseButton1)
-			and not UserInputService:IsKeyDown(Enum.KeyCode.ButtonR2)
+				and not UserInputService:IsKeyDown(Enum.KeyCode.ButtonR2)
+			or not self.Config.Automatic
+		self.Debounce = false
 	elseif
 		self.Instance.Parent.Name:match("^Left")
-		and (
-			inputObject.UserInputType == Enum.UserInputType.MouseButton2
-			or inputObject.KeyCode == Enum.KeyCode.ButtonL2
-		)
+		and (inputObject.UserInputType == Enum.UserInputType.MouseButton2 or inputObject.KeyCode == Enum.KeyCode.ButtonL2)
+		and not self.Debounce
 	then
+		self.Debounce = true
 		repeat
 			PropService:Activate(self.Instance)
-			task.wait(0.1)
+			task.wait(sleep)
 		until not UserInputService:IsMouseButtonPressed(Enum.UserInputType.MouseButton2)
-			and not UserInputService:IsKeyDown(Enum.KeyCode.ButtonL2)
+				and not UserInputService:IsKeyDown(Enum.KeyCode.ButtonL2)
+			or not self.Config.Automatic
+		self.Debounce = false
 	end
 end
 

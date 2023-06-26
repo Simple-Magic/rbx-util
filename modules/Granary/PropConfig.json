@@ -1,0 +1,23 @@
+{
+  "AssaultRifle": {
+    "Automatic": true,
+    "Rate": 600
+  },
+  "Axe": {
+    "Rate": 200
+  },
+  "C4": {},
+  "Pistol": {
+    "Rate": 400
+  },
+  "Shotgun": {
+    "Rate": 300
+  },
+  "Sword": {
+    "Rate": 400
+  },
+  "Uzi": {
+    "Automatic": true,
+    "Rate": 500
+  }
+}

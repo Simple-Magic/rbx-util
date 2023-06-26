@@ -1,3 +1,4 @@
+local CollectionService = game:GetService("CollectionService")
 local Workspace = game:GetService("Workspace")
 local Knit = require(script.Parent.Parent.Knit)
 local MapComponent = require(script.Parent.MapComponent)
@@ -30,6 +31,7 @@ function GranaryCommandService:_SetMap(_: TextSource, source: string): string
 	end
 	local map = template:Clone()
 	map:PivotTo(CFrame.new())
+	CollectionService:AddTag(map, "Map")
 	map.Parent = Workspace
 	return "Map loaded."
 end

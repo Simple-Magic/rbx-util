@@ -73,8 +73,8 @@ function FirstPersonService:Recoil(player: Player, side: string, double: boolean
 			TweenService:Create(grip, TweenInfo.new(0.2), { CFrame = origin }):Play()
 			task.wait(0.2)
 		else
-			TweenService:Create(grip, TweenInfo.new(0.1), { CFrame = origin }):Play()
-			task.wait(0.1)
+			TweenService:Create(grip, TweenInfo.new(0.05), { CFrame = origin }):Play()
+			task.wait(0.05)
 		end
 		self.RecoilLock[side][player] = nil
 	end)
