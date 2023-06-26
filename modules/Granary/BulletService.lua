@@ -19,7 +19,7 @@ function BulletService:Create(gun: GunComponent, target: Vector3)
 	part.CanTouch = false
 	part.BrickColor = BrickColor.Black()
 	part.Shape = Enum.PartType.Cylinder
-	part.Size = Vector3.new(0, 0.2, 0.2)
+	part.Size = Vector3.new(0.05, 0.2, 0.2)
 	part.CFrame = CFrame.new(raycastResult.Position)
 		* CFrame.new(Vector3.zero, raycastResult.Normal)
 		* CFrame.Angles(0, math.pi / 2, 0)

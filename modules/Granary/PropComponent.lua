@@ -48,7 +48,20 @@ function PropComponent:GetPlayer(): Player?
 	end
 end
 
-function PropComponent:GetGrip(): Attachment? return self.Instance.Handle:FindFirstChild("Grip") end
+function PropComponent:GetGrip(): Attachment?
+	if
+		self.Instance.Parent.Name:match("^Left")
+		and self.Instance.Handle:FindFirstChild("LeftGrip")
+	then
+		return self.Instance.Handle.LeftGrip
+	elseif
+		self.Instance.Parent.Name:match("^Right")
+		and self.Instance.Handle:FindFirstChild("RightGrip")
+	then
+		return self.Instance.Handle.RightGrip
+	end
+	return self.Instance.Handle:FindFirstChild("Grip")
+end
 
 function PropComponent:OnClientAncestry()
 	self.AncestryTrove = self.AncestryTrove or Trove.new()

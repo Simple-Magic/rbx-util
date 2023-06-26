@@ -2,7 +2,7 @@
 	<Meta name="ExplicitAutoJoints">true</Meta>
 	<External>null</External>
 	<External>nil</External>
-	<Item class="Tool" referent="RBX32C898948489473AA26C176333E89A17">
+	<Item class="Tool" referent="RBX80CF0D337A554726B3C5613EE7B144E3">
 		<Properties>
 			<BinaryString name="AttributesSerialize"></BinaryString>
 			<bool name="CanBeDropped">true</bool>
@@ -53,9 +53,24 @@
 			<BinaryString name="Tags">QzQAUHJvcA==</BinaryString>
 			<Content name="TextureId"><null></null></Content>
 			<string name="ToolTip"></string>
-			<OptionalCoordinateFrame name="WorldPivotData"></OptionalCoordinateFrame>
+			<OptionalCoordinateFrame name="WorldPivotData">
+				<CFrame>
+					<X>17.0226917</X>
+					<Y>12.2609711</Y>
+					<Z>-5.25593567</Z>
+					<R00>1</R00>
+					<R01>0</R01>
+					<R02>0</R02>
+					<R10>0</R10>
+					<R11>1</R11>
+					<R12>0</R12>
+					<R20>0</R20>
+					<R21>0</R21>
+					<R22>1</R22>
+				</CFrame>
+			</OptionalCoordinateFrame>
 		</Properties>
-		<Item class="Part" referent="RBXCA93CE2D11CA4C53A0A1DB4AA78CB266">
+		<Item class="Part" referent="RBX755BE6246C964C3FB7C6F13303730866">
 			<Properties>
 				<bool name="Anchored">false</bool>
 				<BinaryString name="AttributesSerialize"></BinaryString>
@@ -68,9 +83,9 @@
 				<token name="BottomSurface">4</token>
 				<token name="BottomSurfaceInput">0</token>
 				<CoordinateFrame name="CFrame">
-					<X>-10.9773083</X>
-					<Y>0.260971457</Y>
-					<Z>2.74406433</Z>
+					<X>17.0226917</X>
+					<Y>12.2609711</Y>
+					<Z>-5.25593567</Z>
 					<R00>1</R00>
 					<R01>0</R01>
 					<R02>0</R02>
@@ -150,7 +165,7 @@
 					<Z>1.60197973</Z>
 				</Vector3>
 			</Properties>
-			<Item class="SpecialMesh" referent="RBXC1A059D6B6FC4EEFA196FD3FF73B7C66">
+			<Item class="SpecialMesh" referent="RBXD36FEA1AA4AE4CB5BD9C3CDAE65B3FBD">
 				<Properties>
 					<BinaryString name="AttributesSerialize"></BinaryString>
 					<Content name="MeshId"><url>rbxassetid://454801145</url></Content>
@@ -176,7 +191,7 @@
 					</Vector3>
 				</Properties>
 			</Item>
-			<Item class="Attachment" referent="RBX2A024E16117B497DA07D16D324B7C0C7">
+			<Item class="Attachment" referent="RBX80EAB9B2886D48C1988256D22950C2A5">
 				<Properties>
 					<BinaryString name="AttributesSerialize"></BinaryString>
 					<CoordinateFrame name="CFrame">
@@ -193,7 +208,30 @@
 						<R21>1</R21>
 						<R22>-0</R22>
 					</CoordinateFrame>
-					<string name="Name">Grip</string>
+					<string name="Name">RightGrip</string>
+					<int64 name="SourceAssetId">-1</int64>
+					<BinaryString name="Tags"></BinaryString>
+					<bool name="Visible">false</bool>
+				</Properties>
+			</Item>
+			<Item class="Attachment" referent="RBX5B1CD308E20C4610BA55C88E4828E8FA">
+				<Properties>
+					<BinaryString name="AttributesSerialize"></BinaryString>
+					<CoordinateFrame name="CFrame">
+						<X>0.350002289</X>
+						<Y>0</Y>
+						<Z>-0.199999809</Z>
+						<R00>-1</R00>
+						<R01>0</R01>
+						<R02>0</R02>
+						<R10>0</R10>
+						<R11>0</R11>
+						<R12>1</R12>
+						<R20>0</R20>
+						<R21>1</R21>
+						<R22>-0</R22>
+					</CoordinateFrame>
+					<string name="Name">LeftGrip</string>
 					<int64 name="SourceAssetId">-1</int64>
 					<BinaryString name="Tags"></BinaryString>
 					<bool name="Visible">false</bool>
