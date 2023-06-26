@@ -52,9 +52,7 @@ function BulletService:Cast(origin: Vector3, target: Vector3, filter: { Instance
 		if raycastResult and raycastResult.Instance then
 			raycastParams:AddToFilter(raycastResult.Instance)
 		end
-	until not raycastResult
-		or not raycastResult.Instance
-		or not raycastResult.Instance.Parent:IsA("Tool")
+	until not raycastResult or not raycastResult.Instance or raycastResult.Instance.CanCollide
 	return raycastResult
 end
 

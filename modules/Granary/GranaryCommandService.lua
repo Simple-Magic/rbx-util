@@ -16,20 +16,30 @@ local GranaryCommandService = Knit.CreateService({ Name = "GranaryCommandService
 
 function GranaryCommandService:KnitStart()
 	AdminService = Knit.GetService("AdminService")
-	AdminService:AddCommand("SetMap", "/map", function(...) self:_SetMap(...) end)
+	AdminService:AddCommand("SetMap", "/map", function(...) return self:_SetMap(...) end)
+	AdminService:AddCommand("Maps", nil, function() return self:_ListMaps() end)
 end
 
-function GranaryCommandService:_SetMap(_: TextSource, source: string)
+function GranaryCommandService:_SetMap(_: TextSource, source: string): string
 	local parameters = AdminService.commandParameters(source)
 	local templates = getMaps()
 	local template = templates[parameters[1]:lower()]
-	if not template then return end
+	if not template then return "No map found." end
 	for _, map in ipairs(MapComponent:GetAll()) do
 		map:Destroy()
 	end
 	local map = template:Clone()
 	map:PivotTo(CFrame.new())
 	map.Parent = Workspace
+	return "Map loaded."
+end
+
+function GranaryCommandService:_ListMaps(): string
+	list = "<b>Maps:</b>"
+	for _, map in pairs(getMaps()) do
+		list ..= ("\n- %s"):format(map.Name)
+	end
+	return list
 end
 
 return GranaryCommandService

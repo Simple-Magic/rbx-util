@@ -153,9 +153,9 @@ function StandardCommandService:_Help(): string
 end
 
 function StandardCommandService:_Tools(): string
-	local output = "<b>Tools:</b>\n"
+	local output = "<b>Tools:</b>"
 	for _, tool in pairs(AdminService.tools()) do
-		output ..= ("- %s\n"):format(tool.Name)
+		output ..= ("\n- %s"):format(tool.Name)
 	end
 	return output
 end
