@@ -18,13 +18,13 @@ function MeleeComponent:Start()
 		CollectionService:AddTag(self.Instance, "Prop")
 		self.Trove:Connect(self.Instance.AncestryChanged, function() self:OnServerAncestry() end)
 		task.wait()
+		local prop = self:GetComponent(PropComponent)
+		self.Config = prop.Config
 		self:OnServerAncestry()
 	end
 end
 
 function MeleeComponent:Stop() self.Trove:Clean() end
-
-function MeleeComponent:GetDamage(): number return self.Instance:GetAttribute("Damage") or 10 end
 
 function MeleeComponent:Activate()
 	local swing = self.Instance.Handle:FindFirstChild("Swing") :: Sound
@@ -53,8 +53,8 @@ function MeleeComponent:OnTouch(part: BasePart)
 	local humanoid = part.Parent:FindFirstChild("Humanoid")
 	if not humanoid then return end
 	self.Debounce = true
-	task.delay(0.3, function() self.Debounce = false end)
-	DamageService:Damage(humanoid, self:GetDamage(), player)
+	task.delay(60 / self.Config.Rate, function() self.Debounce = false end)
+	DamageService:Damage(humanoid, self.Config.Damage, player)
 end
 
 return MeleeComponent

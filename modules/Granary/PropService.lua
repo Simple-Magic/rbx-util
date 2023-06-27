@@ -28,6 +28,12 @@ function PropService:OnPlayer(player: Player)
 end
 
 function PropService:OnCharacter(player: Player)
+	local humanoid = player.Character:WaitForChild("Humanoid")
+	humanoid.Died:Connect(function()
+		for descendant in ipairs(player.Character:GetDescendants()) do
+			if descendant:IsA("Tool") then self.Client:Drop(player, descendant) end
+		end
+	end)
 	player.Character.ChildAdded:Connect(function(child)
 		if child:IsA("Tool") then
 			task.wait()

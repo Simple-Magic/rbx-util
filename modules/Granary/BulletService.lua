@@ -38,7 +38,7 @@ function BulletService:Create(gun: GunComponent, target: Vector3)
 	local humanoid = raycastResult.Instance.Parent:FindFirstChild("Humanoid")
 		or raycastResult.Instance.Parent.Parent:FindFirstChild("Humanoid")
 	if not humanoid then return end
-	DamageService:Damage(humanoid, gun:GetDamage(), player)
+	DamageService:Damage(humanoid, gun.Config.Damage, player)
 end
 
 function BulletService:Cast(origin: Vector3, target: Vector3, filter: { Instance }): RaycastResult?

@@ -1,5 +1,4 @@
-local ReplicatedStorage = game:GetService("ReplicatedStorage")
-local Knit = require(ReplicatedStorage.Packages.Knit)
+local Knit = require(script.Parent.Parent.Knit)
 
 local MapService = Knit.CreateService({
 	Name = "MapService",

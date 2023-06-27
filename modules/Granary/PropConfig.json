@@ -1,23 +1,38 @@
 {
   "AssaultRifle": {
     "Automatic": true,
-    "Rate": 600
+    "Damage": 20,
+    "Rate": 600,
+    "Spawns": true
   },
   "Axe": {
+    "Spawns": true,
+    "Damage": 30,
     "Rate": 200
   },
-  "C4": {},
-  "Pistol": {
+  "C4": {
+    "Automatic": true,
     "Rate": 400
+  },
+  "Pistol": {
+    "Damage": 17,
+    "Rate": 400,
+    "Spawns": true
   },
   "Shotgun": {
-    "Rate": 300
+    "Damage": 30,
+    "Rate": 300,
+    "Spawns": true
   },
   "Sword": {
-    "Rate": 400
+    "Damage": 25,
+    "Rate": 400,
+    "Spawns": true
   },
   "Uzi": {
     "Automatic": true,
-    "Rate": 500
+    "Damage": 13,
+    "Rate": 500,
+    "Spawns": true
   }
 }

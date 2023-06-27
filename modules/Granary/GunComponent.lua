@@ -1,8 +1,8 @@
 local CollectionService = game:GetService("CollectionService")
 local RunService = game:GetService("RunService")
 local Component = require(script.Parent.Parent.Component)
-local PropComponent = require(script.Parent.PropComponent)
 local Knit = require(script.Parent.Parent.Knit)
+local PropComponent = require(script.Parent.PropComponent)
 local Trove = require(script.Parent.Parent.Trove)
 
 local BulletService
@@ -16,7 +16,12 @@ function GunComponent:Start()
 	Knit.OnStart():await()
 	BulletService = BulletService or Knit.GetService("BulletService")
 	HitService = HitService or Knit.GetService("HitService")
-	if RunService:IsServer() then CollectionService:AddTag(self.Instance, "Prop") end
+	if RunService:IsServer() then
+		CollectionService:AddTag(self.Instance, "Prop")
+		task.wait()
+		local prop = self:GetComponent(PropComponent)
+		self.Config = prop.Config
+	end
 end
 
 function GunComponent:Stop() self.Trove:Clean() end
@@ -25,8 +30,6 @@ function GunComponent:GetPlayer(): Player?
 	local prop = self:GetComponent(PropComponent)
 	return prop and prop:GetPlayer()
 end
-
-function GunComponent:GetDamage(): number return self.Instance:GetAttribute("Damage") or 10 end
 
 function GunComponent:GetMuzzle(): Attachment return self.Instance.Handle:FindFirstChild("Muzzle") end
 

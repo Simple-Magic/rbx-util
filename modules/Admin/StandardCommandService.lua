@@ -27,6 +27,7 @@ function StandardCommandService:KnitStart()
 	AdminService:AddCommand("Info", nil, function(...) return self:_Info(...) end)
 	AdminService:AddCommand("Kill", nil, function(...) return self:_Kill(...) end)
 	AdminService:AddCommand("Teleport", "/tp", function(...) return self:_Teleport(...) end)
+	AdminService:AddCommand("Respawn", nil, function(...) return self:_Respawn(...) end)
 	AdminService:AddCommand("Tools", nil, function(...) return self:_Tools(...) end)
 	AdminService:AddCommand("UnForceField", "/unff", function(...) return self:_UnFF(...) end)
 end
@@ -191,6 +192,15 @@ function StandardCommandService:_Info(origin: TextSource, source: string): strin
 		output ..= "\n"
 	end
 	return output
+end
+
+function StandardCommandService:_Respawn(origin: TextSource, source: string): string
+	local player = Players:GetPlayerByUserId(origin.UserId)
+	local players = AdminService.playersFromNames(AdminService.commandParameters(source), player)
+	for _, plr in ipairs(players) do
+		plr:LoadCharacter()
+	end
+	return ("Respawned %d players."):format(#players)
 end
 
 function StandardCommandService:_Kill(origin: TextSource, source: string): string
