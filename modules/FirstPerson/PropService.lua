@@ -60,12 +60,7 @@ end
 
 function PropService.Client:Drop(player: Player, instance: Tool)
 	instance.Parent = Workspace
-	local origin = player.Character:GetPivot()
-	local raycastResult = Workspace:Raycast(
-		origin.Position,
-		(CFrame.fromOrientation(origin:ToOrientation()) * CFrame.new(0, 0, -3 - math.random() * 5)).Position
-	)
-	if raycastResult then instance:PivotTo(CFrame.new(raycastResult.Position)) end
+	instance:PivotTo(player.Character:GetPivot() * CFrame.new(0, 0, -3 - math.random() * 5))
 	if self.Server.Left[player] == instance then
 		self.Server.Left[player] = nil
 	elseif self.Server.Right[player] == instance then
