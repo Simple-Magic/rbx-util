@@ -36,9 +36,6 @@ function PlayerListController:AddPlayer(player: Player)
 	if player:IsA("Player") then name = player.DisplayName end
 	label.Text = ("  %s"):format(name)
 	if player:IsA("Team") then label.Text = ("  <b>[BOT]</b> %s"):format(name) end
-	local hue, saturation = player.TeamColor.Color:ToHSV()
-	label.TextColor3 = Color3.fromHSV(hue, saturation, 1)
-	label.BackgroundColor3 = Color3.fromHSV(hue, 0.3, 0.2)
 	label.Parent = self.Gui.Frame.ScrollingFrame
 	self.Labels[player] = label
 	self:ResizeCanvas()
@@ -65,6 +62,7 @@ end
 function PlayerListController:UpdateData()
 	self:UpdateColumns()
 	self:UpdateRows()
+	self:UpdateColors()
 end
 
 function PlayerListController:UpdateColumns()
@@ -95,7 +93,6 @@ function PlayerListController:UpdateRows()
 			local dataLabel = self.LabelDataTemplate:Clone()
 			dataLabel.Position = UDim2.new(0.5 + 0.5 * (index - 0.5) / #properties, 0, 0, 0)
 			dataLabel.Text = tostring(value or "-")
-			dataLabel.TextColor3 = Color3.fromHSV(player.TeamColor.Color:ToHSV(), 0.5, 1)
 			dataLabel.Parent = label
 		end
 	end
@@ -112,6 +109,19 @@ function PlayerListController:UpdateRows()
 		table.sort(players, orderFn)
 		for index, player in ipairs(players) do
 			self.Labels[player].LayoutOrder = index
+		end
+	end
+end
+
+function PlayerListController:UpdateColors()
+	for player, label in pairs(self.Labels) do
+		local hue, saturation = player.TeamColor.Color:ToHSV()
+		local instances = label:GetDescendants()
+		table.insert(instances, label)
+		for _, instance in ipairs(instances) do
+			if instance:IsA("TextLabel") then
+				instance.TextColor3 = Color3.fromHSV(hue, saturation, 1)
+			end
 		end
 	end
 end
