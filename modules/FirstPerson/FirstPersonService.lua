@@ -27,11 +27,11 @@ function FirstPersonService:OnCharacter(player: Player)
 	local head = player.Character:WaitForChild("Head")
 	local rightGrip = Instance.new("Attachment")
 	rightGrip.Name = "RightGrip"
-	rightGrip.CFrame = CFrame.new(1, -0.5, -3)
+	rightGrip.CFrame = CFrame.new(1, -0.5, -5)
 	rightGrip.Parent = head
 	local leftGrip = Instance.new("Attachment")
 	leftGrip.Name = "LeftGrip"
-	leftGrip.CFrame = CFrame.new(-1, -0.5, -3)
+	leftGrip.CFrame = CFrame.new(-1, -0.5, -5)
 	leftGrip.Parent = head
 	for _, motor in ipairs({
 		player.Character:WaitForChild("Head"):WaitForChild("Neck"),
@@ -67,7 +67,7 @@ function FirstPersonService:Recoil(player: Player, side: string, double: boolean
 		task.wait(0.05)
 		if double then
 			TweenService
-				:Create(grip, TweenInfo.new(0.2), { CFrame = origin * CFrame.new(0, -4, 0) })
+				:Create(grip, TweenInfo.new(0.2), { CFrame = origin * CFrame.new(0, -3, 0) })
 				:Play()
 			task.wait(0.2)
 			TweenService:Create(grip, TweenInfo.new(0.2), { CFrame = origin }):Play()

@@ -7,7 +7,7 @@ realm = "shared"
 [dependencies]
 Admin = "rasmusmerzin/admin@1"
 Bar = "rasmusmerzin/bar@1"
-Granary = "rasmusmerzin/granary@0"
+FirstPerson = "rasmusmerzin/firstperson@0"
 Knit = "sleitnick/knit@1"
 Message = "rasmusmerzin/message@1"
 PlayerList = "rasmusmerzin/playerlist@1"
