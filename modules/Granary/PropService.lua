@@ -24,22 +24,25 @@ end
 
 function PropService:OnPlayer(player: Player)
 	player.CharacterAdded:Connect(function() self:OnCharacter(player) end)
+	player.CharacterRemoving:Connect(function() self:DropAll(player) end)
 	if player.Character then self:OnCharacter(player) end
 end
 
 function PropService:OnCharacter(player: Player)
 	local humanoid = player.Character:WaitForChild("Humanoid")
-	humanoid.Died:Connect(function()
-		for descendant in ipairs(player.Character:GetDescendants()) do
-			if descendant:IsA("Tool") then self.Client:Drop(player, descendant) end
-		end
-	end)
+	humanoid.Died:Connect(function() self:DropAll(player) end)
 	player.Character.ChildAdded:Connect(function(child)
 		if child:IsA("Tool") then
 			task.wait()
 			self:PickUp(player, child)
 		end
 	end)
+end
+
+function PropService:DropAll(player: Player)
+	for _, descendant in ipairs(player.Character:GetDescendants()) do
+		if descendant:IsA("Tool") then self.Client:Drop(player, descendant) end
+	end
 end
 
 function PropService:KnitStart() FirstPersonService = Knit.GetService("FirstPersonService") end

@@ -2,7 +2,7 @@
 	<Meta name="ExplicitAutoJoints">true</Meta>
 	<External>null</External>
 	<External>nil</External>
-	<Item class="Model" referent="RBX31DB1D846BDD472EA3F01A526E99DC97">
+	<Item class="Model" referent="RBX520155E5A6194497A5B5012738072031">
 		<Properties>
 			<BinaryString name="AttributesSerialize"></BinaryString>
 			<token name="LevelOfDetail">0</token>
@@ -29,28 +29,13 @@
 			<token name="ModelStreamingMode">0</token>
 			<string name="Name">Cage</string>
 			<bool name="NeedsPivotMigration">false</bool>
-			<Ref name="PrimaryPart">RBX7662509FD238445892C1D8AA8CC4F0BC</Ref>
+			<Ref name="PrimaryPart">RBX211B043E745E4FB68F662107B620E81C</Ref>
 			<float name="ScaleFactor">1</float>
 			<int64 name="SourceAssetId">-1</int64>
 			<BinaryString name="Tags"></BinaryString>
-			<OptionalCoordinateFrame name="WorldPivotData">
-				<CFrame>
-					<X>0</X>
-					<Y>128</Y>
-					<Z>0</Z>
-					<R00>1</R00>
-					<R01>0</R01>
-					<R02>0</R02>
-					<R10>0</R10>
-					<R11>1</R11>
-					<R12>0</R12>
-					<R20>0</R20>
-					<R21>0</R21>
-					<R22>1</R22>
-				</CFrame>
-			</OptionalCoordinateFrame>
+			<OptionalCoordinateFrame name="WorldPivotData"></OptionalCoordinateFrame>
 		</Properties>
-		<Item class="Part" referent="RBX7662509FD238445892C1D8AA8CC4F0BC">
+		<Item class="Part" referent="RBX211B043E745E4FB68F662107B620E81C">
 			<Properties>
 				<bool name="Anchored">true</bool>
 				<BinaryString name="AttributesSerialize"></BinaryString>
@@ -145,134 +130,8 @@
 					<Z>32</Z>
 				</Vector3>
 			</Properties>
-			<Item class="Texture" referent="RBX2D7E3B7421CA42BFB140ED0D24027CA9">
-				<Properties>
-					<BinaryString name="AttributesSerialize"></BinaryString>
-					<Color3 name="Color3">
-						<R>0</R>
-						<G>0</G>
-						<B>0</B>
-					</Color3>
-					<token name="Face">1</token>
-					<string name="Name">Texture</string>
-					<float name="OffsetStudsU">0</float>
-					<float name="OffsetStudsV">0</float>
-					<int64 name="SourceAssetId">-1</int64>
-					<float name="StudsPerTileU">8</float>
-					<float name="StudsPerTileV">8</float>
-					<BinaryString name="Tags"></BinaryString>
-					<Content name="Texture"><url>rbxassetid://6372755229</url></Content>
-					<float name="Transparency">0.800000012</float>
-					<int name="ZIndex">1</int>
-				</Properties>
-			</Item>
-			<Item class="Texture" referent="RBXA2608D0C0C94482A81FC25856B99AE80">
-				<Properties>
-					<BinaryString name="AttributesSerialize"></BinaryString>
-					<Color3 name="Color3">
-						<R>0</R>
-						<G>0</G>
-						<B>0</B>
-					</Color3>
-					<token name="Face">4</token>
-					<string name="Name">Texture</string>
-					<float name="OffsetStudsU">0</float>
-					<float name="OffsetStudsV">0</float>
-					<int64 name="SourceAssetId">-1</int64>
-					<float name="StudsPerTileU">8</float>
-					<float name="StudsPerTileV">8</float>
-					<BinaryString name="Tags"></BinaryString>
-					<Content name="Texture"><url>rbxassetid://6372755229</url></Content>
-					<float name="Transparency">0.800000012</float>
-					<int name="ZIndex">1</int>
-				</Properties>
-			</Item>
-			<Item class="Texture" referent="RBXB123F239E7DF4C7797DE73D465A385D1">
-				<Properties>
-					<BinaryString name="AttributesSerialize"></BinaryString>
-					<Color3 name="Color3">
-						<R>0</R>
-						<G>0</G>
-						<B>0</B>
-					</Color3>
-					<token name="Face">5</token>
-					<string name="Name">Texture</string>
-					<float name="OffsetStudsU">0</float>
-					<float name="OffsetStudsV">0</float>
-					<int64 name="SourceAssetId">-1</int64>
-					<float name="StudsPerTileU">8</float>
-					<float name="StudsPerTileV">8</float>
-					<BinaryString name="Tags"></BinaryString>
-					<Content name="Texture"><url>rbxassetid://6372755229</url></Content>
-					<float name="Transparency">0.800000012</float>
-					<int name="ZIndex">1</int>
-				</Properties>
-			</Item>
-			<Item class="Texture" referent="RBX85B5FE68F813459BB921B20C7FFED041">
-				<Properties>
-					<BinaryString name="AttributesSerialize"></BinaryString>
-					<Color3 name="Color3">
-						<R>0</R>
-						<G>0</G>
-						<B>0</B>
-					</Color3>
-					<token name="Face">2</token>
-					<string name="Name">Texture</string>
-					<float name="OffsetStudsU">0</float>
-					<float name="OffsetStudsV">0</float>
-					<int64 name="SourceAssetId">-1</int64>
-					<float name="StudsPerTileU">8</float>
-					<float name="StudsPerTileV">8</float>
-					<BinaryString name="Tags"></BinaryString>
-					<Content name="Texture"><url>rbxassetid://6372755229</url></Content>
-					<float name="Transparency">0.800000012</float>
-					<int name="ZIndex">1</int>
-				</Properties>
-			</Item>
-			<Item class="Texture" referent="RBX128C186AF8644E188388623A0F1535C1">
-				<Properties>
-					<BinaryString name="AttributesSerialize"></BinaryString>
-					<Color3 name="Color3">
-						<R>0</R>
-						<G>0</G>
-						<B>0</B>
-					</Color3>
-					<token name="Face">3</token>
-					<string name="Name">Texture</string>
-					<float name="OffsetStudsU">0</float>
-					<float name="OffsetStudsV">0</float>
-					<int64 name="SourceAssetId">-1</int64>
-					<float name="StudsPerTileU">8</float>
-					<float name="StudsPerTileV">8</float>
-					<BinaryString name="Tags"></BinaryString>
-					<Content name="Texture"><url>rbxassetid://6372755229</url></Content>
-					<float name="Transparency">0.800000012</float>
-					<int name="ZIndex">1</int>
-				</Properties>
-			</Item>
-			<Item class="Texture" referent="RBX39EEE1F419314922B73FA8070FA7B8AB">
-				<Properties>
-					<BinaryString name="AttributesSerialize"></BinaryString>
-					<Color3 name="Color3">
-						<R>0</R>
-						<G>0</G>
-						<B>0</B>
-					</Color3>
-					<token name="Face">0</token>
-					<string name="Name">Texture</string>
-					<float name="OffsetStudsU">0</float>
-					<float name="OffsetStudsV">0</float>
-					<int64 name="SourceAssetId">-1</int64>
-					<float name="StudsPerTileU">8</float>
-					<float name="StudsPerTileV">8</float>
-					<BinaryString name="Tags"></BinaryString>
-					<Content name="Texture"><url>rbxassetid://6372755229</url></Content>
-					<float name="Transparency">0.800000012</float>
-					<int name="ZIndex">1</int>
-				</Properties>
-			</Item>
 		</Item>
-		<Item class="Part" referent="RBXB46F6EC355D84BF58E1C1216D728621C">
+		<Item class="Part" referent="RBX2F525919D4904D0AAD29548F33094AC2">
 			<Properties>
 				<bool name="Anchored">true</bool>
 				<BinaryString name="AttributesSerialize"></BinaryString>
@@ -290,7 +149,7 @@
 					<Z>-18</Z>
 					<R00>1</R00>
 					<R01>0</R01>
-					<R02>0</R02>
+					<R02>-0</R02>
 					<R10>0</R10>
 					<R11>0</R11>
 					<R12>1</R12>
@@ -367,134 +226,8 @@
 					<Z>32</Z>
 				</Vector3>
 			</Properties>
-			<Item class="Texture" referent="RBX84D9253553CC4979A86320A2236C3CF4">
-				<Properties>
-					<BinaryString name="AttributesSerialize"></BinaryString>
-					<Color3 name="Color3">
-						<R>0</R>
-						<G>0</G>
-						<B>0</B>
-					</Color3>
-					<token name="Face">1</token>
-					<string name="Name">Texture</string>
-					<float name="OffsetStudsU">0</float>
-					<float name="OffsetStudsV">0</float>
-					<int64 name="SourceAssetId">-1</int64>
-					<float name="StudsPerTileU">8</float>
-					<float name="StudsPerTileV">8</float>
-					<BinaryString name="Tags"></BinaryString>
-					<Content name="Texture"><url>rbxassetid://6372755229</url></Content>
-					<float name="Transparency">0.800000012</float>
-					<int name="ZIndex">1</int>
-				</Properties>
-			</Item>
-			<Item class="Texture" referent="RBX106F262DFCF04D0EA1D6610BBA97510C">
-				<Properties>
-					<BinaryString name="AttributesSerialize"></BinaryString>
-					<Color3 name="Color3">
-						<R>0</R>
-						<G>0</G>
-						<B>0</B>
-					</Color3>
-					<token name="Face">4</token>
-					<string name="Name">Texture</string>
-					<float name="OffsetStudsU">0</float>
-					<float name="OffsetStudsV">0</float>
-					<int64 name="SourceAssetId">-1</int64>
-					<float name="StudsPerTileU">8</float>
-					<float name="StudsPerTileV">8</float>
-					<BinaryString name="Tags"></BinaryString>
-					<Content name="Texture"><url>rbxassetid://6372755229</url></Content>
-					<float name="Transparency">0.800000012</float>
-					<int name="ZIndex">1</int>
-				</Properties>
-			</Item>
-			<Item class="Texture" referent="RBX904D5101EE5149238AF17BFB38B9B7C0">
-				<Properties>
-					<BinaryString name="AttributesSerialize"></BinaryString>
-					<Color3 name="Color3">
-						<R>0</R>
-						<G>0</G>
-						<B>0</B>
-					</Color3>
-					<token name="Face">5</token>
-					<string name="Name">Texture</string>
-					<float name="OffsetStudsU">0</float>
-					<float name="OffsetStudsV">0</float>
-					<int64 name="SourceAssetId">-1</int64>
-					<float name="StudsPerTileU">8</float>
-					<float name="StudsPerTileV">8</float>
-					<BinaryString name="Tags"></BinaryString>
-					<Content name="Texture"><url>rbxassetid://6372755229</url></Content>
-					<float name="Transparency">0.800000012</float>
-					<int name="ZIndex">1</int>
-				</Properties>
-			</Item>
-			<Item class="Texture" referent="RBXC2C04C6CE5794321A49DA386273DA76A">
-				<Properties>
-					<BinaryString name="AttributesSerialize"></BinaryString>
-					<Color3 name="Color3">
-						<R>0</R>
-						<G>0</G>
-						<B>0</B>
-					</Color3>
-					<token name="Face">2</token>
-					<string name="Name">Texture</string>
-					<float name="OffsetStudsU">0</float>
-					<float name="OffsetStudsV">0</float>
-					<int64 name="SourceAssetId">-1</int64>
-					<float name="StudsPerTileU">8</float>
-					<float name="StudsPerTileV">8</float>
-					<BinaryString name="Tags"></BinaryString>
-					<Content name="Texture"><url>rbxassetid://6372755229</url></Content>
-					<float name="Transparency">0.800000012</float>
-					<int name="ZIndex">1</int>
-				</Properties>
-			</Item>
-			<Item class="Texture" referent="RBXC8C1D94C882844DDB60430BEA4DCA430">
-				<Properties>
-					<BinaryString name="AttributesSerialize"></BinaryString>
-					<Color3 name="Color3">
-						<R>0</R>
-						<G>0</G>
-						<B>0</B>
-					</Color3>
-					<token name="Face">3</token>
-					<string name="Name">Texture</string>
-					<float name="OffsetStudsU">0</float>
-					<float name="OffsetStudsV">0</float>
-					<int64 name="SourceAssetId">-1</int64>
-					<float name="StudsPerTileU">8</float>
-					<float name="StudsPerTileV">8</float>
-					<BinaryString name="Tags"></BinaryString>
-					<Content name="Texture"><url>rbxassetid://6372755229</url></Content>
-					<float name="Transparency">0.800000012</float>
-					<int name="ZIndex">1</int>
-				</Properties>
-			</Item>
-			<Item class="Texture" referent="RBX695AF7111CB34E7899B02BFC9451E332">
-				<Properties>
-					<BinaryString name="AttributesSerialize"></BinaryString>
-					<Color3 name="Color3">
-						<R>0</R>
-						<G>0</G>
-						<B>0</B>
-					</Color3>
-					<token name="Face">0</token>
-					<string name="Name">Texture</string>
-					<float name="OffsetStudsU">0</float>
-					<float name="OffsetStudsV">0</float>
-					<int64 name="SourceAssetId">-1</int64>
-					<float name="StudsPerTileU">8</float>
-					<float name="StudsPerTileV">8</float>
-					<BinaryString name="Tags"></BinaryString>
-					<Content name="Texture"><url>rbxassetid://6372755229</url></Content>
-					<float name="Transparency">0.800000012</float>
-					<int name="ZIndex">1</int>
-				</Properties>
-			</Item>
 		</Item>
-		<Item class="Part" referent="RBX6AEAF477E33B48A489F3F8EE088B82B3">
+		<Item class="Part" referent="RBXC66FA9D19CA5421B96E180A3DB3B703D">
 			<Properties>
 				<bool name="Anchored">true</bool>
 				<BinaryString name="AttributesSerialize"></BinaryString>
@@ -589,134 +322,8 @@
 					<Z>32</Z>
 				</Vector3>
 			</Properties>
-			<Item class="Texture" referent="RBXB911319F60364801A6F5974379C30F96">
-				<Properties>
-					<BinaryString name="AttributesSerialize"></BinaryString>
-					<Color3 name="Color3">
-						<R>0</R>
-						<G>0</G>
-						<B>0</B>
-					</Color3>
-					<token name="Face">1</token>
-					<string name="Name">Texture</string>
-					<float name="OffsetStudsU">0</float>
-					<float name="OffsetStudsV">0</float>
-					<int64 name="SourceAssetId">-1</int64>
-					<float name="StudsPerTileU">8</float>
-					<float name="StudsPerTileV">8</float>
-					<BinaryString name="Tags"></BinaryString>
-					<Content name="Texture"><url>rbxassetid://6372755229</url></Content>
-					<float name="Transparency">0.800000012</float>
-					<int name="ZIndex">1</int>
-				</Properties>
-			</Item>
-			<Item class="Texture" referent="RBX8BC809381FB2401ABA15F36E50A8A5AD">
-				<Properties>
-					<BinaryString name="AttributesSerialize"></BinaryString>
-					<Color3 name="Color3">
-						<R>0</R>
-						<G>0</G>
-						<B>0</B>
-					</Color3>
-					<token name="Face">4</token>
-					<string name="Name">Texture</string>
-					<float name="OffsetStudsU">0</float>
-					<float name="OffsetStudsV">0</float>
-					<int64 name="SourceAssetId">-1</int64>
-					<float name="StudsPerTileU">8</float>
-					<float name="StudsPerTileV">8</float>
-					<BinaryString name="Tags"></BinaryString>
-					<Content name="Texture"><url>rbxassetid://6372755229</url></Content>
-					<float name="Transparency">0.800000012</float>
-					<int name="ZIndex">1</int>
-				</Properties>
-			</Item>
-			<Item class="Texture" referent="RBX7F458087AACC479B8BD6DAD59E6F5969">
-				<Properties>
-					<BinaryString name="AttributesSerialize"></BinaryString>
-					<Color3 name="Color3">
-						<R>0</R>
-						<G>0</G>
-						<B>0</B>
-					</Color3>
-					<token name="Face">5</token>
-					<string name="Name">Texture</string>
-					<float name="OffsetStudsU">0</float>
-					<float name="OffsetStudsV">0</float>
-					<int64 name="SourceAssetId">-1</int64>
-					<float name="StudsPerTileU">8</float>
-					<float name="StudsPerTileV">8</float>
-					<BinaryString name="Tags"></BinaryString>
-					<Content name="Texture"><url>rbxassetid://6372755229</url></Content>
-					<float name="Transparency">0.800000012</float>
-					<int name="ZIndex">1</int>
-				</Properties>
-			</Item>
-			<Item class="Texture" referent="RBXF17B8CDB41784CCD8346E588F267D460">
-				<Properties>
-					<BinaryString name="AttributesSerialize"></BinaryString>
-					<Color3 name="Color3">
-						<R>0</R>
-						<G>0</G>
-						<B>0</B>
-					</Color3>
-					<token name="Face">2</token>
-					<string name="Name">Texture</string>
-					<float name="OffsetStudsU">0</float>
-					<float name="OffsetStudsV">0</float>
-					<int64 name="SourceAssetId">-1</int64>
-					<float name="StudsPerTileU">8</float>
-					<float name="StudsPerTileV">8</float>
-					<BinaryString name="Tags"></BinaryString>
-					<Content name="Texture"><url>rbxassetid://6372755229</url></Content>
-					<float name="Transparency">0.800000012</float>
-					<int name="ZIndex">1</int>
-				</Properties>
-			</Item>
-			<Item class="Texture" referent="RBXD92C656A502544BAA9063A3EDFA8A165">
-				<Properties>
-					<BinaryString name="AttributesSerialize"></BinaryString>
-					<Color3 name="Color3">
-						<R>0</R>
-						<G>0</G>
-						<B>0</B>
-					</Color3>
-					<token name="Face">3</token>
-					<string name="Name">Texture</string>
-					<float name="OffsetStudsU">0</float>
-					<float name="OffsetStudsV">0</float>
-					<int64 name="SourceAssetId">-1</int64>
-					<float name="StudsPerTileU">8</float>
-					<float name="StudsPerTileV">8</float>
-					<BinaryString name="Tags"></BinaryString>
-					<Content name="Texture"><url>rbxassetid://6372755229</url></Content>
-					<float name="Transparency">0.800000012</float>
-					<int name="ZIndex">1</int>
-				</Properties>
-			</Item>
-			<Item class="Texture" referent="RBX16EBD38FE1884D8CB78478875303B936">
-				<Properties>
-					<BinaryString name="AttributesSerialize"></BinaryString>
-					<Color3 name="Color3">
-						<R>0</R>
-						<G>0</G>
-						<B>0</B>
-					</Color3>
-					<token name="Face">0</token>
-					<string name="Name">Texture</string>
-					<float name="OffsetStudsU">0</float>
-					<float name="OffsetStudsV">0</float>
-					<int64 name="SourceAssetId">-1</int64>
-					<float name="StudsPerTileU">8</float>
-					<float name="StudsPerTileV">8</float>
-					<BinaryString name="Tags"></BinaryString>
-					<Content name="Texture"><url>rbxassetid://6372755229</url></Content>
-					<float name="Transparency">0.800000012</float>
-					<int name="ZIndex">1</int>
-				</Properties>
-			</Item>
 		</Item>
-		<Item class="Part" referent="RBX9559F49D4D12499E8D111627BA80E60A">
+		<Item class="Part" referent="RBXBA9137CFDC454DC5B13B9C90C42F872F">
 			<Properties>
 				<bool name="Anchored">true</bool>
 				<BinaryString name="AttributesSerialize"></BinaryString>
@@ -811,134 +418,8 @@
 					<Z>32</Z>
 				</Vector3>
 			</Properties>
-			<Item class="Texture" referent="RBX4A9446A34371419E83E0B6192455088D">
-				<Properties>
-					<BinaryString name="AttributesSerialize"></BinaryString>
-					<Color3 name="Color3">
-						<R>0</R>
-						<G>0</G>
-						<B>0</B>
-					</Color3>
-					<token name="Face">1</token>
-					<string name="Name">Texture</string>
-					<float name="OffsetStudsU">0</float>
-					<float name="OffsetStudsV">0</float>
-					<int64 name="SourceAssetId">-1</int64>
-					<float name="StudsPerTileU">8</float>
-					<float name="StudsPerTileV">8</float>
-					<BinaryString name="Tags"></BinaryString>
-					<Content name="Texture"><url>rbxassetid://6372755229</url></Content>
-					<float name="Transparency">0.800000012</float>
-					<int name="ZIndex">1</int>
-				</Properties>
-			</Item>
-			<Item class="Texture" referent="RBX8DDFFCF1E5E149FBABCEE291B434DE84">
-				<Properties>
-					<BinaryString name="AttributesSerialize"></BinaryString>
-					<Color3 name="Color3">
-						<R>0</R>
-						<G>0</G>
-						<B>0</B>
-					</Color3>
-					<token name="Face">4</token>
-					<string name="Name">Texture</string>
-					<float name="OffsetStudsU">0</float>
-					<float name="OffsetStudsV">0</float>
-					<int64 name="SourceAssetId">-1</int64>
-					<float name="StudsPerTileU">8</float>
-					<float name="StudsPerTileV">8</float>
-					<BinaryString name="Tags"></BinaryString>
-					<Content name="Texture"><url>rbxassetid://6372755229</url></Content>
-					<float name="Transparency">0.800000012</float>
-					<int name="ZIndex">1</int>
-				</Properties>
-			</Item>
-			<Item class="Texture" referent="RBX3010CF45B4BB451B8FA1170EA3960FFA">
-				<Properties>
-					<BinaryString name="AttributesSerialize"></BinaryString>
-					<Color3 name="Color3">
-						<R>0</R>
-						<G>0</G>
-						<B>0</B>
-					</Color3>
-					<token name="Face">5</token>
-					<string name="Name">Texture</string>
-					<float name="OffsetStudsU">0</float>
-					<float name="OffsetStudsV">0</float>
-					<int64 name="SourceAssetId">-1</int64>
-					<float name="StudsPerTileU">8</float>
-					<float name="StudsPerTileV">8</float>
-					<BinaryString name="Tags"></BinaryString>
-					<Content name="Texture"><url>rbxassetid://6372755229</url></Content>
-					<float name="Transparency">0.800000012</float>
-					<int name="ZIndex">1</int>
-				</Properties>
-			</Item>
-			<Item class="Texture" referent="RBX5BD953F9FDF941B2ABBF0A5BFD649636">
-				<Properties>
-					<BinaryString name="AttributesSerialize"></BinaryString>
-					<Color3 name="Color3">
-						<R>0</R>
-						<G>0</G>
-						<B>0</B>
-					</Color3>
-					<token name="Face">2</token>
-					<string name="Name">Texture</string>
-					<float name="OffsetStudsU">0</float>
-					<float name="OffsetStudsV">0</float>
-					<int64 name="SourceAssetId">-1</int64>
-					<float name="StudsPerTileU">8</float>
-					<float name="StudsPerTileV">8</float>
-					<BinaryString name="Tags"></BinaryString>
-					<Content name="Texture"><url>rbxassetid://6372755229</url></Content>
-					<float name="Transparency">0.800000012</float>
-					<int name="ZIndex">1</int>
-				</Properties>
-			</Item>
-			<Item class="Texture" referent="RBXA3F4999BAC544B879ACD17A766D078E5">
-				<Properties>
-					<BinaryString name="AttributesSerialize"></BinaryString>
-					<Color3 name="Color3">
-						<R>0</R>
-						<G>0</G>
-						<B>0</B>
-					</Color3>
-					<token name="Face">3</token>
-					<string name="Name">Texture</string>
-					<float name="OffsetStudsU">0</float>
-					<float name="OffsetStudsV">0</float>
-					<int64 name="SourceAssetId">-1</int64>
-					<float name="StudsPerTileU">8</float>
-					<float name="StudsPerTileV">8</float>
-					<BinaryString name="Tags"></BinaryString>
-					<Content name="Texture"><url>rbxassetid://6372755229</url></Content>
-					<float name="Transparency">0.800000012</float>
-					<int name="ZIndex">1</int>
-				</Properties>
-			</Item>
-			<Item class="Texture" referent="RBXA63D94A8C48C49EDB916A17D950B50C9">
-				<Properties>
-					<BinaryString name="AttributesSerialize"></BinaryString>
-					<Color3 name="Color3">
-						<R>0</R>
-						<G>0</G>
-						<B>0</B>
-					</Color3>
-					<token name="Face">0</token>
-					<string name="Name">Texture</string>
-					<float name="OffsetStudsU">0</float>
-					<float name="OffsetStudsV">0</float>
-					<int64 name="SourceAssetId">-1</int64>
-					<float name="StudsPerTileU">8</float>
-					<float name="StudsPerTileV">8</float>
-					<BinaryString name="Tags"></BinaryString>
-					<Content name="Texture"><url>rbxassetid://6372755229</url></Content>
-					<float name="Transparency">0.800000012</float>
-					<int name="ZIndex">1</int>
-				</Properties>
-			</Item>
 		</Item>
-		<Item class="Part" referent="RBX5549AE5D926B4BC7AA7C6384E84A4DD2">
+		<Item class="Part" referent="RBX3EA878BC53CF47F8964BB8CC4F4FE6DE">
 			<Properties>
 				<bool name="Anchored">true</bool>
 				<BinaryString name="AttributesSerialize"></BinaryString>
@@ -956,7 +437,7 @@
 					<Z>18</Z>
 					<R00>1</R00>
 					<R01>0</R01>
-					<R02>0</R02>
+					<R02>-0</R02>
 					<R10>0</R10>
 					<R11>0</R11>
 					<R12>1</R12>
@@ -1033,134 +514,8 @@
 					<Z>32</Z>
 				</Vector3>
 			</Properties>
-			<Item class="Texture" referent="RBXC6C99939DE0446B0B5876E93AF4D8D5D">
-				<Properties>
-					<BinaryString name="AttributesSerialize"></BinaryString>
-					<Color3 name="Color3">
-						<R>0</R>
-						<G>0</G>
-						<B>0</B>
-					</Color3>
-					<token name="Face">1</token>
-					<string name="Name">Texture</string>
-					<float name="OffsetStudsU">0</float>
-					<float name="OffsetStudsV">0</float>
-					<int64 name="SourceAssetId">-1</int64>
-					<float name="StudsPerTileU">8</float>
-					<float name="StudsPerTileV">8</float>
-					<BinaryString name="Tags"></BinaryString>
-					<Content name="Texture"><url>rbxassetid://6372755229</url></Content>
-					<float name="Transparency">0.800000012</float>
-					<int name="ZIndex">1</int>
-				</Properties>
-			</Item>
-			<Item class="Texture" referent="RBX75BACBAFF4F24EF6ACB542A359B7CD13">
-				<Properties>
-					<BinaryString name="AttributesSerialize"></BinaryString>
-					<Color3 name="Color3">
-						<R>0</R>
-						<G>0</G>
-						<B>0</B>
-					</Color3>
-					<token name="Face">4</token>
-					<string name="Name">Texture</string>
-					<float name="OffsetStudsU">0</float>
-					<float name="OffsetStudsV">0</float>
-					<int64 name="SourceAssetId">-1</int64>
-					<float name="StudsPerTileU">8</float>
-					<float name="StudsPerTileV">8</float>
-					<BinaryString name="Tags"></BinaryString>
-					<Content name="Texture"><url>rbxassetid://6372755229</url></Content>
-					<float name="Transparency">0.800000012</float>
-					<int name="ZIndex">1</int>
-				</Properties>
-			</Item>
-			<Item class="Texture" referent="RBX0534B1660B514CFE9FB4842FEF5C4266">
-				<Properties>
-					<BinaryString name="AttributesSerialize"></BinaryString>
-					<Color3 name="Color3">
-						<R>0</R>
-						<G>0</G>
-						<B>0</B>
-					</Color3>
-					<token name="Face">5</token>
-					<string name="Name">Texture</string>
-					<float name="OffsetStudsU">0</float>
-					<float name="OffsetStudsV">0</float>
-					<int64 name="SourceAssetId">-1</int64>
-					<float name="StudsPerTileU">8</float>
-					<float name="StudsPerTileV">8</float>
-					<BinaryString name="Tags"></BinaryString>
-					<Content name="Texture"><url>rbxassetid://6372755229</url></Content>
-					<float name="Transparency">0.800000012</float>
-					<int name="ZIndex">1</int>
-				</Properties>
-			</Item>
-			<Item class="Texture" referent="RBX31D001FC2D724969935EB209D3DA9297">
-				<Properties>
-					<BinaryString name="AttributesSerialize"></BinaryString>
-					<Color3 name="Color3">
-						<R>0</R>
-						<G>0</G>
-						<B>0</B>
-					</Color3>
-					<token name="Face">2</token>
-					<string name="Name">Texture</string>
-					<float name="OffsetStudsU">0</float>
-					<float name="OffsetStudsV">0</float>
-					<int64 name="SourceAssetId">-1</int64>
-					<float name="StudsPerTileU">8</float>
-					<float name="StudsPerTileV">8</float>
-					<BinaryString name="Tags"></BinaryString>
-					<Content name="Texture"><url>rbxassetid://6372755229</url></Content>
-					<float name="Transparency">0.800000012</float>
-					<int name="ZIndex">1</int>
-				</Properties>
-			</Item>
-			<Item class="Texture" referent="RBX386B30E2CB1F4AEE8885DCE281866B04">
-				<Properties>
-					<BinaryString name="AttributesSerialize"></BinaryString>
-					<Color3 name="Color3">
-						<R>0</R>
-						<G>0</G>
-						<B>0</B>
-					</Color3>
-					<token name="Face">3</token>
-					<string name="Name">Texture</string>
-					<float name="OffsetStudsU">0</float>
-					<float name="OffsetStudsV">0</float>
-					<int64 name="SourceAssetId">-1</int64>
-					<float name="StudsPerTileU">8</float>
-					<float name="StudsPerTileV">8</float>
-					<BinaryString name="Tags"></BinaryString>
-					<Content name="Texture"><url>rbxassetid://6372755229</url></Content>
-					<float name="Transparency">0.800000012</float>
-					<int name="ZIndex">1</int>
-				</Properties>
-			</Item>
-			<Item class="Texture" referent="RBX7AF6BB45AC9441929E80EF0EF579D881">
-				<Properties>
-					<BinaryString name="AttributesSerialize"></BinaryString>
-					<Color3 name="Color3">
-						<R>0</R>
-						<G>0</G>
-						<B>0</B>
-					</Color3>
-					<token name="Face">0</token>
-					<string name="Name">Texture</string>
-					<float name="OffsetStudsU">0</float>
-					<float name="OffsetStudsV">0</float>
-					<int64 name="SourceAssetId">-1</int64>
-					<float name="StudsPerTileU">8</float>
-					<float name="StudsPerTileV">8</float>
-					<BinaryString name="Tags"></BinaryString>
-					<Content name="Texture"><url>rbxassetid://6372755229</url></Content>
-					<float name="Transparency">0.800000012</float>
-					<int name="ZIndex">1</int>
-				</Properties>
-			</Item>
 		</Item>
-		<Item class="Part" referent="RBX926EBB9A5BBC436B9B8469D8CFE19161">
+		<Item class="Part" referent="RBX217B2C4B91E5414F86F3D2CF39FB3BCA">
 			<Properties>
 				<bool name="Anchored">true</bool>
 				<BinaryString name="AttributesSerialize"></BinaryString>
@@ -1255,132 +610,6 @@
 					<Z>32</Z>
 				</Vector3>
 			</Properties>
-			<Item class="Texture" referent="RBX9C01E6B053934F16BAC4F2F7C860530E">
-				<Properties>
-					<BinaryString name="AttributesSerialize"></BinaryString>
-					<Color3 name="Color3">
-						<R>0</R>
-						<G>0</G>
-						<B>0</B>
-					</Color3>
-					<token name="Face">1</token>
-					<string name="Name">Texture</string>
-					<float name="OffsetStudsU">0</float>
-					<float name="OffsetStudsV">0</float>
-					<int64 name="SourceAssetId">-1</int64>
-					<float name="StudsPerTileU">8</float>
-					<float name="StudsPerTileV">8</float>
-					<BinaryString name="Tags"></BinaryString>
-					<Content name="Texture"><url>rbxassetid://6372755229</url></Content>
-					<float name="Transparency">0.800000012</float>
-					<int name="ZIndex">1</int>
-				</Properties>
-			</Item>
-			<Item class="Texture" referent="RBX1D8C6315D5C548888E79B87994348697">
-				<Properties>
-					<BinaryString name="AttributesSerialize"></BinaryString>
-					<Color3 name="Color3">
-						<R>0</R>
-						<G>0</G>
-						<B>0</B>
-					</Color3>
-					<token name="Face">4</token>
-					<string name="Name">Texture</string>
-					<float name="OffsetStudsU">0</float>
-					<float name="OffsetStudsV">0</float>
-					<int64 name="SourceAssetId">-1</int64>
-					<float name="StudsPerTileU">8</float>
-					<float name="StudsPerTileV">8</float>
-					<BinaryString name="Tags"></BinaryString>
-					<Content name="Texture"><url>rbxassetid://6372755229</url></Content>
-					<float name="Transparency">0.800000012</float>
-					<int name="ZIndex">1</int>
-				</Properties>
-			</Item>
-			<Item class="Texture" referent="RBXE96BE18903154E689923E96B24FEFCFA">
-				<Properties>
-					<BinaryString name="AttributesSerialize"></BinaryString>
-					<Color3 name="Color3">
-						<R>0</R>
-						<G>0</G>
-						<B>0</B>
-					</Color3>
-					<token name="Face">5</token>
-					<string name="Name">Texture</string>
-					<float name="OffsetStudsU">0</float>
-					<float name="OffsetStudsV">0</float>
-					<int64 name="SourceAssetId">-1</int64>
-					<float name="StudsPerTileU">8</float>
-					<float name="StudsPerTileV">8</float>
-					<BinaryString name="Tags"></BinaryString>
-					<Content name="Texture"><url>rbxassetid://6372755229</url></Content>
-					<float name="Transparency">0.800000012</float>
-					<int name="ZIndex">1</int>
-				</Properties>
-			</Item>
-			<Item class="Texture" referent="RBXE954BF78AAFD4534A2921AA1DE964FB9">
-				<Properties>
-					<BinaryString name="AttributesSerialize"></BinaryString>
-					<Color3 name="Color3">
-						<R>0</R>
-						<G>0</G>
-						<B>0</B>
-					</Color3>
-					<token name="Face">2</token>
-					<string name="Name">Texture</string>
-					<float name="OffsetStudsU">0</float>
-					<float name="OffsetStudsV">0</float>
-					<int64 name="SourceAssetId">-1</int64>
-					<float name="StudsPerTileU">8</float>
-					<float name="StudsPerTileV">8</float>
-					<BinaryString name="Tags"></BinaryString>
-					<Content name="Texture"><url>rbxassetid://6372755229</url></Content>
-					<float name="Transparency">0.800000012</float>
-					<int name="ZIndex">1</int>
-				</Properties>
-			</Item>
-			<Item class="Texture" referent="RBXEC6868BFABBD4218B2F92440B8072667">
-				<Properties>
-					<BinaryString name="AttributesSerialize"></BinaryString>
-					<Color3 name="Color3">
-						<R>0</R>
-						<G>0</G>
-						<B>0</B>
-					</Color3>
-					<token name="Face">3</token>
-					<string name="Name">Texture</string>
-					<float name="OffsetStudsU">0</float>
-					<float name="OffsetStudsV">0</float>
-					<int64 name="SourceAssetId">-1</int64>
-					<float name="StudsPerTileU">8</float>
-					<float name="StudsPerTileV">8</float>
-					<BinaryString name="Tags"></BinaryString>
-					<Content name="Texture"><url>rbxassetid://6372755229</url></Content>
-					<float name="Transparency">0.800000012</float>
-					<int name="ZIndex">1</int>
-				</Properties>
-			</Item>
-			<Item class="Texture" referent="RBXB3EBE5B3284142E18B0D227FFD7EFA1E">
-				<Properties>
-					<BinaryString name="AttributesSerialize"></BinaryString>
-					<Color3 name="Color3">
-						<R>0</R>
-						<G>0</G>
-						<B>0</B>
-					</Color3>
-					<token name="Face">0</token>
-					<string name="Name">Texture</string>
-					<float name="OffsetStudsU">0</float>
-					<float name="OffsetStudsV">0</float>
-					<int64 name="SourceAssetId">-1</int64>
-					<float name="StudsPerTileU">8</float>
-					<float name="StudsPerTileV">8</float>
-					<BinaryString name="Tags"></BinaryString>
-					<Content name="Texture"><url>rbxassetid://6372755229</url></Content>
-					<float name="Transparency">0.800000012</float>
-					<int name="ZIndex">1</int>
-				</Properties>
-			</Item>
 		</Item>
 	</Item>
 	<SharedStrings>

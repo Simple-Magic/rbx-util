@@ -73,7 +73,9 @@ end
 function TeamDeathmatch:_AnnounceWinner()
 	local winner = self:_GetWinner()
 	if not winner then return end
-	AnnouncementService:Announce(winner.Name .. " team won!")
+	AnnouncementService:Announce(winner.Name .. " team won!", {
+		Color = winner.TeamColor.Color,
+	})
 end
 
 function TeamDeathmatch:_SpawnProps()

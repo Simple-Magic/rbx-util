@@ -1,7 +1,7 @@
 [package]
 name = "rasmusmerzin/granary"
 description = "First person shooter module."
-version = "0.2.1"
+version = "0.2.4"
 license = "MIT"
 authors = ["Emil Rasmus Merzin"]
 registry = "https://github.com/UpliftGames/wally-index"
