@@ -1,4 +1,5 @@
 local Players = game:GetService("Players")
+local StarterPlayer = game:GetService("StarterPlayer")
 local UserInputService = game:GetService("UserInputService")
 local Knit = require(script.Parent.Parent.Knit)
 local Trove = require(script.Parent.Parent.Trove)
@@ -18,7 +19,7 @@ function CrouchController:OnCharacter()
 	self.HumanoidRootPart = Player.Character:WaitForChild("HumanoidRootPart")
 	local animator = self.Humanoid:WaitForChild("Animator") :: Animator
 	local crouchIdle = Instance.new("Animation")
-	crouchIdle.AnimationId = "rbxassetid://13847852714"
+	crouchIdle.AnimationId = "rbxassetid://13889360857"
 	self.CrouchIdleTrack = animator:LoadAnimation(crouchIdle)
 	self.CharacterTrove:Connect(
 		UserInputService.InputBegan,
@@ -45,15 +46,15 @@ end
 
 function CrouchController:Update()
 	if self.Crouch then
-		self.CrouchIdleTrack:Play(0, 10)
+		self.CrouchIdleTrack:Play(0, 20)
 		self.HumanoidRootPart.CanCollide = false
 		self.Humanoid.CameraOffset = Vector3.new(0, -2.5, 0)
-		self.Humanoid.WalkSpeed = 8
+		self.Humanoid.WalkSpeed = StarterPlayer.CharacterWalkSpeed * 0.5
 	else
 		self.CrouchIdleTrack:Stop()
 		self.HumanoidRootPart.CanCollide = true
 		self.Humanoid.CameraOffset = Vector3.zero
-		self.Humanoid.WalkSpeed = 16
+		self.Humanoid.WalkSpeed = StarterPlayer.CharacterWalkSpeed
 	end
 end
 
