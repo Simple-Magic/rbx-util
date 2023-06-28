@@ -13,7 +13,7 @@ local PropComponent = Component.new({ Tag = "Prop" })
 
 function PropComponent:Construct()
 	self.Trove = Trove.new()
-	self.Config = PropConfig[self.Instance.Name]
+	self.Config = PropConfig[self.Instance.Name] or {}
 end
 
 function PropComponent:Start()
@@ -52,19 +52,19 @@ function PropComponent:GetPlayer(): Player?
 	end
 end
 
-function PropComponent:GetGrip(): Attachment?
-	if
-		self.Instance.Parent.Name:match("^Left")
-		and self.Instance.Handle:FindFirstChild("LeftGrip")
-	then
-		return self.Instance.Handle.LeftGrip
-	elseif
-		self.Instance.Parent.Name:match("^Right")
-		and self.Instance.Handle:FindFirstChild("RightGrip")
-	then
-		return self.Instance.Handle.RightGrip
+function PropComponent:GetSide(): string?
+	if self.Instance.Parent.Name:match("^Left") then
+		return "Left"
+	elseif self.Instance.Parent.Name:match("^Right") then
+		return "Right"
 	end
-	return self.Instance.Handle:FindFirstChild("Grip")
+end
+
+function PropComponent:GetGrip(): Attachment?
+	local side = self:GetSide()
+	local grip = self.Instance.Handle:FindFirstChild(side .. "Grip")
+	if not grip then grip = self.Instance.Handle:FindFirstChild("Grip") end
+	return grip
 end
 
 function PropComponent:OnClientAncestry()

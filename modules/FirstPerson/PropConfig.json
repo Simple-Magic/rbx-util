@@ -1,37 +1,48 @@
 {
-  "AssaultRifle": {
-    "Automatic": true,
-    "Damage": 20,
-    "Rate": 600,
-    "Spread": 0.5
-  },
   "Axe": {
     "Damage": 30,
     "Rate": 200
-  },
-  "C4": {
-    "Automatic": true,
-    "Rate": 400
-  },
-  "Pistol": {
-    "Damage": 17,
-    "Rate": 400,
-    "Spread": 2
-  },
-  "Shotgun": {
-    "Bullets": 6,
-    "Damage": 5,
-    "Rate": 300,
-    "Spread": 5
   },
   "Sword": {
     "Damage": 25,
     "Rate": 400
   },
+  "AssaultRifle": {
+    "Automatic": true,
+    "ClipSize": 30,
+    "Damage": 20,
+    "Rate": 600,
+    "ReloadTime": 3,
+    "Spread": 1
+  },
+  "SniperRifle": {
+    "ClipSize": 10,
+    "Damage": 80,
+    "Rate": 60,
+    "ReloadTime": 3.2,
+    "Spread": 0.1
+  },
+  "Pistol": {
+    "ClipSize": 9,
+    "Damage": 17,
+    "Rate": 400,
+    "ReloadTime": 2,
+    "Spread": 2
+  },
+  "Shotgun": {
+    "Bullets": 6,
+    "ClipSize": 6,
+    "Damage": 5,
+    "Rate": 60,
+    "ReloadTime": 4,
+    "Spread": 5
+  },
   "Uzi": {
     "Automatic": true,
+    "ClipSize": 40,
     "Damage": 13,
     "Rate": 500,
+    "ReloadTime": 2.5,
     "Spread": 3
   }
 }

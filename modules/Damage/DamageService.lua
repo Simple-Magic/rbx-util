@@ -9,20 +9,26 @@ local DamageService = Knit.CreateService({
 	Damaged = Signal.new(),
 })
 
-function DamageService:Damage(humanoid: Humanoid, damage: number, creatorPlayer: Player?)
+function DamageService:Damage(
+	humanoid: Humanoid,
+	damage: number,
+	creatorPlayer: Player?,
+	weapon: string?
+)
 	if self:Verify(humanoid, creatorPlayer) then return end
-	self:Tag(humanoid, creatorPlayer)
+	self:Tag(humanoid, creatorPlayer, weapon)
 	self:DisplayHit(humanoid)
 	humanoid:TakeDamage(damage)
-	self.Damaged:Fire(humanoid, damage, creatorPlayer)
+	self.Damaged:Fire(humanoid, damage, creatorPlayer, weapon)
 end
 
-function DamageService:Tag(humanoid: Humanoid, creatorPlayer: Player?): boolean
+function DamageService:Tag(humanoid: Humanoid, creatorPlayer: Player?, weapon: string?): boolean
 	local creator = humanoid:FindFirstChild("creator")
 	if creator then creator:Destroy() end
 	creator = Instance.new("ObjectValue")
 	creator.Name = "creator"
 	creator.Value = creatorPlayer
+	if weapon then creator:SetAttribute("Weapon", weapon) end
 	creator.Parent = humanoid
 end
 

@@ -18,10 +18,11 @@ function HitController:KnitStart()
 	HitService = Knit.GetService("HitService")
 	Player.CharacterAdded:Connect(function() self:OnCharacter() end)
 	if Player.Character then self:OnCharacter() end
-	RunService:BindToRenderStep(self.Name, Enum.RenderPriority.First.Value, function()
-		local target = self:Cast()
-		if target then HitService.Hit:Fire(target) end
-	end)
+	RunService:BindToRenderStep(
+		self.Name,
+		Enum.RenderPriority.First.Value,
+		function() HitService.Hit:Fire(self:Cast() or Mouse.Hit.Position) end
+	)
 end
 
 function HitController:OnCharacter() self.RaycastParams:AddToFilter(Player.Character) end

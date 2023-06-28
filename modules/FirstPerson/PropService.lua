@@ -2,8 +2,8 @@ local Players = game:GetService("Players")
 local Workspace = game:GetService("Workspace")
 local Knit = require(script.Parent.Parent.Knit)
 local GunComponent = require(script.Parent.GunComponent)
-local PropComponent = require(script.Parent.PropComponent)
 local MeleeComponent = require(script.Parent.MeleeComponent)
+require(script.Parent.PropComponent)
 
 local FirstPersonService
 

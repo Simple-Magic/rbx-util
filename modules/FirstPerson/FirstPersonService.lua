@@ -4,7 +4,7 @@ local Knit = require(script.Parent.Parent.Knit)
 
 local FirstPersonService = Knit.CreateService({
 	Name = "FirstPersonService",
-	RecoilLock = {
+	GripLock = {
 		Left = {},
 		Right = {},
 	},
@@ -58,8 +58,8 @@ function FirstPersonService:Recoil(player: Player, side: string, double: boolean
 	if not head then return end
 	local grip = head:FindFirstChild(side .. "Grip")
 	if not grip then return end
-	if self.RecoilLock[side][player] then return true end
-	self.RecoilLock[side][player] = true
+	if self.GripLock[side][player] then return true end
+	self.GripLock[side][player] = true
 	local origin = grip.CFrame
 	task.spawn(function()
 		TweenService:Create(grip, TweenInfo.new(0.02), { CFrame = origin * CFrame.new(0, 1, 0) })
@@ -76,7 +76,25 @@ function FirstPersonService:Recoil(player: Player, side: string, double: boolean
 			TweenService:Create(grip, TweenInfo.new(0.05), { CFrame = origin }):Play()
 			task.wait(0.05)
 		end
-		self.RecoilLock[side][player] = nil
+		self.GripLock[side][player] = nil
+	end)
+end
+
+function FirstPersonService:Reload(player: Player, side: string, reloadTime: number?): boolean
+	local head = player.Character and player.Character:FindFirstChild("Head")
+	if not head then return end
+	local grip = head:FindFirstChild(side .. "Grip")
+	if not grip then return end
+	if self.GripLock[side][player] then return true end
+	self.GripLock[side][player] = true
+	local origin = grip.CFrame
+	task.spawn(function()
+		TweenService:Create(grip, TweenInfo.new(0.1), { CFrame = origin * CFrame.new(0, 10, -4) })
+			:Play()
+		task.wait(reloadTime or 1)
+		TweenService:Create(grip, TweenInfo.new(0.1), { CFrame = origin }):Play()
+		task.wait(0.1)
+		self.GripLock[side][player] = nil
 	end)
 end
 
