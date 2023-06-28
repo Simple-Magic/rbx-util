@@ -3,7 +3,7 @@ local Workspace = game:GetService("Workspace")
 local Knit = require(script.Parent.Parent.Knit)
 local GunComponent = require(script.Parent.GunComponent)
 local MeleeComponent = require(script.Parent.MeleeComponent)
-require(script.Parent.PropComponent)
+local PropComponent = require(script.Parent.PropComponent)
 
 local FirstPersonService
 
@@ -56,6 +56,8 @@ function PropService:PickUp(player: Player, instance: Tool)
 		instance.Parent = player.Character.RightHand
 		self.Right[player] = instance
 	end
+	local prop = PropComponent:FromInstance(instance)
+	if prop then prop:Equip() end
 end
 
 function PropService.Client:Drop(player: Player, instance: Tool)

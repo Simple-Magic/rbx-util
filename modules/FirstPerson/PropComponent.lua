@@ -43,6 +43,11 @@ end
 
 function PropComponent:Stop() self.Trove:Clean() end
 
+function PropComponent:Equip()
+	local sound = self.Instance.Handle:FindFirstChild("Equip")
+	if sound then sound:Play() end
+end
+
 function PropComponent:GetPlayer(): Player?
 	for _, child in ipairs(Players:GetChildren()) do
 		local character = child:IsA("Player") and child.Character or child:GetAttribute("Character")
