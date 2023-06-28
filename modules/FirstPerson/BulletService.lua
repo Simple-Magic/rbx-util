@@ -10,7 +10,7 @@ function BulletService:KnitStart() DamageService = Knit.GetService("DamageServic
 
 function BulletService:Create(gun: GunComponent, target: Vector3)
 	local player = gun:GetPlayer()
-	local raycastResult = self:Cast(gun:GetMuzzle().WorldPosition, target, { player.Character })
+	local raycastResult = self:Cast(gun, target, { player.Character })
 	if not raycastResult then return end
 	local part = Instance.new("Part")
 	part.Anchored = true
@@ -41,14 +41,22 @@ function BulletService:Create(gun: GunComponent, target: Vector3)
 	DamageService:Damage(humanoid, gun.Config.Damage, player)
 end
 
-function BulletService:Cast(origin: Vector3, target: Vector3, filter: { Instance }): RaycastResult?
+function BulletService:Cast(
+	gun: GunComponent,
+	target: Vector3,
+	filter: { Instance }
+): RaycastResult?
+	local origin = gun:GetMuzzle().WorldPosition
 	local raycastParams = RaycastParams.new()
 	raycastParams.FilterType = Enum.RaycastFilterType.Exclude
 	raycastParams.FilterDescendantsInstances = filter
 	local raycastResult
-	local direction = target - origin
+	local cframe = CFrame.new(Vector3.zero, target - origin)
+		* CFrame.Angles(0, 0, math.random() * math.pi * 2)
+		* CFrame.Angles(math.random() * math.rad(gun.Config.Spread or 1), 0, 0)
+		* CFrame.new(0, 0, -2048)
 	repeat
-		raycastResult = Workspace:Raycast(origin, direction.Unit * 2048, raycastParams)
+		raycastResult = Workspace:Raycast(origin, cframe.Position, raycastParams)
 		if raycastResult and raycastResult.Instance then
 			raycastParams:AddToFilter(raycastResult.Instance)
 		end

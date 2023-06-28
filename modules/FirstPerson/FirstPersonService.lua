@@ -62,9 +62,9 @@ function FirstPersonService:Recoil(player: Player, side: string, double: boolean
 	self.RecoilLock[side][player] = true
 	local origin = grip.CFrame
 	task.spawn(function()
-		TweenService:Create(grip, TweenInfo.new(0.05), { CFrame = origin * CFrame.new(0, 1, 0) })
+		TweenService:Create(grip, TweenInfo.new(0.02), { CFrame = origin * CFrame.new(0, 1, 0) })
 			:Play()
-		task.wait(0.05)
+		task.wait(0.02)
 		if double then
 			TweenService
 				:Create(grip, TweenInfo.new(0.2), { CFrame = origin * CFrame.new(0, -3, 0) })

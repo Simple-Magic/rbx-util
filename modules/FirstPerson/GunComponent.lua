@@ -40,7 +40,9 @@ function GunComponent:Activate()
 	if not player then return end
 	local target = HitService.Hit[player]
 	if not target then return end
-	BulletService:Create(self, target)
+	for _ = 1, self.Config.Bullets or 1 do
+		BulletService:Create(self, target)
+	end
 end
 
 return GunComponent

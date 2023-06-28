@@ -3,10 +3,9 @@
     "Automatic": true,
     "Damage": 20,
     "Rate": 600,
-    "Spawns": true
+    "Spread": 0.5
   },
   "Axe": {
-    "Spawns": true,
     "Damage": 30,
     "Rate": 200
   },
@@ -17,22 +16,22 @@
   "Pistol": {
     "Damage": 17,
     "Rate": 400,
-    "Spawns": true
+    "Spread": 2
   },
   "Shotgun": {
-    "Damage": 30,
+    "Bullets": 6,
+    "Damage": 5,
     "Rate": 300,
-    "Spawns": true
+    "Spread": 5
   },
   "Sword": {
     "Damage": 25,
-    "Rate": 400,
-    "Spawns": true
+    "Rate": 400
   },
   "Uzi": {
     "Automatic": true,
     "Damage": 13,
     "Rate": 500,
-    "Spawns": true
+    "Spread": 3
   }
 }
