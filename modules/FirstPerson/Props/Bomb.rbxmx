@@ -2,7 +2,7 @@
 	<Meta name="ExplicitAutoJoints">true</Meta>
 	<External>null</External>
 	<External>nil</External>
-	<Item class="Tool" referent="RBX0">
+	<Item class="Tool" referent="RBXD97B320694BF45309BCCDDB9CCD5BE12">
 		<Properties>
 			<BinaryString name="AttributesSerialize"></BinaryString>
 			<bool name="CanBeDropped">true</bool>
@@ -17,7 +17,7 @@
 				<R10>0</R10>
 				<R11>0</R11>
 				<R12>-1</R12>
-				<R20>-0</R20>
+				<R20>0</R20>
 				<R21>1</R21>
 				<R22>0</R22>
 			</CoordinateFrame>
@@ -50,27 +50,27 @@
 			<bool name="RequiresHandle">true</bool>
 			<float name="ScaleFactor">1</float>
 			<int64 name="SourceAssetId">47586</int64>
-			<BinaryString name="Tags">UHJvcA==</BinaryString>
+			<BinaryString name="Tags">UHJvcABCb21i</BinaryString>
 			<Content name="TextureId"><url>rbxasset://Textures/Bomb.png</url></Content>
 			<string name="ToolTip"></string>
 			<OptionalCoordinateFrame name="WorldPivotData">
 				<CFrame>
-					<X>52</X>
-					<Y>29</Y>
-					<Z>-107.999992</Z>
-					<R00>-0.999999404</R00>
-					<R01>-9.31322575e-10</R01>
-					<R02>0</R02>
-					<R10>0</R10>
-					<R11>-2.91038305e-10</R11>
-					<R12>0.99999994</R12>
-					<R20>9.31322575e-10</R20>
-					<R21>0.999999583</R21>
-					<R22>-2.91038305e-10</R22>
+					<X>46.5</X>
+					<Y>28.5</Y>
+					<Z>-84.4999924</Z>
+					<R00>-1</R00>
+					<R01>3.55271368e-15</R01>
+					<R02>1.98523347e-23</R02>
+					<R10>-1.98523347e-23</R10>
+					<R11>4.4408921e-16</R11>
+					<R12>1</R12>
+					<R20>-3.55271368e-15</R20>
+					<R21>1</R21>
+					<R22>4.4408921e-16</R22>
 				</CFrame>
 			</OptionalCoordinateFrame>
 		</Properties>
-		<Item class="Part" referent="RBX1">
+		<Item class="Part" referent="RBXA7CFBA92A373470A8B770BA6BD808397">
 			<Properties>
 				<bool name="Anchored">false</bool>
 				<BinaryString name="AttributesSerialize"></BinaryString>
@@ -83,18 +83,18 @@
 				<token name="BottomSurface">0</token>
 				<token name="BottomSurfaceInput">0</token>
 				<CoordinateFrame name="CFrame">
-					<X>52</X>
-					<Y>29</Y>
-					<Z>-107.999992</Z>
+					<X>46.5</X>
+					<Y>28.5</Y>
+					<Z>-84.4999924</Z>
 					<R00>-1</R00>
-					<R01>1.02445661e-08</R01>
-					<R02>1.78894268e-17</R02>
-					<R10>-1.49078295e-17</R10>
-					<R11>-3.20142868e-09</R11>
+					<R01>3.57627869e-07</R01>
+					<R02>9.99200722e-15</R02>
+					<R10>-9.99200722e-15</R10>
+					<R11>4.47034836e-08</R11>
 					<R12>1</R12>
-					<R20>1.02445643e-08</R20>
+					<R20>-3.57627869e-07</R20>
 					<R21>1</R21>
-					<R22>3.2014289e-09</R22>
+					<R22>4.47034836e-08</R22>
 				</CoordinateFrame>
 				<bool name="CanCollide">false</bool>
 				<bool name="CanQuery">true</bool>
@@ -160,12 +160,12 @@
 				<token name="formFactorRaw">0</token>
 				<token name="shape">0</token>
 				<Vector3 name="size">
-					<X>2</X>
-					<Y>2</Y>
-					<Z>2</Z>
+					<X>1</X>
+					<Y>1</Y>
+					<Z>1</Z>
 				</Vector3>
 			</Properties>
-			<Item class="SpecialMesh" referent="RBX2">
+			<Item class="SpecialMesh" referent="RBX6475E3B17553496F8D70E4122886F193">
 				<Properties>
 					<BinaryString name="AttributesSerialize"></BinaryString>
 					<Content name="MeshId"><url>rbxasset://fonts/timebomb.mesh</url></Content>
@@ -177,9 +177,9 @@
 						<Z>0</Z>
 					</Vector3>
 					<Vector3 name="Scale">
-						<X>1</X>
-						<Y>1</Y>
-						<Z>1</Z>
+						<X>0.5</X>
+						<Y>0.5</Y>
+						<Z>0.5</Z>
 					</Vector3>
 					<int64 name="SourceAssetId">-1</int64>
 					<BinaryString name="Tags"></BinaryString>
@@ -191,22 +191,22 @@
 					</Vector3>
 				</Properties>
 			</Item>
-			<Item class="Attachment" referent="RBXD9BD05B47AB34DAF809E643FFF02A3F3">
+			<Item class="Attachment" referent="RBX89F3CC1BEA8D42A1962B44B16378C16C">
 				<Properties>
 					<BinaryString name="AttributesSerialize"></BinaryString>
 					<CoordinateFrame name="CFrame">
-						<X>0.650001526</X>
-						<Y>0.300003052</Y>
-						<Z>-0.200000763</Z>
+						<X>0.325000763</X>
+						<Y>-0.0499954224</Y>
+						<Z>0.199998856</Z>
 						<R00>-1</R00>
-						<R01>3.63959501e-23</R01>
-						<R02>5.32907052e-15</R02>
-						<R10>5.32907052e-15</R10>
-						<R11>6.66133815e-16</R11>
+						<R01>8.75299833e-13</R01>
+						<R02>2.14576721e-06</R02>
+						<R10>2.14576721e-06</R10>
+						<R11>2.68220901e-07</R11>
 						<R12>1</R12>
-						<R20>3.6395947e-23</R20>
+						<R20>2.99760217e-13</R20>
 						<R21>1</R21>
-						<R22>-6.66133815e-16</R22>
+						<R22>-2.68220901e-07</R22>
 					</CoordinateFrame>
 					<string name="Name">LeftGrip</string>
 					<int64 name="SourceAssetId">-1</int64>
@@ -214,22 +214,22 @@
 					<bool name="Visible">false</bool>
 				</Properties>
 			</Item>
-			<Item class="Attachment" referent="RBX76504CDD72924209A84EB8F02D705292">
+			<Item class="Attachment" referent="RBXD3F0022F618D46FC83CE655071942377">
 				<Properties>
 					<BinaryString name="AttributesSerialize"></BinaryString>
 					<CoordinateFrame name="CFrame">
-						<X>-0.750003815</X>
-						<Y>0.300003052</Y>
-						<Z>-0.200000763</Z>
+						<X>-0.375003815</X>
+						<Y>-0.0499954224</Y>
+						<Z>0.199998856</Z>
 						<R00>-1</R00>
-						<R01>3.63959501e-23</R01>
-						<R02>5.32907052e-15</R02>
-						<R10>5.32907052e-15</R10>
-						<R11>6.66133815e-16</R11>
+						<R01>3.91686683e-13</R01>
+						<R02>1.43051147e-06</R02>
+						<R10>1.43051147e-06</R10>
+						<R11>1.78813934e-07</R11>
 						<R12>1</R12>
-						<R20>3.6395947e-23</R20>
+						<R20>1.35891298e-13</R20>
 						<R21>1</R21>
-						<R22>-6.66133815e-16</R22>
+						<R22>-1.78813934e-07</R22>
 					</CoordinateFrame>
 					<string name="Name">RightGrip</string>
 					<int64 name="SourceAssetId">-1</int64>

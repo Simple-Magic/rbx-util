@@ -7,7 +7,7 @@ local Mouse = Player:GetMouse()
 local CursorController = Knit.CreateController({ Name = "CursorController" })
 
 function CursorController:KnitInit()
-	Timer.Simple(1, function() Mouse.Icon = "rbxasset://textures/GunCursor.png" end)
+	Timer.Simple(1, function() Mouse.Icon = "rbxassetid://13898932223" end)
 end
 
 return CursorController
