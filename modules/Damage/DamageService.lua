@@ -4,10 +4,14 @@ local Workspace = game:GetService("Workspace")
 local Knit = require(script.Parent.Parent.Knit)
 local Signal = require(script.Parent.Parent.Signal)
 
+local HitmarkerService
+
 local DamageService = Knit.CreateService({
 	Name = "DamageService",
 	Damaged = Signal.new(),
 })
+
+function DamageService:KnitStart() HitmarkerService = Knit.GetService("HitmarkerService") end
 
 function DamageService:Damage(
 	humanoid: Humanoid,
@@ -20,6 +24,12 @@ function DamageService:Damage(
 	self:DisplayHit(humanoid)
 	humanoid:TakeDamage(damage)
 	self.Damaged:Fire(humanoid, damage, creatorPlayer, weapon)
+	if creatorPlayer then
+		HitmarkerService:HitmarkerFor(
+			creatorPlayer,
+			('<font color="#ff6622">-%d</font>'):format(damage)
+		)
+	end
 end
 
 function DamageService:Tag(humanoid: Humanoid, creatorPlayer: Player?, weapon: string?): boolean
